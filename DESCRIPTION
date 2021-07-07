@@ -1,0 +1,16 @@
+Package: EndophenotypeExplorer
+Type: Package
+Title: EndophenotypeExplorer
+Version: 1.0.0
+Date: 2021-07-07
+Author: Paul Shannon
+Maintainer: Paul Shannon<pshannon@systemsbiology.org>
+Imports:
+   DBI,
+   org.Hs.eg.db,
+   RPostgreSQL
+Description: tools to explore associations between eQTLs, variants, gene expression and gene regulation
+Depends: R (>= 4.1.0), R6
+License: Artistic-2.0
+Encoding: UTF-8
+RoxygenNote: 7.1.1
