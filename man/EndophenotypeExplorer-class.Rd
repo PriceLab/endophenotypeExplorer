@@ -33,7 +33,10 @@ EndophenotypeExplorer
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{EndophenotypeExplorer$new()}}
+\item \href{#method-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
+\item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
+\item \href{#method-identifyTargetGeneChromosome}{\code{EndophenotypeExplorer$identifyTargetGeneChromosome()}}
 \item \href{#method-vcfSampleID.to.clinicalTable}{\code{EndophenotypeExplorer$vcfSampleID.to.clinicalTable()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
@@ -44,7 +47,7 @@ EndophenotypeExplorer
 \subsection{Method \code{new()}}{
 Create a new EndophenotypeExplorer object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(target.gene, default.genome, vcf.url)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(target.gene, default.genome)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -63,11 +66,38 @@ A new `EndophenotypeExplorer` object.
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-setupVcfURL"></a>}}
+\if{latex}{\out{\hypertarget{method-setupVcfURL}{}}}
+\subsection{Method \code{setupVcfURL()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupVcfURL(chromosome)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getVcfUrl"></a>}}
+\if{latex}{\out{\hypertarget{method-getVcfUrl}{}}}
+\subsection{Method \code{getVcfUrl()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getVcfUrl()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-setupClinicalData"></a>}}
 \if{latex}{\out{\hypertarget{method-setupClinicalData}{}}}
 \subsection{Method \code{setupClinicalData()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupClinicalData()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-identifyTargetGeneChromosome"></a>}}
+\if{latex}{\out{\hypertarget{method-identifyTargetGeneChromosome}{}}}
+\subsection{Method \code{identifyTargetGeneChromosome()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$identifyTargetGeneChromosome(target.gene)}\if{html}{\out{</div>}}
 }
 
 }

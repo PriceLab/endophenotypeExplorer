@@ -11,26 +11,22 @@ runTests <- function()
 test_ctor <- function()
 {
    message(sprintf("--- test_ctor"))
-   vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
-   vcf.data.file.chr2 <- "NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_2.recalibrated_variants.vcf.gz"
-   vcf.url <- sprintf("%s/%s", vcf.base.url, vcf.data.file.chr2)
 
-   etx <- EndophenotypeExplorer$new("BIN1", "hg19", vcf.url)
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
+   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
+   checkEquals(etx$getVcfUrl(), expected)
 
 } # test_ctor
 #----------------------------------------------------------------------------------------------------
 test_vcf.sampleID.to.clinicalTable <- function()
 {
    message(sprintf("--- test_vcf.sampleID.to.clinicalTable"))
-   vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
-   vcf.data.file.chr2 <- "NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_2.recalibrated_variants.vcf.gz"
-   vcf.url <- sprintf("%s/%s", vcf.base.url, vcf.data.file.chr2)
 
-   etx <- EndophenotypeExplorer$new("BIN1", "hg19", vcf.url)
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
-
    tbl.clinical <- etx$vcfSampleID.to.clinicalTable("SM-CTEMF")
+   checkEquals(dim(tbl.clinical), c(1, 36))
 
    rs10200967.00.samples <- c("1036","11241","11249","11254","11275","11312","11337","11349","11370",
                               "11399","11422","11470","14552","1940","1954","1963","68682","6976",
