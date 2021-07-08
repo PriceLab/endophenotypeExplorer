@@ -8,9 +8,9 @@ Maintainer: Paul Shannon<pshannon@systemsbiology.org>
 Imports:
    DBI,
    org.Hs.eg.db,
-   RPostgreSQL
+   RPostgreSQL,
 Description: tools to explore associations between eQTLs, variants, gene expression and gene regulation
-Depends: R (>= 4.1.0), R6
+Depends: R (>= 4.1.0), R6, GenomicRanges
 License: Artistic-2.0
 Encoding: UTF-8
 RoxygenNote: 7.1.1

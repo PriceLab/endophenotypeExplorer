@@ -1,0 +1,371 @@
+"individualID","individualIdSource","species","sex","race","ethnicity","yearsEducation","ageDeath","causeDeath","mannerDeath","apoeGenotype","pmi","pH","brainWeight","diagnosis","diagnosisCriteria","CERAD","Braak","thal"
+1005,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,8,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1010,"MayoBrainBank","Human","male","White",NA,NA,"63",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1015,"MayoBrainBank","Human","male","White",NA,NA,"77",NA,NA,34,6,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1019,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,34,4,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1029,"MayoBrainBank","Human","female","White",NA,NA,"69",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1034,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,23,5,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1036,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+1045,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+1046,"MayoBrainBank","Human","female","White",NA,NA,"72",NA,NA,33,2,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1047,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,34,7,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+1052,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+1058,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,5,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1078,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5.5,3
+1085,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,15,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1089,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,44,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1098,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+1103,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,23,4,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1104,"MayoBrainBank","Human","female","White",NA,NA,"60",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1105,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,6,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1114,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1119,"MayoBrainBank","Human","female","White",NA,NA,"70",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1121,"MayoBrainBank","Human","female","White",NA,NA,"66",NA,NA,44,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1123,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+11249,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,33,13,NA,NA,"progressive supranuclear palsy",NA,NA,0,0
+11253,"MayoBrainBank","Human","female","White",NA,NA,"72",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11254,"MayoBrainBank","Human","female","White",NA,NA,"65",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11255,"MayoBrainBank","Human","female","White",NA,NA,"69",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11258,"MayoBrainBank","Human","female","White",NA,NA,"64",NA,NA,23,10,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,1
+11259,"MayoBrainBank","Human","female","White",NA,NA,"76",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,4
+11263,"MayoBrainBank","Human","female","White",NA,NA,"58",NA,NA,23,3,NA,NA,"control",NA,NA,NA,NA
+11264,"MayoBrainBank","Human","female","White",NA,NA,"76",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11265,"MayoBrainBank","Human","female","White",NA,NA,"59",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11266,"MayoBrainBank","Human","female","White",NA,NA,"76",NA,NA,34,4,NA,NA,"control",NA,NA,NA,NA
+11267,"MayoBrainBank","Human","female","White",NA,NA,"70",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,1,1
+11271,"MayoBrainBank","Human","female","White",NA,NA,"72",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,0
+11275,"MayoBrainBank","Human","female","White",NA,NA,"81",NA,NA,33,12,NA,NA,"progressive supranuclear palsy",NA,NA,1,1
+11276,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,0
+11279,"MayoBrainBank","Human","female","White",NA,NA,"66",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,0
+11281,"MayoBrainBank","Human","female","White",NA,NA,"67",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1.5,0
+11285,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,33,5,NA,NA,"progressive supranuclear palsy",NA,NA,1.5,0
+11287,"MayoBrainBank","Human","female","White",NA,NA,"64",NA,NA,24,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1.5,3
+11288,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11289,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,34,3,NA,NA,"control",NA,NA,NA,NA
+1129,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,34,5,NA,NA,"Alzheimer Disease",NA,NA,6,5
+11290,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,22,4,NA,NA,"pathological aging",NA,NA,NA,NA
+11291,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,34,1,NA,NA,"pathological aging",NA,NA,NA,NA
+11293,"MayoBrainBank","Human","female","White",NA,NA,"75",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11294,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11295,"MayoBrainBank","Human","female","White",NA,NA,"74",NA,NA,23,8,NA,NA,"progressive supranuclear palsy",NA,NA,2,2
+11298,"MayoBrainBank","Human","female","White",NA,NA,"70",NA,NA,33,11,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+11300,"MayoBrainBank","Human","female","White",NA,NA,"70",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+11303,"MayoBrainBank","Human","female","White",NA,NA,"71",NA,NA,34,18,NA,NA,"progressive supranuclear palsy",NA,NA,2,3
+11305,"MayoBrainBank","Human","female","White",NA,NA,"65",NA,NA,23,12,NA,NA,"progressive supranuclear palsy",NA,NA,2,3
+11306,"MayoBrainBank","Human","female","White",NA,NA,"73",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,2,2
+11307,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,0
+11309,"MayoBrainBank","Human","female","White",NA,NA,"67",NA,NA,44,11,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,5
+11311,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,23,2,NA,NA,"control",NA,NA,NA,NA
+11312,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,34,1,NA,NA,"pathological aging",NA,NA,NA,NA
+11313,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,34,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11314,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,23,NA,NA,NA,"control",NA,NA,NA,NA
+11316,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,34,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11317,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,23,2,NA,NA,"control",NA,NA,NA,NA
+11319,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11320,"MayoBrainBank","Human","female","White",NA,NA,"68",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11321,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,11,NA,NA,"control",NA,NA,NA,NA
+11322,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11323,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11325,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,33,4,NA,NA,"control",NA,NA,NA,NA
+11327,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11328,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,23,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11329,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11330,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11331,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,23,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11333,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11334,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11337,"MayoBrainBank","Human","female","White",NA,NA,"84",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11338,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,34,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11340,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,23,NA,NA,NA,"control",NA,NA,NA,NA
+11341,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11344,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11345,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11346,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11349,"MayoBrainBank","Human","female","White",NA,NA,"72",NA,NA,33,17,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11353,"MayoBrainBank","Human","female","White",NA,NA,"68",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11355,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11357,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11358,"MayoBrainBank","Human","female","White",NA,NA,"78",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11366,"MayoBrainBank","Human","male","White",NA,NA,"65",NA,NA,33,6,NA,NA,"progressive supranuclear palsy",NA,NA,0,0
+1137,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+11370,"MayoBrainBank","Human","male","White",NA,NA,"62",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0,1
+11371,"MayoBrainBank","Human","male","White",NA,NA,"68",NA,NA,34,20,NA,NA,"progressive supranuclear palsy",NA,NA,0,3
+11372,"MayoBrainBank","Human","male","White",NA,NA,"68",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11374,"MayoBrainBank","Human","male","White",NA,NA,"64",NA,NA,33,8,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11377,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,20,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11381,"MayoBrainBank","Human","male","White",NA,NA,"79",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,0
+11383,"MayoBrainBank","Human","male","White",NA,NA,"64",NA,NA,33,6,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,1
+11385,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,34,NA,NA,NA,"control",NA,NA,NA,NA
+11386,"MayoBrainBank","Human","male","White",NA,NA,"65",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11387,"MayoBrainBank","Human","male","White",NA,NA,"53",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11388,"MayoBrainBank","Human","male","White",NA,NA,"81",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11389,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11391,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,4,NA,NA,"control",NA,NA,NA,NA
+11393,"MayoBrainBank","Human","male","White",NA,NA,"71",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11394,"MayoBrainBank","Human","male","White",NA,NA,"61",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11395,"MayoBrainBank","Human","male","White",NA,NA,"68",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11396,"MayoBrainBank","Human","male","White",NA,NA,"78",NA,NA,33,1,NA,NA,"control",NA,NA,NA,NA
+11397,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11398,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,23,NA,NA,NA,"control",NA,NA,NA,NA
+11399,"MayoBrainBank","Human","male","White",NA,NA,"79",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11400,"MayoBrainBank","Human","male","White",NA,NA,"83",NA,NA,34,3,NA,NA,"control",NA,NA,NA,NA
+11402,"MayoBrainBank","Human","male","White",NA,NA,"64",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,1
+11403,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,1
+11404,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,0
+11408,"MayoBrainBank","Human","male","White",NA,NA,"61",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,2
+11410,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,23,21,NA,NA,"progressive supranuclear palsy",NA,NA,1.5,0
+11412,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1.5,1
+11416,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11417,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11422,"MayoBrainBank","Human","male","White",NA,NA,"63",NA,NA,33,1,NA,NA,"control",NA,NA,NA,NA
+11423,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,23,4,NA,NA,"pathological aging",NA,NA,NA,NA
+11424,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,34,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11425,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,34,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11426,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11427,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11428,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11429,"MayoBrainBank","Human","male","White",NA,NA,"79",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11430,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,5,NA,NA,"control",NA,NA,NA,NA
+11431,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11433,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11438,"MayoBrainBank","Human","male","White",NA,NA,"67",NA,NA,34,3,NA,NA,"progressive supranuclear palsy",NA,NA,2,0
+11440,"MayoBrainBank","Human","male","White",NA,NA,"70",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,0
+11443,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,0
+11445,"MayoBrainBank","Human","male","White",NA,NA,"77",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,2,3
+11447,"MayoBrainBank","Human","male","White",NA,NA,"70",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,3
+11448,"MayoBrainBank","Human","male","White",NA,NA,"71",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+11449,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+11452,"MayoBrainBank","Human","male","White",NA,NA,"78",NA,NA,33,7,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,0
+11456,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,1
+11457,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,0
+11460,"MayoBrainBank","Human","male","White",NA,NA,"67",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,3
+11463,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11464,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11465,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11468,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,23,4,NA,NA,"control",NA,NA,NA,NA
+11469,"MayoBrainBank","Human","male","White",NA,NA,"81",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11470,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,23,2,NA,NA,"control",NA,NA,NA,NA
+11471,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11472,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,34,2,NA,NA,"control",NA,NA,NA,NA
+11474,"MayoBrainBank","Human","male","White",NA,NA,"83",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11476,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11480,"MayoBrainBank","Human","male","White",NA,NA,"87",NA,NA,34,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11481,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11482,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11483,"MayoBrainBank","Human","male","White",NA,NA,"78",NA,NA,34,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11485,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,23,12,NA,NA,"control",NA,NA,NA,NA
+11486,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,34,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11489,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11491,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11492,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,33,1,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11493,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,6,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11494,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11495,"MayoBrainBank","Human","male","White",NA,NA,"65",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11497,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11498,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,15,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11499,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+11500,"MayoBrainBank","Human","male","White",NA,NA,"70",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11502,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,3
+11503,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,3
+11505,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11506,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+11507,"MayoBrainBank","Human","male","White",NA,NA,"77",NA,NA,33,5,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+1166,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,6,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+1169,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,16,NA,NA,"Alzheimer Disease",NA,NA,5,4
+1172,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,30,NA,NA,"Alzheimer Disease",NA,NA,4.5,NA
+1183,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,4.5,5
+1195,"MayoBrainBank","Human","male","White",NA,NA,"65",NA,NA,44,14,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+1200,"MayoBrainBank","Human","female","White",NA,NA,"76",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1203,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1214,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+1239,"MayoBrainBank","Human","male","White",NA,NA,"87",NA,NA,33,5,NA,NA,"Alzheimer Disease",NA,NA,5,5
+127,"MayoBrainBank","Human","male","White",NA,NA,"79",NA,NA,34,22,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1271,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+1275,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,23,6,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+129,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,34,19,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1302,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,34,7,NA,NA,"Alzheimer Disease",NA,NA,6,5
+132,"MayoBrainBank","Human",NA,"White",NA,NA,NA,NA,NA,NA,9,NA,NA,NA,NA,NA,NA,NA
+134,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+135,"MayoBrainBank","Human","female","White",NA,NA,"81",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+141,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,44,5,NA,NA,"Alzheimer Disease",NA,NA,6,5
+142,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,6,5
+149,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1919,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,33,5,NA,NA,"control",NA,NA,1,2
+1923,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,14,NA,NA,"control",NA,NA,2,NA
+1924,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,2,NA,NA,"control",NA,NA,2,NA
+1925,"MayoBrainBank","Human",NA,"White",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1926,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,2,NA,NA,"control",NA,NA,2,NA
+1929,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,10,NA,NA,"control",NA,NA,2.5,NA
+1930,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,18,NA,NA,"control",NA,NA,1,NA
+1931,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,9,NA,NA,"control",NA,NA,3,NA
+1932,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,33,NA,NA,NA,"control",NA,NA,1,0
+1933,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,24,38,NA,NA,"control",NA,NA,1,NA
+1935,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,3,NA,NA,"control",NA,NA,2.5,NA
+1936,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,33,12,NA,NA,"control",NA,NA,2,NA
+1937,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,33,NA,NA,NA,"control",NA,NA,2.5,0
+1940,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,14,NA,NA,"control",NA,NA,2.5,NA
+1941,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,20,NA,NA,"control",NA,NA,3,NA
+1942,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,33,6,NA,NA,"control",NA,NA,2.5,0
+1943,"MayoBrainBank","Human","male","White",NA,NA,"88",NA,NA,34,5,NA,NA,"control",NA,NA,2.5,NA
+1944,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,14,NA,NA,"control",NA,NA,3,NA
+1945,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,23,NA,NA,NA,"control",NA,NA,2.5,NA
+1950,"MayoBrainBank","Human",NA,"White",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1951,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,34,7,NA,NA,"control",NA,NA,NA,NA
+1952,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,5,NA,NA,"control",NA,NA,3,0
+1955,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,33,5,NA,NA,"control",NA,NA,1,NA
+1956,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,8,NA,NA,"control",NA,NA,3,NA
+1959,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,16,NA,NA,"control",NA,NA,2,NA
+1960,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,18,NA,NA,"control",NA,NA,3,0
+1963,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,4,NA,NA,"control",NA,NA,3,NA
+1964,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,23,33,NA,NA,"control",NA,NA,3,NA
+6810,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,33,1,NA,NA,"progressive supranuclear palsy",NA,NA,2,2
+6819,"MayoBrainBank","Human","female","White",NA,NA,"78",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,2
+6821,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,34,NA,NA,NA,"progressive supranuclear palsy",NA,NA,0,2
+6863,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,23,3,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+6870,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+6872,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,1,1
+6880,"MayoBrainBank","Human","male","White",NA,NA,"79",NA,NA,33,6,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+6894,"MayoBrainBank","Human","male","White",NA,NA,"69",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+6913,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,33,2,NA,NA,"progressive supranuclear palsy",NA,NA,2,1
+6914,"MayoBrainBank","Human","female","White",NA,NA,"78",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,1
+6925,"MayoBrainBank","Human","female","White",NA,NA,"81",NA,NA,33,9,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,0
+6929,"MayoBrainBank","Human","female","White",NA,NA,"76",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,3
+6952,"MayoBrainBank","Human","male","White",NA,NA,"83",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,0,1
+6976,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,23,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+7000,"MayoBrainBank","Human","male","White",NA,NA,"83",NA,NA,23,4,NA,NA,"progressive supranuclear palsy",NA,NA,2,3
+7015,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,34,17,NA,NA,"progressive supranuclear palsy",NA,NA,3,3
+7016,"MayoBrainBank","Human","male","White",NA,NA,"61",NA,NA,34,15,NA,NA,"progressive supranuclear palsy",NA,NA,0.5,3
+7095,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,23,6,NA,NA,"control",NA,NA,0,0
+7098,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,4,NA,NA,"control",NA,NA,2,0
+7099,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,4,NA,NA,"control",NA,NA,2,0
+731,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+732,"MayoBrainBank","Human","female","White",NA,NA,"84",NA,NA,34,5,NA,NA,"Alzheimer Disease",NA,NA,6,4
+736,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,18,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+742,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+744,"MayoBrainBank","Human","male","White",NA,NA,"73",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+746,"MayoBrainBank","Human","male","White",NA,NA,"76",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+751,"MayoBrainBank","Human","male","White",NA,NA,"64",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+766,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,34,5,NA,NA,"Alzheimer Disease",NA,NA,4.5,5
+775,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+777,"MayoBrainBank","Human","male","White",NA,NA,"87",NA,NA,33,5,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+783,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+786,"MayoBrainBank","Human","male","White",NA,NA,"88",NA,NA,34,5,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+787,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,34,4,NA,NA,"Alzheimer Disease",NA,NA,6,5
+791,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,33,5,NA,NA,"Alzheimer Disease",NA,NA,4.5,5
+797,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,4.5,NA
+812,"MayoBrainBank","Human","female","White",NA,NA,"78",NA,NA,44,3,NA,NA,"Alzheimer Disease",NA,NA,6,5
+813,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,34,5,NA,NA,"Alzheimer Disease",NA,NA,5,5
+816,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,34,18,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+828,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,23,7,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+834,"MayoBrainBank","Human","male","White",NA,NA,"78",NA,NA,44,NA,NA,NA,"Alzheimer Disease",NA,NA,5,4
+843,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+844,"MayoBrainBank","Human",NA,"White",NA,NA,NA,NA,NA,NA,6,NA,NA,NA,NA,NA,NA,NA
+850,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,6,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+851,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+859,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,3,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+871,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+886,"MayoBrainBank","Human","female","White",NA,NA,"74",NA,NA,34,4,NA,NA,"Alzheimer Disease",NA,NA,5,3
+892,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,33,2,NA,NA,"Alzheimer Disease",NA,NA,4.5,NA
+894,"MayoBrainBank","Human","male","White",NA,NA,"87",NA,NA,33,12,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+896,"MayoBrainBank","Human","female","White",NA,NA,"80",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,6,5
+933,"MayoBrainBank","Human","female","White",NA,NA,"81",NA,NA,34,4,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+946,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,5,5
+948,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,5,5
+952,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,6,5
+962,"MayoBrainBank","Human","male","White",NA,NA,"66",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+966,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,44,16,NA,NA,"Alzheimer Disease",NA,NA,6,5
+976,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,7,NA,NA,"Alzheimer Disease",NA,NA,6,5
+981,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+991,"MayoBrainBank","Human","male","White",NA,NA,"87",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,3
+1000,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1027,"MayoBrainBank","Human","male","White",NA,NA,"86",NA,NA,33,4,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1059,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+11241,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,33,NA,NA,NA,"control",NA,NA,NA,NA
+11261,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,33,2,NA,NA,"pathological aging",NA,NA,NA,NA
+11292,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11326,"MayoBrainBank","Human","female","White",NA,NA,"82",NA,NA,33,2,NA,NA,"control",NA,NA,NA,NA
+11332,"MayoBrainBank","Human","female","White",NA,NA,"84",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11339,"MayoBrainBank","Human","female","White",NA,NA,"75",NA,NA,34,2,NA,NA,"control",NA,NA,NA,NA
+11342,"MayoBrainBank","Human","female","White",NA,NA,"85",NA,NA,34,2,NA,NA,"control",NA,NA,NA,NA
+11343,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,34,3,NA,NA,"pathological aging",NA,NA,NA,NA
+11432,"MayoBrainBank","Human","male","White",NA,NA,"74",NA,NA,33,3,NA,NA,"control",NA,NA,NA,NA
+11458,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,3,NA,NA,"progressive supranuclear palsy",NA,NA,2.5,2
+1146,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,23,NA,NA,NA,"Alzheimer Disease",NA,NA,5,NA
+11475,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,23,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+11477,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,3,NA,NA,"pathological aging",NA,NA,NA,NA
+1159,"MayoBrainBank","Human","male","White",NA,NA,"65",NA,NA,33,8,NA,NA,"Alzheimer Disease",NA,NA,6,5
+1258,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,34,20,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+1282,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+14549,"MayoBrainBank","Human","male","White",NA,NA,"63",NA,NA,33,3,NA,NA,"control",NA,NA,3,0
+14552,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,33,16,NA,NA,"control",NA,NA,3,NA
+14553,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,33,NA,NA,NA,"control",NA,NA,3,2
+1934,"MayoBrainBank","Human","male","White",NA,NA,"89",NA,NA,33,NA,NA,NA,"control",NA,NA,0,0
+1938,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,23,19,NA,NA,"control",NA,NA,2.5,NA
+1953,"MayoBrainBank","Human","female","White",NA,NA,"86",NA,NA,33,10,NA,NA,"control",NA,NA,3,NA
+1957,"MayoBrainBank","Human",NA,"White",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1958,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,2,NA,NA,"control",NA,NA,2,1
+6915,"MayoBrainBank","Human","male","White",NA,NA,"80",NA,NA,33,NA,NA,NA,"progressive supranuclear palsy",NA,NA,3,0
+716,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,21,NA,NA,"Alzheimer Disease",NA,NA,5,5
+719,"MayoBrainBank","Human","female","White",NA,NA,"88",NA,NA,23,NA,NA,NA,"Alzheimer Disease",NA,NA,5,5
+725,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,34,3,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+785,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,34,37,NA,NA,"Alzheimer Disease",NA,NA,5.5,5
+801,"MayoBrainBank","Human","male","White",NA,NA,"84",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+849,"MayoBrainBank","Human","male","White",NA,NA,"64",NA,NA,33,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+931,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,33,5,NA,NA,"Alzheimer Disease",NA,NA,6,5
+937,"MayoBrainBank","Human","female","White",NA,NA,"67",NA,NA,34,NA,NA,NA,"Alzheimer Disease",NA,NA,6,NA
+18202,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18213,"MayoBrainBank","Human","male","White",NA,NA,"82",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18214,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18221,"MayoBrainBank","Human","male","White",NA,NA,"85",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18225,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18232,"MayoBrainBank","Human","male","White",NA,NA,"83",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18235,"MayoBrainBank","Human","male","White",NA,NA,"77",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18237,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+12308,"MayoBrainBank","Human","male","White",NA,NA,"72",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18198,"MayoBrainBank","Human","female","White",NA,NA,"81",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18199,"MayoBrainBank","Human","female","White",NA,NA,"75",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18203,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18204,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18209,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18222,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+2517,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18212,"MayoBrainBank","Human","male","White",NA,NA,"75",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18230,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18231,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18234,"MayoBrainBank","Human","male","White",NA,NA,"81",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18236,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18201,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18210,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18239,"MayoBrainBank","Human","male","White",NA,NA,"81",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+2210,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+12306,"MayoBrainBank","Human","female","White",NA,NA,"67",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18218,"MayoBrainBank","Human","female","White",NA,NA,"83",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18223,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18224,"MayoBrainBank","Human","female","White",NA,NA,"89",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18233,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18238,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18206,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18216,"MayoBrainBank","Human","male","White",NA,NA,"81",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18219,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18226,"MayoBrainBank","Human","male","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18229,"MayoBrainBank","Human","female","White",NA,NA,"77",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18200,"MayoBrainBank","Human","male","White",NA,NA,"88",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18211,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18217,"MayoBrainBank","Human","female","White",NA,NA,"90+",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18220,"MayoBrainBank","Human","female","White",NA,NA,"79",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+18228,"MayoBrainBank","Human","female","White",NA,NA,"87",NA,NA,NA,NA,NA,NA,"pathological aging",NA,NA,NA,NA
+14547,"MayoBrainBank","Human","female",NA,NA,NA,"57",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14550,"MayoBrainBank","Human","male",NA,NA,NA,"64",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14555,"MayoBrainBank","Human","male",NA,NA,NA,"67",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14560,"MayoBrainBank","Human","male",NA,NA,NA,"70",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14556,"MayoBrainBank","Human","female",NA,NA,NA,"72",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14562,"MayoBrainBank","Human","male",NA,NA,NA,"76",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14543,"MayoBrainBank","Human","male",NA,NA,NA,"80",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14551,"MayoBrainBank","Human","female",NA,NA,NA,"80",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14558,"MayoBrainBank","Human","female",NA,NA,NA,"80",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14557,"MayoBrainBank","Human","male",NA,NA,NA,"81",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14546,"MayoBrainBank","Human","male",NA,NA,NA,"83",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+14548,"MayoBrainBank","Human","male",NA,NA,NA,"83",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+1948,"MayoBrainBank","Human","male",NA,NA,NA,"90+",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+1954,"MayoBrainBank","Human","female",NA,NA,NA,"90+",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA
+1947,"MayoBrainBank","Human","male",NA,NA,NA,"90+",NA,NA,NA,NA,NA,NA,"control",NA,NA,NA,NA

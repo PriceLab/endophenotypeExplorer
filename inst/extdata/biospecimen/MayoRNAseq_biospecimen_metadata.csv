@@ -1,0 +1,1490 @@
+"individualID","specimenID","specimenIdSource","samplingDate","organ","tissue","BrodmannArea","sampleStatus","tissueWeight","tissueVolume","nucleicAcidSource","cellType","fastingState","assay","exclude","excludeReason","Exclusion_Category"
+1005,"1005_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1010,"1010_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1015,"1015_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1019,"1019_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1029,"1029_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1034,"1034_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1036,"1036_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1045,"1045_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1046,"1046_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1047,"1047_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1052,"1052_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1058,"1058_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1078,"1078_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1085,"1085_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1089,"1089_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1098,"1098_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1103,"1103_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1104,"1104_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1105,"1105_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1114,"1114_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1119,"1119_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1121,"1121_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1123,"1123_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11249,"11249_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11253,"11253_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11254,"11254_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11255,"11255_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11258,"11258_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11259,"11259_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11263,"11263_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11264,"11264_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11265,"11265_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11266,"11266_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11267,"11267_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11271,"11271_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11275,"11275_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11276,"11276_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11279,"11279_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11281,"11281_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11285,"11285_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11287,"11287_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11288,"11288_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11289,"11289_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1129,"1129_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11290,"11290_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11291,"11291_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11293,"11293_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11294,"11294_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11295,"11295_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11298,"11298_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11300,"11300_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11303,"11303_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11305,"11305_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11306,"11306_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11307,"11307_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11309,"11309_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11311,"11311_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11312,"11312_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11313,"11313_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11314,"11314_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11316,"11316_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11317,"11317_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11319,"11319_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11320,"11320_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11321,"11321_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11322,"11322_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11323,"11323_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11325,"11325_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11327,"11327_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11328,"11328_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11329,"11329_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11330,"11330_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11331,"11331_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11333,"11333_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11334,"11334_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11337,"11337_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11338,"11338_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11340,"11340_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11341,"11341_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11344,"11344_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11345,"11345_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11346,"11346_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11349,"11349_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11353,"11353_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11355,"11355_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11357,"11357_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11358,"11358_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11366,"11366_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1137,"1137_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11370,"11370_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11371,"11371_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11372,"11372_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11374,"11374_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11377,"11377_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11381,"11381_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11383,"11383_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11385,"11385_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11386,"11386_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11387,"11387_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Eigenstrat Outlier","A"
+11388,"11388_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - > 3rd degree relative with another sample","A"
+11389,"11389_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11391,"11391_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11393,"11393_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11394,"11394_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11395,"11395_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11396,"11396_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11397,"11397_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11398,"11398_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11399,"11399_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11400,"11400_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11402,"11402_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11403,"11403_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11404,"11404_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11408,"11408_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11410,"11410_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11412,"11412_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11416,"11416_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+11417,"11417_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11422,"11422_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11423,"11423_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11424,"11424_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11425,"11425_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11426,"11426_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11427,"11427_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11428,"11428_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11429,"11429_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11430,"11430_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11431,"11431_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11433,"11433_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11438,"11438_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Eigenstrat Outlier","A"
+11440,"11440_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11443,"11443_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11445,"11445_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11447,"11447_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11448,"11448_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11449,"11449_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11452,"11452_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11456,"11456_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11457,"11457_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11460,"11460_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11463,"11463_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11464,"11464_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11465,"11465_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11468,"11468_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11469,"11469_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11470,"11470_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11471,"11471_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11472,"11472_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11474,"11474_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11476,"11476_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11480,"11480_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11481,"11481_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11482,"11482_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11483,"11483_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11485,"11485_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11486,"11486_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11489,"11489_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11491,"11491_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11492,"11492_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11493,"11493_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11494,"11494_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11495,"11495_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11497,"11497_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11498,"11498_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11499,"11499_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11500,"11500_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11502,"11502_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11503,"11503_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - > 3rd degree relative with another sample","A"
+11505,"11505_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11506,"11506_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11507,"11507_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1166,"1166_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1169,"1169_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+1172,"1172_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1183,"1183_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1195,"1195_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1200,"1200_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1203,"1203_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1214,"1214_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1239,"1239_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+127,"127_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+1271,"1271_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1275,"1275_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+129,"129_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1302,"1302_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+132,"132_TCX",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS and RNAseq) - Sex mis-match","A"
+134,"134_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+135,"135_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+141,"141_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+142,"142_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+149,"149_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1919,"1919_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1923,"1923_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Principal Components Analysis","B"
+1924,"1924_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Principal Components Analysis","B"
+1925,"1925_TCX",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(Pathology) - Does not meet control criteria (Braak > 3.0)","A"
+1926,"1926_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1929,"1929_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1930,"1930_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+1931,"1931_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1932,"1932_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1933,"1933_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1935,"1935_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1936,"1936_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1937,"1937_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1940,"1940_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Principal Components Analysis","B"
+1941,"1941_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1942,"1942_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1943,"1943_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1944,"1944_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1945,"1945_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1950,"1950_TCX",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(Pathology) - Does not meet control criteria (Braak > 3.0)","A"
+1951,"1951_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1952,"1952_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1955,"1955_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1956,"1956_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1959,"1959_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1960,"1960_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1963,"1963_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1964,"1964_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6810,"6810_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6819,"6819_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6821,"6821_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6863,"6863_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6870,"6870_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6872,"6872_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6880,"6880_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6894,"6894_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6913,"6913_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6914,"6914_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6925,"6925_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6929,"6929_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6952,"6952_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6976,"6976_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7000,"7000_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7015,"7015_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7016,"7016_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7095,"7095_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7098,"7098_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7099,"7099_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+731,"731_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+732,"732_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+736,"736_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+742,"742_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+744,"744_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+746,"746_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+751,"751_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+766,"766_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+775,"775_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+777,"777_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+783,"783_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+786,"786_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+787,"787_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+791,"791_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+797,"797_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+812,"812_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+813,"813_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+816,"816_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+828,"828_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+834,"834_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+843,"843_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+844,"844_TCX",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS and RNAseq) - Sex mis-match","A"
+850,"850_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+851,"851_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+859,"859_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+871,"871_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+886,"886_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+892,"892_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+894,"894_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+896,"896_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+933,"933_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+946,"946_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+948,"948_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+952,"952_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+962,"962_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+966,"966_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+976,"976_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+981,"981_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+991,"991_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1000,"1000_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1010,"1010_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1015,"1015_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1019,"1019_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1027,"1027_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1029,"1029_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1034,"1034_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1036,"1036_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1045,"1045_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1046,"1046_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1052,"1052_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1058,"1058_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1059,"1059_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1078,"1078_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1085,"1085_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1089,"1089_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1098,"1098_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1103,"1103_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1104,"1104_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1105,"1105_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1114,"1114_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1119,"1119_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11241,"11241_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11249,"11249_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11253,"11253_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11254,"11254_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11255,"11255_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11258,"11258_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11259,"11259_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11261,"11261_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11263,"11263_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11264,"11264_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11265,"11265_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11266,"11266_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11267,"11267_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11271,"11271_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11275,"11275_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11276,"11276_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11279,"11279_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11281,"11281_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11285,"11285_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11287,"11287_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11288,"11288_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1129,"1129_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11290,"11290_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11291,"11291_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11292,"11292_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11294,"11294_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11295,"11295_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11298,"11298_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11300,"11300_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11303,"11303_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11305,"11305_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11306,"11306_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11307,"11307_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11309,"11309_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11311,"11311_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Principal Components Analysis","B"
+11312,"11312_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11313,"11313_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11314,"11314_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11317,"11317_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11319,"11319_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11320,"11320_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11323,"11323_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11325,"11325_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11326,"11326_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11329,"11329_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11330,"11330_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11331,"11331_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11332,"11332_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11333,"11333_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11334,"11334_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11337,"11337_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11338,"11338_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11339,"11339_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11341,"11341_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11342,"11342_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11343,"11343_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11344,"11344_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11349,"11349_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11353,"11353_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11355,"11355_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11357,"11357_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11358,"11358_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11366,"11366_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1137,"1137_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11370,"11370_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11371,"11371_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11372,"11372_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11374,"11374_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11377,"11377_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11381,"11381_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11383,"11383_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11385,"11385_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11386,"11386_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Low Mapped Reads","A"
+11388,"11388_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - > 3rd degree relative with another sample","A"
+11389,"11389_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11391,"11391_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11393,"11393_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11394,"11394_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11395,"11395_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11396,"11396_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11397,"11397_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11399,"11399_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11400,"11400_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11402,"11402_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11403,"11403_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11404,"11404_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11408,"11408_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11410,"11410_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11412,"11412_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11416,"11416_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+11417,"11417_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11422,"11422_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11423,"11423_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11424,"11424_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11425,"11425_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11426,"11426_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11427,"11427_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11429,"11429_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11430,"11430_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11431,"11431_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11432,"11432_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11438,"11438_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Eigenstrat Outlier","A"
+11440,"11440_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11443,"11443_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11445,"11445_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11447,"11447_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11448,"11448_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11449,"11449_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11452,"11452_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11456,"11456_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11457,"11457_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11458,"11458_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1146,"1146_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11460,"11460_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11463,"11463_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11464,"11464_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11465,"11465_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11468,"11468_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11469,"11469_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11470,"11470_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11471,"11471_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11472,"11472_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11474,"11474_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11475,"11475_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11476,"11476_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11477,"11477_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11480,"11480_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11481,"11481_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11483,"11483_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11485,"11485_CER","BannerSun",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11491,"11491_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11492,"11492_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11493,"11493_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11494,"11494_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11495,"11495_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11497,"11497_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11498,"11498_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11499,"11499_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11500,"11500_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11502,"11502_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11503,"11503_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - > 3rd degree relative with another sample","A"
+11505,"11505_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+11506,"11506_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+11507,"11507_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1159,"1159_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1166,"1166_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1169,"1169_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS, RNAseq) - Heterozygosity Outlier, GeneBodyCoverage Plot(RSeQC)","A"
+1172,"1172_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1183,"1183_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1200,"1200_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1203,"1203_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Sex mis-match","A"
+1214,"1214_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1239,"1239_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1258,"1258_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+127,"127_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+1271,"1271_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1282,"1282_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1302,"1302_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+132,"132_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS and RNAseq) - Sex mis-match","A"
+134,"134_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+135,"135_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+141,"141_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+142,"142_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+14549,"14549_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+14552,"14552_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+14553,"14553_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+149,"149_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1919,"1919_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1923,"1923_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - Principal Components Analysis","B"
+1924,"1924_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1926,"1926_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1929,"1929_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1930,"1930_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+1931,"1931_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1932,"1932_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1933,"1933_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1934,"1934_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1935,"1935_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1936,"1936_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1937,"1937_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1938,"1938_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1940,"1940_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1941,"1941_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1942,"1942_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1943,"1943_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1944,"1944_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1945,"1945_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1950,"1950_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(Pathology) - Does not meet control criteria (Braak > 3.0)","A"
+1951,"1951_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1952,"1952_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1953,"1953_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(RNAseq) - GeneBodyCoverage Plot (RSeQC)","B"
+1955,"1955_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1956,"1956_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1957,"1957_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(Pathology) - Does not meet control criteria (Braak > 3.0)","A"
+1958,"1958_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1960,"1960_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1963,"1963_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+1964,"1964_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6810,"6810_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6819,"6819_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6821,"6821_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6863,"6863_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6870,"6870_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6872,"6872_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6880,"6880_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6894,"6894_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6913,"6913_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6914,"6914_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6915,"6915_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6925,"6925_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6929,"6929_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+6952,"6952_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7000,"7000_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7015,"7015_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+7016,"7016_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+716,"716_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+719,"719_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+725,"725_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS) - Heterozygosity Outlier","A"
+731,"731_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+732,"732_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+736,"736_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+742,"742_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+744,"744_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+746,"746_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+751,"751_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+766,"766_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+775,"775_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+777,"777_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+783,"783_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+785,"785_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+786,"786_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+787,"787_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+791,"791_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+797,"797_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+801,"801_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+812,"812_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+813,"813_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+816,"816_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+834,"834_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+844,"844_CER",NA,NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","true","(GWAS and RNAseq) - Sex mis-match","A"
+849,"849_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+851,"851_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+871,"871_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+886,"886_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+892,"892_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+894,"894_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+896,"896_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+931,"931_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+933,"933_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+937,"937_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+946,"946_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+948,"948_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+952,"952_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+966,"966_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+976,"976_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+991,"991_CER","MayoBrainBank",NA,"brain","cerebellum",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+12306,"12306","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+12308,"12308","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18198,"18198","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18199,"18199","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18200,"18200","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18201,"18201","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18202,"18202","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18203,"18203","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18204,"18204","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18206,"18206","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18209,"18209","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18210,"18210","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18211,"18211","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18212,"18212","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18213,"18213","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18214,"18214","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18216,"18216","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18217,"18217","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18218,"18218","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18219,"18219","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18220,"18220","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18221,"18221","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18222,"18222","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18223,"18223","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18224,"18224","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18225,"18225","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18226,"18226","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18228,"18228","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18229,"18229","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18230,"18230","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18231,"18231","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18232,"18232","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18233,"18233","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18234,"18234","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18235,"18235","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18236,"18236","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18237,"18237","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18238,"18238","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+18239,"18239","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+2210,"2210","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+2517,"2517","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1005,"1005","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1047,"1047","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1121,"1121","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1123,"1123","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11293,"11293","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11316,"11316","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11321,"11321","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11322,"11322","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11327,"11327","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11328,"11328","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11340,"11340","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11345,"11345","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11346,"11346","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11398,"11398","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11428,"11428","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11433,"11433","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11482,"11482","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11486,"11486","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11489,"11489","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1195,"1195","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1275,"1275","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+129,"129","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1925,"1925","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1959,"1959","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6976,"6976","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7095,"7095","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7098,"7098","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7099,"7099","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+828,"828","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+843,"843","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+850,"850","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+859,"859","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+962,"962","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+981,"981","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+716,"716","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+719,"719","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+785,"785","MayoBrainBank",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+849,"849","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+931,"931","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+937,"937","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1000,"1000","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1027,"1027","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1059,"1059","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1146,"1146","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1159,"1159","MayoBrainBank",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1258,"1258","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1282,"1282","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1934,"1934","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1938,"1938","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1953,"1953","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1957,"1957","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1958,"1958","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6915,"6915","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11241,"11241","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11292,"11292","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11326,"11326","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11332,"11332","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11342,"11342","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11432,"11432","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11458,"11458","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11475,"11475","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14549,"14549","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14552,"14552","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14553,"14553","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1010,"1010","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1015,"1015","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1019,"1019","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1029,"1029","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1034,"1034","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1036,"1036","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1045,"1045","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1046,"1046","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1052,"1052","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1058,"1058","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1078,"1078","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1085,"1085","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1089,"1089","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1098,"1098","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1103,"1103","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1104,"1104","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1105,"1105","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1114,"1114","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1119,"1119","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11249,"11249","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11253,"11253","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11254,"11254","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11255,"11255","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11258,"11258","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11259,"11259","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11263,"11263","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11264,"11264","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11265,"11265","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11266,"11266","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11267,"11267","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11271,"11271","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11275,"11275","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11276,"11276","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11279,"11279","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11281,"11281","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11285,"11285","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11287,"11287","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11288,"11288","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1129,"1129","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11290,"11290","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11291,"11291","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11294,"11294","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11295,"11295","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11298,"11298","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11300,"11300","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11303,"11303","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11305,"11305","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11306,"11306","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11307,"11307","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11309,"11309","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11312,"11312","BannerSun",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11313,"11313","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11314,"11314","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11317,"11317","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11319,"11319","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11320,"11320","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11323,"11323","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11325,"11325","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11329,"11329","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11330,"11330","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11331,"11331","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11333,"11333","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11334,"11334","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11337,"11337","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11338,"11338","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11341,"11341","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11344,"11344","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11349,"11349","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11353,"11353","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11355,"11355","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11357,"11357","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11358,"11358","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1137,"1137","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11370,"11370","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11371,"11371","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11372,"11372","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11374,"11374","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11377,"11377","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11381,"11381","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11383,"11383","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11385,"11385","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11389,"11389","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11391,"11391","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11393,"11393","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11394,"11394","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11395,"11395","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11396,"11396","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11397,"11397","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11399,"11399","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11400,"11400","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11402,"11402","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11403,"11403","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11404,"11404","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11408,"11408","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11410,"11410","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11412,"11412","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11417,"11417","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11422,"11422","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11423,"11423","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11424,"11424","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11425,"11425","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11426,"11426","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11427,"11427","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11429,"11429","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11430,"11430","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11431,"11431","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11440,"11440","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11443,"11443","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11445,"11445","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11447,"11447","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11448,"11448","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11449,"11449","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11452,"11452","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11456,"11456","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11457,"11457","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11460,"11460","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11463,"11463","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11464,"11464","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11465,"11465","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11468,"11468","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11469,"11469","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11470,"11470","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11471,"11471","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11472,"11472","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11474,"11474","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11476,"11476","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11480,"11480","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11481,"11481","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11483,"11483","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11485,"11485","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11491,"11491","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11492,"11492","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11493,"11493","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11494,"11494","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11495,"11495","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11497,"11497","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11498,"11498","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11499,"11499","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11500,"11500","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11502,"11502","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11505,"11505","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11506,"11506","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11507,"11507","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1166,"1166","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1172,"1172","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1183,"1183","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1200,"1200","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1214,"1214","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1239,"1239","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1271,"1271","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1302,"1302","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+134,"134","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+135,"135","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+141,"141","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+142,"142","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+149,"149","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1919,"1919","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1923,"1923","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1924,"1924","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1926,"1926","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1929,"1929","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1931,"1931","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1932,"1932","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1933,"1933","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1935,"1935","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1936,"1936","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1937,"1937","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1940,"1940","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1941,"1941","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1942,"1942","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1943,"1943","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1944,"1944","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1945,"1945","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1950,"1950","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1951,"1951","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1952,"1952","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1955,"1955","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1956,"1956","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1960,"1960","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1963,"1963","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1964,"1964","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6810,"6810","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6819,"6819","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6821,"6821","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6863,"6863","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6870,"6870","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6872,"6872","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6880,"6880","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6894,"6894","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6913,"6913","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6914,"6914","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6925,"6925","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6929,"6929","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+6952,"6952","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7000,"7000","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7015,"7015","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+7016,"7016","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+731,"731","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+732,"732","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+736,"736","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+742,"742","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+744,"744","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+746,"746","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+751,"751","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+766,"766","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+775,"775","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+777,"777","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+783,"783","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+786,"786","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+787,"787","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+791,"791","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+797,"797","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+812,"812","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+813,"813","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+816,"816","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+834,"834","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+851,"851","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+871,"871","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+886,"886","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+892,"892","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+894,"894","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+896,"896","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+933,"933","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+946,"946","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+948,"948","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+952,"952","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+966,"966","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+976,"976","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+991,"991","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+11402,"11402","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+816,"816","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11306,"11306","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+141,"141","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11249,"11249","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+812,"812","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6915,"6915","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1214,"1214","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1159,"1159","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11428,"11428","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11313,"11313","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+834,"834","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6913,"6913","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11292,"11292","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11298,"11298","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1944,"1944","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1200,"1200","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11267,"11267","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+976,"976","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11319,"11319","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+828,"828","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11381,"11381","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11343,"11343","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1047,"1047","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+742,"742","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11447,"11447","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11502,"11502","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11276,"11276","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+786,"786","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+952,"952","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1929,"1929","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11493,"11493","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11499,"11499","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1005,"1005","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11329,"11329","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11317,"11317","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+129,"129","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11255,"11255","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1089,"1089","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11253,"11253","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1036,"1036","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11295,"11295","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1937,"1937","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1923,"1923","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11460,"11460","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11491,"11491","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1027,"1027","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11449,"11449","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+134,"134","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6870,"6870","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11396,"11396","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7000,"7000","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11398,"11398","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11327,"11327","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+777,"777","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11316,"11316","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11485,"11485","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+766,"766","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6894,"6894","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11266,"11266","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11264,"11264","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11470,"11470","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11432,"11432","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11474,"11474","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6976,"6976","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11505,"11505","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11422,"11422","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1275,"1275","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11427,"11427","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+849,"849","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+896,"896","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11498,"11498","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11400,"11400","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11332,"11332","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11386,"11386","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11383,"11383","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1942,"1942","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+991,"991","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11337,"11337","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1015,"1015","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1000,"1000","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6952,"6952","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1964,"1964","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11469,"11469","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11481,"11481","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11339,"11339","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11482,"11482","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11322,"11322","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+719,"719","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11288,"11288","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+744,"744","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11374,"11374","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11307,"11307","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11410,"11410","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1926,"1926","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11300,"11300","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+933,"933","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11372,"11372","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1963,"1963","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+962,"962","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+937,"937","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1302,"1302","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11475,"11475","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11480,"11480","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11389,"11389","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11507,"11507","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11385,"11385","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11311,"11311","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1166,"1166","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11281,"11281","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11431,"11431","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11271,"11271","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11458,"11458","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11325,"11325","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11393,"11393","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11263,"11263","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1945,"1945","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11486,"11486","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+142,"142","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+948,"948","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11463,"11463","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11426,"11426","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11429,"11429","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+813,"813","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+775,"775","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11345,"11345","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6929,"6929","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11285,"11285","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11443,"11443","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11430,"11430","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11344,"11344","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1121,"1121","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1938,"1938","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11477,"11477","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1129,"1129","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1105,"1105","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11355,"11355","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+783,"783","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11353,"11353","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11287,"11287","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1052,"1052","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11346,"11346","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6880,"6880","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11241,"11241","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11425,"11425","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11305,"11305","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+843,"843","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7015,"7015","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11468,"11468","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+135,"135","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+731,"731","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7016,"7016","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+801,"801","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1059,"1059","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1959,"1959","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1956,"1956","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11408,"11408","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1924,"1924","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1271,"1271","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7098,"7098","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11309,"11309","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+732,"732","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1078,"1078","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11290,"11290","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1950,"1950","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1098,"1098","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11424,"11424","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11471,"11471","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1919,"1919","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1936,"1936","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11448,"11448","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11423,"11423","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+14549,"14549","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11452,"11452","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1058,"1058","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11303,"11303","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11358,"11358","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1933,"1933","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11371,"11371","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11394,"11394","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1282,"1282","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11294,"11294","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11391,"11391","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1119,"1119","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11404,"11404","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1203,"1203","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11289,"11289","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1957,"1957","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11506,"11506","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11412,"11412","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11334,"11334","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11483,"11483","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1934,"1934","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11395,"11395","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11259,"11259","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1239,"1239","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+14553,"14553","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11326,"11326","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+716,"716","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1085,"1085","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6863,"6863","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+894,"894","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6914,"6914","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1034,"1034","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7095,"7095","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6925,"6925","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+966,"966","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1146,"1146","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6819,"6819","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1103,"1103","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11377,"11377","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1104,"1104","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1114,"1114","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1943,"1943","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1955,"1955","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1183,"1183","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1960,"1960","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1940,"1940","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11476,"11476","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1941,"1941","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11331,"11331","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11456,"11456","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11489,"11489","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7099,"7099","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+791,"791","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11494,"11494","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1953,"1953","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1925,"1925","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11440,"11440","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1258,"1258","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+14552,"14552","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1958,"1958","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11320,"11320","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11323,"11323","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6810,"6810","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+746,"746","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11370,"11370","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1010,"1010","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11349,"11349","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11457,"11457","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11338,"11338","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1931,"1931","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11314,"11314","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11472,"11472","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11342,"11342","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11492,"11492","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11500,"11500","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+850,"850","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1029,"1029","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+785,"785","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+981,"981","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+736,"736","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1019,"1019","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1046,"1046","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11291,"11291","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11366,"11366","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+797,"797","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+931,"931","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+751,"751","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1045,"1045","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1137,"1137","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+787,"787","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11254,"11254","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11399,"11399","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11279,"11279","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11495,"11495","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11328,"11328","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+859,"859","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+886,"886","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11265,"11265","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11403,"11403","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6872,"6872","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11465,"11465","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11340,"11340","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+946,"946","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1172,"1172","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11258,"11258","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11497,"11497","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11275,"11275","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+871,"871","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1935,"1935","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11445,"11445","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11293,"11293","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11417,"11417","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1952,"1952","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+851,"851","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1195,"1195","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11433,"11433","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11397,"11397","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11312,"11312","SNPs",NA,"brain","cerebellar cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1932,"1932","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11464,"11464","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11333,"11333","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11321,"11321","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11261,"11261","SNPs",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+149,"149","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+6821,"6821","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1123,"1123","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1951,"1951","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11330,"11330","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11357,"11357","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11341,"11341","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+892,"892","SNPs",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+7095,"b1_001",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1019,"b1_007",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1137,"b1_014",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1036,"b1_015",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1010,"b1_016",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+871,"b1_017",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+933,"b1_025",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+787,"b1_028",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+948,"b1_036",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1169,"b1_038",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1052,"b1_040",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1203,"b1_047",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1078,"b1_051",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+786,"b1_055",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1166,"b1_061",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1129,"b1_063",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+129,"b1_065",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+894,"b1_070",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+127,"b1_071",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6894,"b1_081",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6863,"b1_090",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11255,"b1_091",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6870,"b1_093",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11295,"b1_094",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11412,"b1_100",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11306,"b1_120",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11445,"b1_121",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11489,"b1_124",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11438,"b1_129",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11249,"b1_133",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1964,"b1_135",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1919,"b1_140",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1923,"b1_141",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1940,"b1_147",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1943,"b1_149",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11374,"b1_164",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1935,"b1_167",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11287,"b1_184",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11371,"b1_190",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1955,"b1_198",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+7098,"b2_002",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1103,"b2_008",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1034,"b2_018",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1089,"b2_019",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+775,"b2_024",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+896,"b2_029",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+976,"b2_045",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+797,"b2_048",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+135,"b2_050",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1085,"b2_052",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+134,"b2_053",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+132,"b2_057",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1121,"b2_064",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+777,"b2_066",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1104,"b2_073",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+850,"b2_077",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+981,"b2_078",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6925,"b2_085",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6914,"b2_092",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6880,"b2_098",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11267,"b2_104",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11448,"b2_105",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11281,"b2_111",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11271,"b2_112",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11443,"b2_114",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11298,"b2_117",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1924,"b2_142",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1929,"b2_143",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1931,"b2_146",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1275,"b2_153",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1183,"b2_157",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11402,"b2_163",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11408,"b2_173",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11456,"b2_176",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11492,"b2_177",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11502,"b2_180",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11370,"b2_181",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11349,"b2_185",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11497,"b2_191",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1119,"b2_194",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+7099,"b3_003",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1926,"b3_004",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+844,"b3_011",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1098,"b3_022",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+742,"b3_023",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+141,"b3_030",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+886,"b3_035",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1114,"b3_041",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+834,"b3_042",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1046,"b3_044",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+991,"b3_049",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+812,"b3_056",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1239,"b3_069",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+828,"b3_076",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1123,"b3_079",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6821,"b3_084",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+7000,"b3_088",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6872,"b3_096",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+7016,"b3_097",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11276,"b3_099",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11495,"b3_107",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11383,"b3_110",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11307,"b3_118",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11449,"b3_119",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11500,"b3_128",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11506,"b3_132",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1952,"b3_136",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1933,"b3_146",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1941,"b3_148",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+859,"b3_152",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11300,"b3_159",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11460,"b3_162",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11259,"b3_165",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11279,"b3_166",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11355,"b3_168",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1937,"b3_170",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11404,"b3_172",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11254,"b3_188",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1942,"b3_189",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+791,"b3_192",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1936,"b4_005",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+966,"b4_006",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1105,"b4_012",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+731,"b4_020",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1045,"b4_021",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+751,"b4_026",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+946,"b4_031",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+142,"b4_032",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+766,"b4_033",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+843,"b4_034",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+783,"b4_043",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+813,"b4_046",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1172,"b4_058",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1015,"b4_072",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1195,"b4_074",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1047,"b4_080",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6929,"b4_086",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6952,"b4_087",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6913,"b4_089",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6976,"b4_095",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11452,"b4_108",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11305,"b4_109",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11503,"b4_122",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11275,"b4_126",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11447,"b4_130",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11493,"b4_131",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1951,"b4_134",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1932,"b4_145",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1945,"b4_151",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1214,"b4_154",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11403,"b4_169",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11253,"b4_171",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11377,"b4_174",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11494,"b4_178",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11309,"b4_182",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11505,"b4_186",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11353,"b4_187",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+744,"b4_193",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+149,"b4_194",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1956,"b4_199",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1302,"b5_009",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+746,"b5_010",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1005,"b5_013",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+952,"b5_027",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+962,"b5_037",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1271,"b5_039",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1029,"b5_054",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+736,"b5_059",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1058,"b5_060",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+851,"b5_062",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1200,"b5_067",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+892,"b5_068",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+816,"b5_075",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6810,"b5_082",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+6819,"b5_083",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11440,"b5_101",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11410,"b5_102",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11372,"b5_103",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11498,"b5_106",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11358,"b5_113",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11285,"b5_115",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11357,"b5_116",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11457,"b5_123",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11366,"b5_125",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11258,"b5_127",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1959,"b5_137",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1960,"b5_138",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1963,"b5_139",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1944,"b5_150",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+7015,"b5_155",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1925,"b5_156",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11491,"b5_158",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1930,"b5_160",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11381,"b5_161",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11507,"b5_175",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11499,"b5_177",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+11303,"b5_183",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+732,"b5_195",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+1950,"b5_197",NA,NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_02","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_24","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_46","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_01","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_23","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b1_45","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_02","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_24","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_46","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_01","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_23","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b2_45","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_02","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_24","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_46","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_01","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_23","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b3_45","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_02","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_24","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_46","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_01","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_23","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b4_45","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_02","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_24","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_45","EmoryGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_01","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_23","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+NA,"b5_44","MayoGlobalInternalStandard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"label free mass spectrometry","false",NA,NA
+18202,"18202_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18213,"18213_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18214,"18214_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18221,"18221_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18225,"18225_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18232,"18232_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18235,"18235_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18237,"18237_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+12308,"12308_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18198,"18198_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18199,"18199_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18203,"18203_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18204,"18204_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18209,"18209_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18222,"18222_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+2517,"2517_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18212,"18212_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18230,"18230_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18231,"18231_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18234,"18234_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18236,"18236_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18201,"18201_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18210,"18210_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18239,"18239_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+2210,"2210_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+12306,"12306_TCX","BannerSun",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18218,"18218_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18223,"18223_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18224,"18224_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18233,"18233_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18238,"18238_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18206,"18206_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18216,"18216_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18219,"18219_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18226,"18226_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18229,"18229_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18200,"18200_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18211,"18211_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18217,"18217_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18220,"18220_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+18228,"18228_TCX","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,"bulk cell",NA,NA,"rnaSeq","false",NA,NA
+132,"132","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11438,"11438","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11503,"11503","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+725,"725","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11388,"11388","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11387,"11387","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+127,"127","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+844,"844","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1930,"1930","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+11416,"11416","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+1169,"1169","SNPs",NA,"brain",NA,NA,NA,NA,NA,NA,NA,NA,"snpArray","false",NA,NA
+14547,"14547","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14550,"14550","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14555,"14555","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14560,"14560","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14556,"14556","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14562,"14562","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14543,"14543","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14551,"14551","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14558,"14558","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14557,"14557","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14546,"14546","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+14548,"14548","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1948,"1948","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1954,"1954","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
+1947,"1947","MayoBrainBank",NA,"brain","temporal cortex",NA,NA,NA,NA,NA,NA,NA,"wholeGenomeSeq","false",NA,NA
