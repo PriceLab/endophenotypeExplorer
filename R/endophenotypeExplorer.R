@@ -124,15 +124,21 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
              })
            },
 
-        rosmap.patient.table = function(patientID){
+        get.rosmap.patient.table = function(patientID){
+            if(is.na(patientID))
+               return(private$tbl.clinical.rosmap)
             subset(private$tbl.clinical.rosmap, individualID==patientID)
             },
 
-        sinai.patient.table = function(patientID){
+        get.sinai.patient.table = function(patientID){
+            if(is.na(patientID))
+               return(private$tbl.clinical.sinai)
             subset(private$tbl.clinical.sinai, individualID==patientID)
             },
 
-        mayo.patient.table = function(patientID){
+        get.mayo.patient.table = function(patientID){
+            if(is.na(patientID))
+               return(private$tbl.clinical.mayo)
             subset(private$tbl.clinical.mayo, individualID==patientID)
             },
 
@@ -157,8 +163,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         standardizeMayoPatientTable = function(tbl){
-            coi <- c("individualID", "individualIdSource", "sex", "ethnicity", "apoeGenotype",
-                     "Braak", "CERAD", "pmi", "ageDeath")
+           tbl$ageDeath <- as.numeric(sub("+", "", tbl$ageDeath, fixed=TRUE))
+           coi <- c("individualID", "individualIdSource", "sex", "ethnicity", "apoeGenotype",
+                    "Braak", "CERAD", "pmi", "ageDeath")
            tbl.0 <- tbl[, coi]
            tbl.0$cogdx <- NA
            standard.names <- c("patientID", "study", "sex","ethnicity","apoeGenotype","braak","cerad",
@@ -168,6 +175,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         standardizeRosmapPatientTable = function(tbl){
+           tbl$age_death <- as.numeric(sub("+", "", tbl$age_death, fixed=TRUE))
            coi <- c("individualID", "Study", "msex", "race", "apoe_genotype", "braaksc", "ceradsc",
                     "cogdx", "pmi", "age_death")
            tbl.0 <- tbl[, coi]
@@ -178,6 +186,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         standardizeSinaiPatientTable = function(tbl){
+           tbl$ageDeath <- as.numeric(sub("+", "", tbl$ageDeath, fixed=TRUE))
            coi <- c("individualID","individualIdSource","sex","ethnicity","apoeGenotype",
                     "Braak","CERAD","pmi","ageDeath")
            tbl.0 <- tbl[, coi]

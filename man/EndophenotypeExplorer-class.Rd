@@ -41,9 +41,9 @@ EndophenotypeExplorer
 \item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
 \item \href{#method-getClinicalTable}{\code{EndophenotypeExplorer$getClinicalTable()}}
 \item \href{#method-identifyTargetGeneChromosome}{\code{EndophenotypeExplorer$identifyTargetGeneChromosome()}}
-\item \href{#method-rosmap.patient.table}{\code{EndophenotypeExplorer$rosmap.patient.table()}}
-\item \href{#method-sinai.patient.table}{\code{EndophenotypeExplorer$sinai.patient.table()}}
-\item \href{#method-mayo.patient.table}{\code{EndophenotypeExplorer$mayo.patient.table()}}
+\item \href{#method-get.rosmap.patient.table}{\code{EndophenotypeExplorer$get.rosmap.patient.table()}}
+\item \href{#method-get.sinai.patient.table}{\code{EndophenotypeExplorer$get.sinai.patient.table()}}
+\item \href{#method-get.mayo.patient.table}{\code{EndophenotypeExplorer$get.mayo.patient.table()}}
 \item \href{#method-vcfSampleID.to.clinicalTable}{\code{EndophenotypeExplorer$vcfSampleID.to.clinicalTable()}}
 \item \href{#method-standardizeMayoPatientTable}{\code{EndophenotypeExplorer$standardizeMayoPatientTable()}}
 \item \href{#method-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
@@ -148,29 +148,29 @@ A new `EndophenotypeExplorer` object.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rosmap.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-rosmap.patient.table}{}}}
-\subsection{Method \code{rosmap.patient.table()}}{
+\if{html}{\out{<a id="method-get.rosmap.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-get.rosmap.patient.table}{}}}
+\subsection{Method \code{get.rosmap.patient.table()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$rosmap.patient.table(patientID)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rosmap.patient.table(patientID)}\if{html}{\out{</div>}}
 }
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sinai.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-sinai.patient.table}{}}}
-\subsection{Method \code{sinai.patient.table()}}{
+\if{html}{\out{<a id="method-get.sinai.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-get.sinai.patient.table}{}}}
+\subsection{Method \code{get.sinai.patient.table()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$sinai.patient.table(patientID)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.sinai.patient.table(patientID)}\if{html}{\out{</div>}}
 }
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mayo.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-mayo.patient.table}{}}}
-\subsection{Method \code{mayo.patient.table()}}{
+\if{html}{\out{<a id="method-get.mayo.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-get.mayo.patient.table}{}}}
+\subsection{Method \code{get.mayo.patient.table()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$mayo.patient.table(patientID)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.mayo.patient.table(patientID)}\if{html}{\out{</div>}}
 }
 
 }
