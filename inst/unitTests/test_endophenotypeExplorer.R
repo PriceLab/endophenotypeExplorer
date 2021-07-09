@@ -66,6 +66,10 @@ test_vcf.sampleID.to.clinicalTable <- function()
    checkEquals(tbl.clinical$braaksc, 4)
    checkEquals(tbl.clinical$ceradsc, 2)
 
+   problem.sampleID <- "71729"
+   tbl.clinical <- etx$vcfSampleID.to.clinicalTable(problem.sampleID)
+   checkEquals(nrow(tbl.clinical), 0)
+
 } # test_vcf.sampleID.to.clinicalTable
 #----------------------------------------------------------------------------------------------------
 test_getPatientTables <- function()
