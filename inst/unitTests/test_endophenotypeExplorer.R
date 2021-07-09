@@ -4,6 +4,7 @@ library(EndophenotypeExplorer)
 runTests <- function()
 {
     test_ctor()
+    test_readRemoteVCF()
     test_getGenoMatrix()
     test_mapSampleIdToPatientAndCohort()
     test_getPatientTables()
@@ -21,6 +22,19 @@ test_ctor <- function()
    checkEquals(etx$getVcfUrl(), expected)
 
 } # test_ctor
+#----------------------------------------------------------------------------------------------------
+test_readRemoteVCF <- function()
+{
+   message(sprintf("--- test_readRemoteVCF"))
+
+   require(VariantAnnotation)
+   roi <- GRanges(seqnames="2", IRanges(start=127084188, end=127084203))
+   url <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
+
+   x <- readVcf(url, "hg19", roi)
+   checkEquals(dim(geno(x)$GT), c(2, 1894))
+
+} # test_readRemoteVCF
 #----------------------------------------------------------------------------------------------------
 test_getGenoMatrix <- function()
 {
