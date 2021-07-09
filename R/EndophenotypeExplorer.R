@@ -25,6 +25,7 @@
 #'
 #' @export
 #'
+#----------------------------------------------------------------------------------------------------
 EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
 
     #--------------------------------------------------------------------------------
@@ -103,11 +104,15 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                                       sep=",", header=TRUE, as.is=TRUE)
             private$tbl.clinical.mayo <- read.table(file.path(dir, "MayoRNAseq_individual_metadata.csv"),
                                                       sep=",", header=TRUE, as.is=TRUE)
-            dir <- "~/github/endophenotypeExplorer/inst/extdata/idMapping"
+            dir <- system.file(package="EndophenotypeExplorer", "extdata", "idMapping")
                # the crucial sample-to-patient mapping
                # this was difficult to obtain.  see the mapToPatientID function in
                # ~/github/TrenaProjectAD/explore/ampad.eQTLS/ldlr.R
                # todo: move this code to a prep directory in this package
+            message(sprintf("--- about to load id mapping file"))
+            message(sprintf("    dir: %s", dir))
+            full.path <- file.path(dir, "tbl.vcfToPatientIDs.RData")
+            message(sprintf("    full.path: %s", full.path))
             private$tbl.idMap <- get(load(file.path(dir, "tbl.vcfToPatientIDs.RData")))
             },
 
@@ -143,8 +148,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         vcfSampleID.to.clinicalTable = function(sampleID){
+            if(!sampleID %in% private$tbl.idMap$vcf)
+                return(data.frame())
             tbl <- subset(private$tbl.idMap, vcf==sampleID)
-            stopifnot(nrow(tbl) == 1)
             patientID <- tbl$patient
             cohort <- tbl$cohort
             tbl.patient <- switch(cohort,
