@@ -30,6 +30,8 @@ test_readRemoteVCF <- function()
    message(sprintf("--- test_readRemoteVCF"))
 
    require(VariantAnnotation)
+   message(sprintf("packageVersion('VariantAnnotation': %s')", packageVersion("VariantAnnotation")))
+
    roi <- GRanges(seqnames="2", IRanges(start=127084188, end=127084203))
    url <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
    x <- readVcf(url, "hg19", roi)
@@ -225,6 +227,9 @@ exploreALFA <- function(rsid="rs372089992")
 #----------------------------------------------------------------------------------------------------
 test_getAggregatedAlleleFrequencies <- function()
 {
+
+    message(sprintf("--- test_getAggregatedAlleleFrequencies"))
+
         # these are all associated with the BIN1 GWAS landmark snp according to
         # Posthuma Genome-wide meta-analysis identifies new loci and functional pathways
         # influencing  Alzheimer's disease risk
