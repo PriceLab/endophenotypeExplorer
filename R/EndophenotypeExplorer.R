@@ -8,6 +8,8 @@
 #' @import VariantAnnotation
 #' @import GenomicRanges
 #' @importFrom rtracklayer liftOver import.chain
+#' @import httr
+#' @import jsonlite
 #'
 #' @title EndophenotypeExplorer
 #------------------------------------------------------------------------------------------------------------------------
@@ -41,7 +43,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                    tbl.biospecimen.sinai=NULL,
                    tbl.clinical.rosmap=NULL,
                    tbl.clinical.sinai=NULL,
-                   tbl.clinical.mayo=NULL
+                   tbl.clinical.mayo=NULL,
+                   tbl.gwas.38=NULL,
+                   tbl.gwas.38.associated=NULL,
+                   verbose=NULL
                    ),
 
     #--------------------------------------------------------------------------------
@@ -54,12 +59,14 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' @param vcf.url https endpoint from serving indexed vcf files
       #' @return A new `EndophenotypeExplorer` object.
 
-        initialize = function(target.gene, default.genome){
+        initialize = function(target.gene, default.genome, verbose=FALSE){
             private$target.gene <- target.gene
             private$default.genome <- default.genome
             private$chromosome <- self$identifyTargetGeneChromosome(target.gene)
             private$vcf.url <- self$setupVcfURL(private$chromosome)
+            private$verbose <- verbose
             self$setupClinicalData()
+            self$setupGWASData()
             },
 
         setupVcfURL = function(chromosome){
@@ -109,16 +116,29 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                # this was difficult to obtain.  see the mapToPatientID function in
                # ~/github/TrenaProjectAD/explore/ampad.eQTLS/ldlr.R
                # todo: move this code to a prep directory in this package
-            message(sprintf("--- about to load id mapping file"))
-            message(sprintf("    dir: %s", dir))
+            if(private$verbose) message(sprintf("--- about to load id mapping file"))
+            if(private$verbose) message(sprintf("    dir: %s", dir))
             full.path <- file.path(dir, "tbl.vcfToPatientIDs.RData")
-            message(sprintf("    full.path: %s", full.path))
+            if(private$verbose) message(sprintf("    full.path: %s", full.path))
             private$tbl.idMap <- get(load(file.path(dir, "tbl.vcfToPatientIDs.RData")))
             },
 
         getClinicalTable = function(){
             private$tbl.clinical
             },
+
+        setupGWASData = function(){
+           dir <- system.file(package="EndophenotypeExplorer", "extdata", "gwas")
+           full.path <- file.path(dir, "tbl.posthuma-38-loci-curated.RData")
+           private$tbl.gwas.38 <- get(load(full.path))
+           full.path <- file.path(dir, "tbl.posthuma-38-geneAssociations-curated-3828x12.RData")
+           private$tbl.gwas.38.associated <- get(load(full.path))
+           },
+
+        getGWASTables = function(){
+           list(gwas.38 = private$tbl.gwas.38,
+                gwas.38.assoc = private$tbl.gwas.38.associated)
+           },
 
         identifyTargetGeneChromosome = function(target.gene){
            suppressMessages({
@@ -201,7 +221,52 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                 "pmi", "ageAtDeath", "cogdx")
            colnames(tbl.0) <- standard.names
            tbl.0
-           }
+           },
+
+        getAggregatedAlleleFrequencies = function(rsid){
+
+            uri <- sprintf("https://api.ncbi.nlm.nih.gov/variation/v0/refsnp/%s/frequency",
+                  sub("rs", "", rsid))
+            response <- GET(uri)
+            suppressMessages(x <- fromJSON(httr::content(response, as="text"))$results)
+            ref <- x[[1]]$ref
+            counts.list <- x[[1]]$counts
+
+            population.codes <- names(counts.list[[1]][[1]])
+            tbls <- list()
+            for(pop in population.codes){
+                pop.record <- counts.list[[1]][[1]][[pop]]
+                tbl <- data.frame(population=pop, ref=ref, rsid=rsid, stringsAsFactors=FALSE)
+                alleles <- names(pop.record)
+                counts <- as.integer(pop.record)
+                tbl[1, alleles] <- counts
+                tbls[[pop]] <- tbl
+            }
+            tbl.alfa <- do.call(rbind, tbls)
+            rownames(tbl.alfa) <- NULL
+
+            f <- system.file(package="EndophenotypeExplorer", "extdata", "gwas", "populationCodes.tsv")
+            stopifnot(file.exists(f))
+            tbl.popCodes <- read.table(f, header=TRUE, as.is=TRUE, sep="\t")
+
+            tbl.alfa <- merge(tbl.alfa, tbl.popCodes, by.x="population", by.y="biosampleID")
+            allele.colnames <- setdiff(colnames(tbl.alfa), c("population", "ref", "name", "rsid"))
+            tbl.alfa <- tbl.alfa[, c("rsid", "ref", "name", allele.colnames)]
+            deleter <- grep("population", colnames(tbl.alfa))
+            if(length(deleter) == 1)
+                tbl.alfa <- tbl.alfa[, -(deleter)]
+            coi <- c("rsid", "ref", "name", allele.colnames)
+            tbl.alfa <- tbl.alfa[, coi]
+            colnames(tbl.alfa)[grep("name", colnames(tbl.alfa))] <- "population"
+            tbl.alfa$total <- rowSums(tbl.alfa[, allele.colnames])
+
+            for(allele in allele.colnames){
+                allele.freq <- 100 * tbl.alfa[[allele]]/tbl.alfa$total
+                new.colname <- sprintf("%s.freq", allele)
+                tbl.alfa[[new.colname]] <- allele.freq
+            } # for allele
+           tbl.alfa
+           } # getAggregatedAlleleFrequencies
 
        ) # public
 

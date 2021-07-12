@@ -40,6 +40,8 @@ EndophenotypeExplorer
 \item \href{#method-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
 \item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
 \item \href{#method-getClinicalTable}{\code{EndophenotypeExplorer$getClinicalTable()}}
+\item \href{#method-setupGWASData}{\code{EndophenotypeExplorer$setupGWASData()}}
+\item \href{#method-getGWASTables}{\code{EndophenotypeExplorer$getGWASTables()}}
 \item \href{#method-identifyTargetGeneChromosome}{\code{EndophenotypeExplorer$identifyTargetGeneChromosome()}}
 \item \href{#method-get.rosmap.patient.table}{\code{EndophenotypeExplorer$get.rosmap.patient.table()}}
 \item \href{#method-get.sinai.patient.table}{\code{EndophenotypeExplorer$get.sinai.patient.table()}}
@@ -48,6 +50,7 @@ EndophenotypeExplorer
 \item \href{#method-standardizeMayoPatientTable}{\code{EndophenotypeExplorer$standardizeMayoPatientTable()}}
 \item \href{#method-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
 \item \href{#method-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
+\item \href{#method-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -57,7 +60,7 @@ EndophenotypeExplorer
 \subsection{Method \code{new()}}{
 Create a new EndophenotypeExplorer object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(target.gene, default.genome)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(target.gene, default.genome, verbose = FALSE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -139,6 +142,24 @@ A new `EndophenotypeExplorer` object.
 
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-setupGWASData"></a>}}
+\if{latex}{\out{\hypertarget{method-setupGWASData}{}}}
+\subsection{Method \code{setupGWASData()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupGWASData()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getGWASTables"></a>}}
+\if{latex}{\out{\hypertarget{method-getGWASTables}{}}}
+\subsection{Method \code{getGWASTables()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getGWASTables()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-identifyTargetGeneChromosome"></a>}}
 \if{latex}{\out{\hypertarget{method-identifyTargetGeneChromosome}{}}}
 \subsection{Method \code{identifyTargetGeneChromosome()}}{
@@ -207,6 +228,15 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{standardizeSinaiPatientTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$standardizeSinaiPatientTable(tbl)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getAggregatedAlleleFrequencies"></a>}}
+\if{latex}{\out{\hypertarget{method-getAggregatedAlleleFrequencies}{}}}
+\subsection{Method \code{getAggregatedAlleleFrequencies()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getAggregatedAlleleFrequencies(rsid)}\if{html}{\out{</div>}}
 }
 
 }
