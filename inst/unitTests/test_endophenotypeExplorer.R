@@ -25,17 +25,18 @@ test_ctor <- function()
 
 } # test_ctor
 #----------------------------------------------------------------------------------------------------
-test_readRemoteVCF <- function()
+test_readRemoteVCF <- function(verbose=FALSE)
 {
    message(sprintf("--- test_readRemoteVCF"))
 
    require(VariantAnnotation)
-   message(sprintf("packageVersion('VariantAnnotation': %s')", packageVersion("VariantAnnotation")))
+   if(verbose) message(sprintf("packageVersion('VariantAnnotation': %s')", packageVersion("VariantAnnotation")))
 
    roi <- GRanges(seqnames="2", IRanges(start=127084188, end=127084203))
    url <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
    x <- readVcf(url, "hg19", roi)
 
+   if(verbose) message(sprintf("size: %d", length(x)))
    checkEquals(dim(geno(x)$GT), c(2, 1894))
 
 } # test_readRemoteVCF
