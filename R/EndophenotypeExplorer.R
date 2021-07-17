@@ -3,6 +3,9 @@
 #' @importFrom RPostgreSQL dbConnect dbListTables dbGetQuery dbListConnections dbDisconnect
 #' @import RPostgreSQL
 #' @import org.Hs.eg.db
+#' @importFrom BSgenome snpsById snpsByOverlaps
+#' @import SNPlocs.Hsapiens.dbSNP144.GRCh37
+#' @import SNPlocs.Hsapiens.dbSNP151.GRCh38
 #' @import TxDb.Hsapiens.UCSC.hg38.knownGene
 #' @import R6
 #' @import VariantAnnotation
@@ -16,10 +19,6 @@
 #' @name EndophenotypeExplorer-class
 #' @rdname EndophenotypeExplorer-class
 #' @aliases EndophenotypeExplorer
-#'
-# library(R6)
-# library(VariantAnnotation)
-# library(RPostgreSQL)
 #----------------------------------------------------------------------------------------------------
 #' R6 Class for exploring associations between eQTLs, variants, gene expression and gene regulation
 #'
@@ -71,7 +70,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
 
         setupVcfURL = function(chromosome){
            vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
-           vcf.directory <- "NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants"
+           vcf.directory <- "NIA-1898"
            sprintf("%s/%s/%s.vcf.gz", vcf.base.url, vcf.directory, chromosome)
            },
 
@@ -83,12 +82,40 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             roi <- GRanges(seqnames=chrom, IRanges(start=start, end=end))
             x <- readVcf(private$vcf.url, private$default.genome, roi)
             stopifnot("GT" %in% names(geno(x)))
-            invisible(geno(x)$GT)
+            mtx <- geno(x)$GT
+            invisible(mtx)
             },
 
         getIdMap = function(){
            private$tbl.idMap
            },
+
+        locsToRSID = function(locs, genome){
+            chroms <- unlist(lapply(strsplit(locs, ":"), "[", 1))
+            loc.strings <- unlist(lapply(strsplit(locs, ":"), "[", 2))
+            locs <- as.integer(sub("_.*$", "", loc.strings))
+            snplocs <- switch(genome,
+                   "hg19" = SNPlocs.Hsapiens.dbSNP144.GRCh37,
+                   "hg38" = SNPlocs.Hsapiens.dbSNP151.GRCh38
+                   )
+            gr <- GRanges(seqnames=chroms, IRanges(start=locs, end=locs))
+            gr.snps <- snpsByOverlaps(snplocs, gr)
+            tbl.rsids <- as.data.frame(gr.snps)[, c("seqnames", "pos", "RefSNP_id")]
+            colnames(tbl.rsids)[1] <- "chrom"
+            colnames(tbl.rsids)[2] <- "loc"
+            colnames(tbl.rsids)[3] <- "rsid"
+            tbl.rsids$chrom <- as.character(tbl.rsids$chrom)
+            tbl.rsids$signature <- sprintf("%s:%s", tbl.rsids$chrom, tbl.rsids$loc)
+            sig <- sprintf("%s:%s", chroms, locs)
+            tbl.all <- data.frame(chrom=chroms, loc=locs,
+                                  signature=sig,
+                                  stringsAsFactors=FALSE)
+            tbl.new <- merge(tbl.all, tbl.rsids[, c("rsid", "signature")], by="signature", all.x=TRUE)
+            failures <- which(is.na(tbl.new$rsid))
+            length(failures)
+            tbl.new$rsid[failures] <- tbl.new$signature[failures]
+            tbl.new$rsid
+            },
 
         mapSampleIdToPatientAndCohort = function(sampleID){
            return(subset(private$tbl.idMap, vcf==sampleID))

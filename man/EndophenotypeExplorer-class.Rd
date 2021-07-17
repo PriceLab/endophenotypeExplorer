@@ -37,6 +37,7 @@ EndophenotypeExplorer
 \item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
 \item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
+\item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
 \item \href{#method-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
 \item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
 \item \href{#method-getClinicalTable}{\code{EndophenotypeExplorer$getClinicalTable()}}
@@ -111,6 +112,15 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{getIdMap()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getIdMap()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-locsToRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-locsToRSID}{}}}
+\subsection{Method \code{locsToRSID()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$locsToRSID(locs, genome)}\if{html}{\out{</div>}}
 }
 
 }

@@ -6,6 +6,7 @@ runTests <- function()
 {
     test_ctor()
     test_readRemoteVCF()
+    test_locsToRSID()
     test_getGenoMatrix()
     test_mapSampleIdToPatientAndCohort()
     test_getPatientTables()
@@ -21,7 +22,7 @@ test_ctor <- function()
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
-   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
+   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr2.vcf.gz"
    checkEquals(etx$getVcfUrl(), expected)
 
 } # test_ctor
@@ -35,6 +36,7 @@ test_readRemoteVCF <- function(verbose=FALSE)
 
    roi <- GRanges(seqnames="2", IRanges(start=127084188, end=127084203))
    url <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
+   url <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr2.vcf.gz"
    x <- readVcf(url, "hg19", roi)
 
    if(verbose) message(sprintf("size: %d", length(x)))
@@ -48,11 +50,30 @@ test_getGenoMatrix <- function()
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
       # chr2:127,084,188-127,084,203: 16 base pairs around rs10200967 in bin1 5' utr
-   mtx.geno <- etx$getGenoMatrix("2", 127084188, 127084203)
-   checkEquals(dim(mtx.geno), c(2, 1894))
-   checkEquals(rownames(mtx.geno), c("2:127084193_G/A", "2:127084194_A/C"))
+   mtx.geno <- etx$getGenoMatrix("2", 127084188, 127094203)
+   checkEquals(dim(mtx.geno), c(220, 1894))
+   checkTrue(all(c("2:127084193_G/A", "2:127084194_A/C") %in% rownames(mtx.geno)))
+
 
 } # test_getGenoMatrix
+#----------------------------------------------------------------------------------------------------
+test_locsToRSID <- function()
+{
+   message(sprintf("--- test_locsToRSID"))
+   list.locs <- get(load(system.file(package="EndophenotypeExplorer", "extdata",
+                                     "chromLocs.hg19.for.rsidMapping.RData")))
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+   rsids <- etx$locsToRSID(list.locs, "hg19")
+   checkEquals(length(list.locs), length(rsids))
+   checkEquals(length(grep(":", rsids)), 69)
+
+     # though the locs are actually hg19, we should be able to make a useless hg38 conversion
+   rsids <- etx$locsToRSID(list.locs, "hg38")
+   checkEquals(length(list.locs), length(rsids))
+   checkEquals(length(grep(":", rsids)), 181)
+
+
+} # test_locsToRSID
 #----------------------------------------------------------------------------------------------------
 test_mapSampleIdToPatientAndCohort <- function()
 {
@@ -254,7 +275,8 @@ test_gwasLociFrequencies <- function()
    rsids <- unique(grep("^rs", unlist(strsplit(tbl.williams$rsid, ",")), value=TRUE))
 
    checkEquals(length(unique(rsids)), 57)
-
+   set.seed(17)
+   rsids <- rsids[sample(seq_len(57), 5)]
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    tbls <- list()
    for(rsid in rsids){
@@ -265,9 +287,10 @@ test_gwasLociFrequencies <- function()
       }
    tbl <- do.call(rbind.fill, tbls)
    dim(tbl)
+   fivenum(tbl$min.freq)
    tbl.rareEuropean <- subset(tbl, population=="European" & min.freq < 1)
    tbl.genesRareEuropean <- subset(tbl.williams, rsid %in% tbl.rareEuropean$rsid)
-   checkTrue(all(c("ABI3", "PLCG2", "APP", "CNTNAP2", "HESX1") %in% tbl.genesRareEuropean$locusOrGene))
+   checkEquals("CNTNAP2", tbl.genesRareEuropean$locusOrGene)
 
 } # test_gwasLociFrequencies
 #----------------------------------------------------------------------------------------------------
