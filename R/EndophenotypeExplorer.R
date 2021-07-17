@@ -264,9 +264,15 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                 allele.freq <- 100 * tbl.alfa[[allele]]/tbl.alfa$total
                 new.colname <- sprintf("%s.freq", allele)
                 tbl.alfa[[new.colname]] <- allele.freq
-            } # for allele
-           tbl.alfa
-           } # getAggregatedAlleleFrequencies
+                } # for allele
+            min.freqs <- unlist(lapply(seq_len(nrow(tbl.alfa)), function(r){
+                freqs <- tbl.alfa[r,grep("freq", colnames(tbl.alfa))]
+                freqs <- freqs[freqs>0]
+                min(freqs, na.rm=TRUE)
+                }))
+            tbl.alfa$min.freq <- min.freqs
+            tbl.alfa
+            } # getAggregatedAlleleFrequencies
 
        ) # public
 
