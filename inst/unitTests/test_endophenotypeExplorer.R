@@ -7,6 +7,7 @@ runTests <- function()
     test_ctor()
     test_readRemoteVCF()
     test_locsToRSID()
+    test_rsidToLocs()
     test_getGenoMatrix()
     test_mapSampleIdToPatientAndCohort()
     test_getPatientTables()
@@ -74,6 +75,39 @@ test_locsToRSID <- function()
 
 
 } # test_locsToRSID
+#----------------------------------------------------------------------------------------------------
+test_rsidToLocs <- function()
+{
+   message(sprintf("--- test_rsidToLocs"))
+
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+
+   rsid.list <- "rs4575098"
+   tbl.locs <- etx$rsidToLoc(rsid.list)
+   checkEquals(tbl.locs$chrom, "1")
+   checkEquals(tbl.locs$hg19, 161155392)
+   checkEquals(tbl.locs$hg38, 161185602)
+   checkEquals(tbl.locs$rsid, "rs4575098")
+
+   rsid.list <- c("rs114360492", "rs4351014", "rs74615166", "rs6504163", "rs9381040")
+   tbl.locs <- etx$rsidToLoc(rsid.list)
+
+   new.order <- match(rsid.list, tbl.locs$rsid)
+   tbl.locs <- tbl.locs[new.order,]
+   checkEquals(tbl.locs$rsid, rsid.list)
+   checkEquals(tbl.locs$chrom, c("7", "4", "15", "17", "6"))
+   checkEquals(tbl.locs$hg19,  c(145950029, 11027619, 64725490, 61545779, 41154650))
+   checkEquals(tbl.locs$hg38,  c(146252937, 11025995, 64433291, 63468418, 41186912))
+
+   rsid.list <- c("rs4575098", "bogus")
+   tbl.locs <- etx$rsidToLoc(rsid.list)
+   checkEquals(dim(tbl.locs), c(1, 4))
+
+   rsid.list <- c("rs4575099", "bogus")   # rs4575099 does not exist
+   tbl.locs <- etx$rsidToLoc(rsid.list)
+   checkEquals(dim(tbl.locs), c(0, 4))
+
+} #  test_rsidToLocs()
 #----------------------------------------------------------------------------------------------------
 test_mapSampleIdToPatientAndCohort <- function()
 {

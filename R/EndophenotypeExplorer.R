@@ -90,6 +90,22 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            private$tbl.idMap
            },
 
+        rsidToLoc = function(rsids){
+            rsids <- grep("^rs", rsids, value=TRUE)
+            gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
+            tbl.hg19 <- as.data.frame(gr.hg19)
+            colnames(tbl.hg19)[1] <- "chrom"
+            colnames(tbl.hg19)[2] <- "hg19"
+            colnames(tbl.hg19)[4] <- "rsid"
+            tbl.hg19$chrom <- as.character(tbl.hg19$chrom)
+            gr.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsids, ifnotfound="drop")
+            tbl.hg38 <- as.data.frame(gr.hg38)
+            colnames(tbl.hg38)[2] <- "hg38"
+            colnames(tbl.hg38)[4] <- "rsid"
+            tbl.out <- merge(tbl.hg19[, c("chrom", "hg19", "rsid")], tbl.hg38[, c("hg38", "rsid")], by="rsid")
+            tbl.out[, c("chrom", "hg19", "hg38", "rsid")]
+            },
+
         locsToRSID = function(locs, genome){
             chroms <- unlist(lapply(strsplit(locs, ":"), "[", 1))
             loc.strings <- unlist(lapply(strsplit(locs, ":"), "[", 2))
