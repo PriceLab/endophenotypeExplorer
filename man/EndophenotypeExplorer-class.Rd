@@ -53,6 +53,7 @@ EndophenotypeExplorer
 \item \href{#method-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
 \item \href{#method-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
 \item \href{#method-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
+\item \href{#method-getTissueExpression}{\code{EndophenotypeExplorer$getTissueExpression()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -257,6 +258,15 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{getAggregatedAlleleFrequencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getAggregatedAlleleFrequencies(rsid)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getTissueExpression"></a>}}
+\if{latex}{\out{\hypertarget{method-getTissueExpression}{}}}
+\subsection{Method \code{getTissueExpression()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getTissueExpression(geneSymbol, tissue)}\if{html}{\out{</div>}}
 }
 
 }

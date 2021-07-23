@@ -315,7 +315,29 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                 }))
             tbl.alfa$min.freq <- min.freqs
             tbl.alfa
-            } # getAggregatedAlleleFrequencies
+            }, # getAggregatedAlleleFrequencies
+
+        getTissueExpression = function(geneSymbol, tissue){
+           stopifnot(tolower(tissue)=="brain")
+           f <- system.file(package="EndophenotypeExplorer", "extdata", "gtex", "tissues.RData")
+           supportedTissues <- get(load(f))
+           f <- system.file(package="EndophenotypeExplorer", "extdata", "gtex", "tbl.gencode-v26-GRCh38.RData")
+           tbl.gencode <- get(load(f))
+           stopifnot(geneSymbol %in% tbl.gencode$gene_name)
+           gtex.tissues <- grep("brain", supportedTissues, ignore.case=TRUE, value=TRUE)
+           gencode.id <- subset(tbl.gencode, gene_name==geneSymbol)$gene_id[1]
+           tissues.string <- paste(gtex.tissues, collapse=",")
+           url.0 <- "https://gtexportal.org/rest/v1/expression/medianGeneExpression"
+           url.1 <- "datasetId=gtex_v8"
+           url.2 <- sprintf("gencodeId=%s", gencode.id)
+           url.3 <- sprintf("tissueSiteDetailId=%s", tissues.string)
+           url.4 <- "format=json"
+           url <- sprintf("%s?%s&%s&%s&%s", url.0, url.1, url.2, url.3, url.4)
+           x <- content(GET(url))
+           tbls <- lapply(x[[1]], as.data.frame)
+           tbl <- do.call(rbind, tbls)
+           tbl
+           }
 
        ) # public
 

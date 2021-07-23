@@ -14,6 +14,7 @@ runTests <- function()
     test_vcf.sampleID.to.clinicalTable()
     test_getAggregatedAlleleFrequencies()
     test_gwasLociFrequencies()
+    test_gtexTissueExpression()
 
 } # runTests
 #----------------------------------------------------------------------------------------------------
@@ -317,7 +318,7 @@ test_gwasLociFrequencies <- function()
       message(sprintf("--- %s", rsid))
       tbl <- etx$getAggregatedAlleleFrequencies(rsid)
       tbls[[rsid]] <- tbl
-      Sys.sleep(1)
+      Sys.sleep(2)
       }
    tbl <- do.call(rbind.fill, tbls)
    dim(tbl)
@@ -327,6 +328,20 @@ test_gwasLociFrequencies <- function()
    checkEquals("CNTNAP2", tbl.genesRareEuropean$locusOrGene)
 
 } # test_gwasLociFrequencies
+#----------------------------------------------------------------------------------------------------
+test_gtexTissueExpression <- function()
+{
+    message(sprintf("--- test_gtexTissueExpression"))
+    targetGene <- "BIN1"
+    etx <- EndophenotypeExplorer$new(targetGene, "hg19")
+    tbl.gtex <- etx$getTissueExpression(targetGene, "brain")
+    checkEquals(dim(tbl.gtex), c(13, 6))
+    checkEquals(colnames(tbl.gtex),
+                c("datasetId", "gencodeId", "geneSymbol", "median", "tissueSiteDetailId", "unit"))
+    checkTrue(all(tbl.gtex$geneSymbol == targetGene))
+    checkEqualsNumeric(mean(tbl.gtex$median), 140, tolerance=1)
+
+} # test_gtexTissueExpression
 #----------------------------------------------------------------------------------------------------
 
 if(!interactive())
