@@ -57,6 +57,19 @@ test_getGenoMatrix <- function()
    checkTrue(all(c("2:127084193_G/A", "2:127084194_A/C") %in% rownames(mtx.geno)))
 
 
+     # divide the region into two halves, should get the same matrix back
+   mtx.geno.2 <- etx$getGenoMatrix(chrom=c("2", "2"),
+                                   start=c(127084188, 127084196),
+                                   end  =c(127084195, 127094203))
+   checkEquals(dim(mtx.geno.2), dim(mtx.geno))
+
+     # now, on a different chromosome, query by rsid, then write rsids back into the mtx rownames
+   etx <- EndophenotypeExplorer$new("NDUFS2", "hg19")
+   rsids <- c("rs11576415", "rs11584174", "rs12753774", "rs12754503")
+   mtx.geno <- etx$getGenoMatrixByRSID(rsids)
+   rownames(mtx.geno) <- etx$locsToRSID(rownames(mtx.geno), "hg19")
+   checkEquals(sort(rownames(mtx.geno)), sort(rsids))
+
 } # test_getGenoMatrix
 #----------------------------------------------------------------------------------------------------
 test_locsToRSID <- function()

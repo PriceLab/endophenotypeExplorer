@@ -79,10 +79,23 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         getGenoMatrix = function(chrom, start, end){
+            printf("entering getGenoMatrix with vectors")
+            chromosomesInProperFormat <- !grepl("chr", chrom[1])
+            stopifnot(chromosomesInProperFormat)
             roi <- GRanges(seqnames=chrom, IRanges(start=start, end=end))
             x <- readVcf(private$vcf.url, private$default.genome, roi)
             stopifnot("GT" %in% names(geno(x)))
             mtx <- geno(x)$GT
+            invisible(mtx)
+            },
+
+        getGenoMatrixByRSID = function(rsids){
+            tbl.locs <- self$rsidToLoc(rsids)
+            mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
+            #roi <- with(tbl.locs, GRanges(seqnames=chrom, IRanges(start=hg19, end=hg19)))
+            #x <- readVcf(private$vcf.url, private$default.genome, roi)
+            #stopifnot("GT" %in% names(geno(x)))
+            #mtx <- geno(x)$GT
             invisible(mtx)
             },
 
