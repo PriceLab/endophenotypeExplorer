@@ -79,10 +79,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         getGenoMatrix = function(chrom, start, end){
-            printf("entering getGenoMatrix with vectors")
+            message(sprintf("entering getGenoMatrix with vectors"))
             chromosomesInProperFormat <- !grepl("chr", chrom[1])
             stopifnot(chromosomesInProperFormat)
-            roi <- GRanges(seqnames=chrom, IRanges(start=start, end=end))
+            roi <- sort(GRanges(seqnames=chrom, IRanges(start=start, end=end)))
             x <- readVcf(private$vcf.url, private$default.genome, roi)
             stopifnot("GT" %in% names(geno(x)))
             mtx <- geno(x)$GT
@@ -92,10 +92,6 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         getGenoMatrixByRSID = function(rsids){
             tbl.locs <- self$rsidToLoc(rsids)
             mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
-            #roi <- with(tbl.locs, GRanges(seqnames=chrom, IRanges(start=hg19, end=hg19)))
-            #x <- readVcf(private$vcf.url, private$default.genome, roi)
-            #stopifnot("GT" %in% names(geno(x)))
-            #mtx <- geno(x)$GT
             invisible(mtx)
             },
 
@@ -120,14 +116,16 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         locsToRSID = function(locs, genome){
+              # expect locs in this form:  "2:127084193_G/A"
+              # todo: enforce this, fail or accomodate if otherwise
             chroms <- unlist(lapply(strsplit(locs, ":"), "[", 1))
             loc.strings <- unlist(lapply(strsplit(locs, ":"), "[", 2))
-            locs <- as.integer(sub("_.*$", "", loc.strings))
+            locs.base <- as.integer(sub("_.*$", "", loc.strings))
             snplocs <- switch(genome,
                    "hg19" = SNPlocs.Hsapiens.dbSNP144.GRCh37,
                    "hg38" = SNPlocs.Hsapiens.dbSNP151.GRCh38
                    )
-            gr <- GRanges(seqnames=chroms, IRanges(start=locs, end=locs))
+            gr <- GRanges(seqnames=chroms, IRanges(start=locs.base, end=locs.base))
             gr.snps <- snpsByOverlaps(snplocs, gr)
             tbl.rsids <- as.data.frame(gr.snps)[, c("seqnames", "pos", "RefSNP_id")]
             colnames(tbl.rsids)[1] <- "chrom"
@@ -135,15 +133,17 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             colnames(tbl.rsids)[3] <- "rsid"
             tbl.rsids$chrom <- as.character(tbl.rsids$chrom)
             tbl.rsids$signature <- sprintf("%s:%s", tbl.rsids$chrom, tbl.rsids$loc)
-            sig <- sprintf("%s:%s", chroms, locs)
-            tbl.all <- data.frame(chrom=chroms, loc=locs,
+            sig <- sprintf("%s:%s", chroms, locs.base)
+            tbl.all <- data.frame(chrom=chroms, loc=locs.base,
                                   signature=sig,
                                   stringsAsFactors=FALSE)
             tbl.new <- merge(tbl.all, tbl.rsids[, c("rsid", "signature")], by="signature", all.x=TRUE)
             failures <- which(is.na(tbl.new$rsid))
             length(failures)
             tbl.new$rsid[failures] <- tbl.new$signature[failures]
-            tbl.new$rsid
+            result <- tbl.new$rsid
+            names(result) <- locs
+            result
             },
 
         mapSampleIdToPatientAndCohort = function(sampleID){

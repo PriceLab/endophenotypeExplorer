@@ -67,7 +67,14 @@ test_getGenoMatrix <- function()
    etx <- EndophenotypeExplorer$new("NDUFS2", "hg19")
    rsids <- c("rs11576415", "rs11584174", "rs12753774", "rs12754503")
    mtx.geno <- etx$getGenoMatrixByRSID(rsids)
-   rownames(mtx.geno) <- etx$locsToRSID(rownames(mtx.geno), "hg19")
+   new.names <- etx$locsToRSID(rownames(mtx.geno), "hg19")
+   checkEquals(names(new.names), rownames(mtx.geno))
+        # the locations were sorted before the matrix was retreived.
+        # but the rsids are not in location order
+        # thus the first check will fail, and so is negated in order to pass
+   checkTrue(!all(as.character(new.names) == rsids))
+   checkEquals(sort(as.character(new.names)), sort(rsids))
+   rownames(mtx.geno) <- as.character(new.names)
    checkEquals(sort(rownames(mtx.geno)), sort(rsids))
 
 } # test_getGenoMatrix
@@ -77,16 +84,31 @@ test_locsToRSID <- function()
    message(sprintf("--- test_locsToRSID"))
    list.locs <- get(load(system.file(package="EndophenotypeExplorer", "extdata",
                                      "chromLocs.hg19.for.rsidMapping.RData")))
+
+      # first, just a few
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+   small.set <- list.locs[c(1,3,5,9)]   # 9 has no gh19 rsid
+   rsids <- etx$locsToRSID(small.set, "hg19")
+   checkEquals(names(rsids), small.set)
+   checkEquals(as.character(rsids),
+               c("rs574335478", "rs572625692", "rs185158978", "2:127084512"))
+
+     # now the full 220
    rsids <- etx$locsToRSID(list.locs, "hg19")
+   checkEquals(names(rsids), list.locs)
+
    checkEquals(length(list.locs), length(rsids))
    checkEquals(length(grep(":", rsids)), 69)
+
+     # one long insertion ought to work despite its extreme nature
+   checkEquals(list.locs[168],
+               "2:127091778_A/AGACCTGGGACCAAAAGCAGGACATCATTTTTAATCTAGGTGCATACAAAGTCAGTCATTGTTAGGT")
+   checkEquals(rsids[[168]], "2:127091778")
 
      # though the locs are actually hg19, we should be able to make a useless hg38 conversion
    rsids <- etx$locsToRSID(list.locs, "hg38")
    checkEquals(length(list.locs), length(rsids))
    checkEquals(length(grep(":", rsids)), 181)
-
 
 } # test_locsToRSID
 #----------------------------------------------------------------------------------------------------
