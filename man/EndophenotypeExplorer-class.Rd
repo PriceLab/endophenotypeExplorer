@@ -37,6 +37,7 @@ EndophenotypeExplorer
 \item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
 \item \href{#method-getGenoMatrixByRSID}{\code{EndophenotypeExplorer$getGenoMatrixByRSID()}}
+\item \href{#method-getEQTLsForGene}{\code{EndophenotypeExplorer$getEQTLsForGene()}}
 \item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
 \item \href{#method-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
 \item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
@@ -115,6 +116,15 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{getGenoMatrixByRSID()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getGenoMatrixByRSID(rsids)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getEQTLsForGene"></a>}}
+\if{latex}{\out{\hypertarget{method-getEQTLsForGene}{}}}
+\subsection{Method \code{getEQTLsForGene()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getEQTLsForGene()}\if{html}{\out{</div>}}
 }
 
 }

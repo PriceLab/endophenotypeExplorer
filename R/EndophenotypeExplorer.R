@@ -45,6 +45,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                    tbl.clinical.mayo=NULL,
                    tbl.gwas.38=NULL,
                    tbl.gwas.38.associated=NULL,
+                   tbl.eqtls=NULL,
                    verbose=NULL
                    ),
 
@@ -93,6 +94,19 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             tbl.locs <- self$rsidToLoc(rsids)
             mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
             invisible(mtx)
+            },
+
+        getEQTLsForGene = function(){
+            suppressWarnings(db.access.test <- try(system("/sbin/ping -c 1 khaleesi", intern=TRUE, ignore.stderr=TRUE)))
+            if(length(db.access.test) == 0){
+               message(sprintf(("khaleesi unreachable, no eQTLS available")))
+               return(data.frame())
+               }
+            db <- dbConnect(PostgreSQL(), user="trena", password="trena", dbname="genereg2021", host="khaleesi")
+            query.string <- sprintf("select * from eqtls where genesymbol='%s'", private$target.gene)
+            private$tbl.eqtls <- dbGetQuery(db, query.string)
+            dbDisconnect(db)
+            private$tbl.eqtls
             },
 
         getIdMap = function(){

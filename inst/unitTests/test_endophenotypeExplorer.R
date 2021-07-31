@@ -15,6 +15,7 @@ runTests <- function()
     test_getAggregatedAlleleFrequencies()
     test_gwasLociFrequencies()
     test_gtexTissueExpression()
+    test_getEQTLsForGene()
 
 } # runTests
 #----------------------------------------------------------------------------------------------------
@@ -378,6 +379,20 @@ test_gtexTissueExpression <- function()
 
 } # test_gtexTissueExpression
 #----------------------------------------------------------------------------------------------------
+test_getEQTLsForGene <- function()
+{
+    message(sprintf("--- test_getEQTLsForGene"))
 
+    targetGene <- "NDUFS2"
+    etx <- EndophenotypeExplorer$new(targetGene, "hg19")
+    tbl.eQTL <- etx$getEQTLsForGene()
+    checkTrue(nrow(tbl.eQTL) > 10000)
+    checkTrue(ncol(tbl.eQTL) >= 10)
+
+    min.pval <- min(tbl.eQTL$pvalue)
+    checkTrue("rs1136224" %in% subset(tbl.eQTL, pvalue == min.pval)$rsid)
+
+} # test_getEQTLsForGene
+#----------------------------------------------------------------------------------------------------
 if(!interactive())
    runTests()
