@@ -50,7 +50,8 @@ EndophenotypeExplorer
 \item \href{#method-get.rosmap.patient.table}{\code{EndophenotypeExplorer$get.rosmap.patient.table()}}
 \item \href{#method-get.sinai.patient.table}{\code{EndophenotypeExplorer$get.sinai.patient.table()}}
 \item \href{#method-get.mayo.patient.table}{\code{EndophenotypeExplorer$get.mayo.patient.table()}}
-\item \href{#method-vcfSampleID.to.clinicalTable}{\code{EndophenotypeExplorer$vcfSampleID.to.clinicalTable()}}
+\item \href{#method-sampleID.to.clinicalTable}{\code{EndophenotypeExplorer$sampleID.to.clinicalTable()}}
+\item \href{#method-getStandardClinicalColumnNames}{\code{EndophenotypeExplorer$getStandardClinicalColumnNames()}}
 \item \href{#method-standardizeMayoPatientTable}{\code{EndophenotypeExplorer$standardizeMayoPatientTable()}}
 \item \href{#method-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
 \item \href{#method-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
@@ -65,7 +66,12 @@ EndophenotypeExplorer
 \subsection{Method \code{new()}}{
 Create a new EndophenotypeExplorer object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(target.gene, default.genome, verbose = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(
+  target.gene,
+  default.genome,
+  verbose = FALSE,
+  defer.setupClinicalData.toSupportTesting = FALSE
+)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -237,11 +243,20 @@ A new `EndophenotypeExplorer` object.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vcfSampleID.to.clinicalTable"></a>}}
-\if{latex}{\out{\hypertarget{method-vcfSampleID.to.clinicalTable}{}}}
-\subsection{Method \code{vcfSampleID.to.clinicalTable()}}{
+\if{html}{\out{<a id="method-sampleID.to.clinicalTable"></a>}}
+\if{latex}{\out{\hypertarget{method-sampleID.to.clinicalTable}{}}}
+\subsection{Method \code{sampleID.to.clinicalTable()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$vcfSampleID.to.clinicalTable(sampleID)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$sampleID.to.clinicalTable(sampleID)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getStandardClinicalColumnNames"></a>}}
+\if{latex}{\out{\hypertarget{method-getStandardClinicalColumnNames}{}}}
+\subsection{Method \code{getStandardClinicalColumnNames()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getStandardClinicalColumnNames()}\if{html}{\out{</div>}}
 }
 
 }

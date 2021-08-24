@@ -5,13 +5,18 @@ library(plyr)
 runTests <- function()
 {
     test_ctor()
+    test_standardizeRosmapPatientTable ()
+    test_standardizeSinaiPatientTable()
+    test_standardizeMayoPatientTable()
+
+    test_getClinicalTable()
     test_readRemoteVCF()
     test_locsToRSID()
     test_rsidToLocs()
     test_getGenoMatrix()
     test_mapSampleIdToPatientAndCohort()
     test_getPatientTables()
-    test_vcf.sampleID.to.clinicalTable()
+    test_sampleID.to.clinicalTable()
     test_getAggregatedAlleleFrequencies()
     test_gwasLociFrequencies()
     test_gtexTissueExpression()
@@ -29,6 +34,87 @@ test_ctor <- function()
    checkEquals(etx$getVcfUrl(), expected)
 
 } # test_ctor
+#----------------------------------------------------------------------------------------------------
+test_standardizeMayoPatientTable <- function()
+{
+    message(sprintf("--- test_standardizeMayoPatientTable"))
+
+    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+
+    dir <- system.file(package="EndophenotypeExplorer", "extdata", "clinical")
+    tbl.clinical.mayo <- read.table(file.path(dir, "MayoRNAseq_individual_metadata.csv"),
+                                    sep=",", header=TRUE, as.is=TRUE)
+    tbl.std <- etx$standardizeMayoPatientTable(tbl.clinical.mayo)
+    checkEquals(nrow(tbl.std), nrow(tbl.clinical.mayo))
+
+    checkEquals(colnames(tbl.std), etx$getStandardClinicalColumnNames())
+
+} # test_standardizeMayoPatientTable
+#----------------------------------------------------------------------------------------------------
+test_standardizeRosmapPatientTable <- function()
+{
+    message(sprintf("--- test_standardizeRosmapPatientTable"))
+
+    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+
+    dir <- system.file(package="EndophenotypeExplorer", "extdata", "clinical")
+    file.exists(dir)
+    full.path <- file.path(dir, "ROSMAP_clinical.csv")
+    file.exists(full.path)
+    tbl.clinical.rosmap <- read.table(full.path, sep=",", header=TRUE, as.is=TRUE)
+    checkEquals(dim(tbl.clinical.rosmap), c(3583, 18))
+
+    tbl.std <- etx$standardizeRosmapPatientTable(tbl.clinical.rosmap)
+    checkEquals(nrow(tbl.std), nrow(tbl.clinical.rosmap))
+    checkEquals(colnames(tbl.std), etx$getStandardClinicalColumnNames())
+
+} # test_standardizeRosmapPatientTable
+#----------------------------------------------------------------------------------------------------
+test_standardizeSinaiPatientTable <- function()
+{
+    message(sprintf("--- test_standardizeSinaiPatientTable"))
+
+    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
+
+    dir <- system.file(package="EndophenotypeExplorer", "extdata", "clinical")
+    tbl.clinical.sinai <- read.table(file.path(dir, "MSBB_individual_metadata.csv"),
+                                    sep=",", header=TRUE, as.is=TRUE)
+    checkEquals(dim(tbl.clinical.sinai), c(377, 20))
+    tbl.std <- etx$standardizeSinaiPatientTable(tbl.clinical.sinai)
+    checkEquals(nrow(tbl.std), nrow(tbl.clinical.sinai))
+
+    checkEquals(colnames(tbl.std), etx$getStandardClinicalColumnNames())
+
+} # test_standardizeSinaiPatientTable
+#----------------------------------------------------------------------------------------------------
+test_getClinicalTable <- function()
+{
+   message(sprintf("--- test_getClinicalTable"))
+
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19",
+                                    defer.setupClinicalData.toSupportTesting=TRUE)
+   etx$setupClinicalData()
+
+   tbl <- etx$getClinicalTable()
+   checkEquals(colnames(tbl), etx$getStandardClinicalColumnNames())
+
+   studies <- as.list(table(tbl$study))
+   checkEquals(studies$ROS, 1451)
+   checkEquals(studies$MAP, 2132)
+   checkEquals(studies$MSSM, 377)
+   checkEquals(studies$MayoBrainBank, 370)
+
+   cogdx <- as.list(table(tbl$cogdx))
+   names(cogdx) <- paste0("cogdx.", names(cogdx))
+
+   checkEquals(cogdx$cogdx.1, 586)
+   checkEquals(cogdx$cogdx.2, 404)
+   checkEquals(cogdx$cogdx.3, 33)
+   checkEquals(cogdx$cogdx.4, 674)
+   checkEquals(cogdx$cogdx.5, 94)
+   checkEquals(cogdx$cogdx.6, 30)
+
+} # test_getClinicalTable
 #----------------------------------------------------------------------------------------------------
 test_readRemoteVCF <- function(verbose=FALSE)
 {
@@ -149,40 +235,20 @@ test_rsidToLocs <- function()
 test_mapSampleIdToPatientAndCohort <- function()
 {
    message(sprintf("--- test_mapSampleIdToPatientAndCohort"))
+
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    tbl.map <- etx$getIdMap()
-   checkEquals(dim(tbl.map), c(1845, 3))
-   checkEquals(colnames(tbl.map), c("vcf", "patient", "cohort"))
+   checkEquals(dim(tbl.map), c(4026, 4))
+   checkEquals(colnames(tbl.map), c("sample", "patient", "study", "assay"))
 
-   map <- as.list(etx$mapSampleIdToPatientAndCohort("SM-CJGH1"))
-   checkEquals(map, list(vcf="SM-CJGH1", patient="R7025378", cohort="rosmap"))
+   x <- etx$mapSampleIdToPatientAndCohort("SM-CJGH1")
+   checkEquals(dim(x), c(1, 4))
+   checkEquals(x$sample,  "SM-CJGH1")
+   checkEquals(x$patient, "R7025378")
+   checkEquals(x$study,   "rosmap")
+   checkEquals(x$assay,    "vcf")
 
 } # test_mapSampleIdToPatientAndCohort
-#----------------------------------------------------------------------------------------------------
-test_vcf.sampleID.to.clinicalTable <- function()
-{
-   message(sprintf("--- test_vcf.sampleID.to.clinicalTable"))
-
-   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
-   checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
-
-      # choose just one
-   tbl.clinical <- etx$vcfSampleID.to.clinicalTable("SM-CTEMF")
-   checkEquals(dim(tbl.clinical), c(1, 18))
-   checkEquals(colnames(tbl.clinical), c("projid", "Study", "msex", "educ", "race", "spanish",
-                                         "apoe_genotype", "age_at_visit_max", "age_first_ad_dx",
-                                         "age_death", "cts_mmse30_first_ad_dx", "cts_mmse30_lv",
-                                         "pmi", "braaksc", "ceradsc", "cogdx", "dcfdx_lv", "individualID"))
-      # spot check a few important fields
-   checkEquals(tbl.clinical$apoe_genotype, 33)
-   checkEquals(tbl.clinical$braaksc, 4)
-   checkEquals(tbl.clinical$ceradsc, 2)
-
-   problem.sampleID <- "71729"
-   tbl.clinical <- etx$vcfSampleID.to.clinicalTable(problem.sampleID)
-   checkEquals(nrow(tbl.clinical), 0)
-
-} # test_vcf.sampleID.to.clinicalTable
 #----------------------------------------------------------------------------------------------------
 test_getPatientTables <- function()
 {
@@ -198,7 +264,7 @@ test_getPatientTables <- function()
    checkEquals(dim(tbl.pt.sinai), c(377, 20))
 
    tbl.pt.rosmap <- etx$get.rosmap.patient.table(NA)
-   checkEquals(dim(tbl.pt.rosmap), c(3584, 18))
+   checkEquals(dim(tbl.pt.rosmap), c(3583, 18))
 
    tbl.pt.mayo <- etx$get.mayo.patient.table(NA)
    checkEquals(dim(tbl.pt.mayo), c(370, 19))
@@ -220,7 +286,7 @@ test_getPatientTables <- function()
 #----------------------------------------------------------------------------------------------------
 test_getGWASTables <- function()
 {
-   message(sprintf("--- test_vcf.sampleID.to.clinicalTable"))
+   message(sprintf("--- test_getGWASTables"))
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    x <- etx$getGWASTables()
@@ -232,31 +298,31 @@ test_getGWASTables <- function()
 
 } # test_getGWASTables
 #----------------------------------------------------------------------------------------------------
-test_vcf.sampleID.to.clinicalTable <- function()
+test_sampleID.to.clinicalTable <- function()
 {
-   message(sprintf("--- test_vcf.sampleID.to.clinicalTable"))
+   message(sprintf("--- test_sampleID.to.clinicalTable"))
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
    tbl.map <- etx$getIdMap()
+   tbl.clinical <- etx$getClinicalTable()
 
-   vcf.ids <- c(subset(tbl.map, cohort=="sinai")$vcf[1],
-                subset(tbl.map, cohort=="rosmap")$vcf[1],
-                subset(tbl.map, cohort=="mayo")$vcf[1])
+   sample.ids <- c(subset(tbl.map, study=="sinai")$sample[1],
+                   subset(tbl.map, study=="rosmap")$sample[1],
+                   subset(tbl.map, study=="mayo")$sample[1])
 
-   tbls <- lapply(vcf.ids, function(id) etx$vcfSampleID.to.clinicalTable(id))
+   tbls <- lapply(sample.ids, function(id) etx$sampleID.to.clinicalTable(id))
    tbl <- do.call(rbind, tbls)
    checkEquals(dim(tbl), c(3, 12))
    checkTrue(is.numeric(tbl$ageAtDeath))
 
-   # as.data.frame(t(tbl))
    set.seed(17)
-   vcf.ids <- sample(tbl.map$vcf, size=100)
-   tbls <- lapply(vcf.ids, function(id) etx$vcfSampleID.to.clinicalTable(id))
+   sample.ids <- sample(tbl.map$sample, size=100)
+   tbls <- lapply(sample.ids, function(id) etx$sampleID.to.clinicalTable(id))
    tbl.all <- do.call(rbind, tbls)
    checkEquals(dim(tbl.all), c(100, 12))
 
    checkEqualsNumeric(mean(tbl.all$braak, na.rm=TRUE), 3.9, tolerance=0.2)
-   checkEqualsNumeric(mean(tbl.all$pmi, na.rm=TRUE),    78, tolerance=0.2)
+   checkEqualsNumeric(mean(tbl.all$pmi, na.rm=TRUE),   122.9, tolerance=0.2)
    checkEqualsNumeric(mean(tbl.all$cogdx, na.rm=TRUE), 2.5, tolerance=0.2)
    checkEqualsNumeric(mean(tbl.all$cerad, na.rm=TRUE), 2.3, tolerance=0.2)
 
@@ -264,9 +330,9 @@ test_vcf.sampleID.to.clinicalTable <- function()
                       c(66.00000, 84.92300, 89.97878, 90.00000, 90.00000),
                       tolerance=0.5)
 
-   checkEquals(length(which(is.na(tbl.all$cogdx))), 32)
+   checkEquals(length(which(is.na(tbl.all$cogdx))), 52)
 
-} # test_vcf.sampleID.to.clinicalTable
+} # test_sampleID.to.clinicalTable
 #----------------------------------------------------------------------------------------------------
 test_getAggregatedAlleleFrequencies <- function()
 {
@@ -391,6 +457,10 @@ test_getEQTLsForGene <- function()
 
     min.pval <- min(tbl.eQTL$pvalue)
     checkTrue("rs1136224" %in% subset(tbl.eQTL, pvalue == min.pval)$rsid)
+
+    tbl.sig <- subset(tbl.eQTL, pvalue <= 0.01)
+    dim(tbl.sig)
+    checkTrue(nrow(tbl.sig) < 400 & nrow(tbl.sig) > 300)
 
 } # test_getEQTLsForGene
 #----------------------------------------------------------------------------------------------------

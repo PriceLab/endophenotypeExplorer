@@ -46,6 +46,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                    tbl.gwas.38=NULL,
                    tbl.gwas.38.associated=NULL,
                    tbl.eqtls=NULL,
+                   standard.clinical.columns=NULL,
                    verbose=NULL
                    ),
 
@@ -59,14 +60,19 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' @param vcf.url https endpoint from serving indexed vcf files
       #' @return A new `EndophenotypeExplorer` object.
 
-        initialize = function(target.gene, default.genome, verbose=FALSE){
+        initialize = function(target.gene, default.genome, verbose=FALSE,
+                              defer.setupClinicalData.toSupportTesting=FALSE){
             private$target.gene <- target.gene
             private$default.genome <- default.genome
             private$chromosome <- self$identifyTargetGeneChromosome(target.gene)
             private$vcf.url <- self$setupVcfURL(private$chromosome)
             private$verbose <- verbose
-            self$setupClinicalData()
+            private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
+                                                   "apoeGenotype","braak","cerad", "pmi",
+                                                   "ageAtDeath", "cogdx")
             self$setupGWASData()
+            if(!defer.setupClinicalData.toSupportTesting)
+                self$setupClinicalData()
             },
 
         setupVcfURL = function(chromosome){
@@ -161,7 +167,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         mapSampleIdToPatientAndCohort = function(sampleID){
-           return(subset(private$tbl.idMap, vcf==sampleID))
+           subset(private$tbl.idMap, sample==sampleID)
            },
 
         setupClinicalData = function(){
@@ -181,6 +187,14 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                                       sep=",", header=TRUE, as.is=TRUE)
             private$tbl.clinical.mayo <- read.table(file.path(dir, "MayoRNAseq_individual_metadata.csv"),
                                                       sep=",", header=TRUE, as.is=TRUE)
+            tbl.c.mayo <- self$standardizeMayoPatientTable(private$tbl.clinical.mayo)
+            tbl.c.rosmap <- self$standardizeRosmapPatientTable(private$tbl.clinical.rosmap)
+            tbl.c.sinai <- self$standardizeSinaiPatientTable(private$tbl.clinical.sinai)
+            stopifnot(all(colnames(tbl.c.mayo) == colnames(tbl.c.rosmap)))
+            stopifnot(all(colnames(tbl.c.mayo) == colnames(tbl.c.sinai)))
+
+            private$tbl.clinical <- rbind(tbl.c.mayo, tbl.c.rosmap, tbl.c.sinai)
+
             dir <- system.file(package="EndophenotypeExplorer", "extdata", "idMapping")
                # the crucial sample-to-patient mapping
                # this was difficult to obtain.  see the mapToPatientID function in
@@ -188,9 +202,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                # todo: move this code to a prep directory in this package
             if(private$verbose) message(sprintf("--- about to load id mapping file"))
             if(private$verbose) message(sprintf("    dir: %s", dir))
-            full.path <- file.path(dir, "tbl.vcfToPatientIDs.RData")
+            full.path <- file.path(dir, "tbl.sampleToPatientMap-rosmap-mayo-sinai.RData")
+            #full.path <- file.path(dir, "tbl.vcfToPatientIDs.RData")
             if(private$verbose) message(sprintf("    full.path: %s", full.path))
-            private$tbl.idMap <- get(load(file.path(dir, "tbl.vcfToPatientIDs.RData")))
+            private$tbl.idMap <- get(load(full.path))
             },
 
         getClinicalTable = function(){
@@ -237,13 +252,13 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             subset(private$tbl.clinical.mayo, individualID==patientID)
             },
 
-        vcfSampleID.to.clinicalTable = function(sampleID){
-            if(!sampleID %in% private$tbl.idMap$vcf)
+        sampleID.to.clinicalTable = function(sampleID){
+            tbl.sub <- subset(private$tbl.idMap,  sample==sampleID)
+            if(nrow(tbl.sub) == 0)
                 return(data.frame())
-            tbl <- subset(private$tbl.idMap, vcf==sampleID)
-            patientID <- tbl$patient
-            cohort <- tbl$cohort
-            tbl.patient <- switch(cohort,
+            patientID <- tbl.sub$patient[1]
+            study <- tbl.sub$study[1]
+            tbl.patient <- switch(study,
               "mayo"   = self$standardizeMayoPatientTable(subset(private$tbl.clinical.mayo,
                                                           individualID==patientID)),
               "rosmap" = self$standardizeRosmapPatientTable(subset(private$tbl.clinical.rosmap,
@@ -251,33 +266,39 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
               "sinai"  = self$standardizeSinaiPatientTable(subset(private$tbl.clinical.sinai,
                                                            individualID==patientID))
               )
-            tbl.patient$cohort <- cohort
+            tbl.patient$study <- study
             tbl.patient$sampleID <- sampleID
-            coi <- c("patientID", "sampleID", "cohort", "study","sex","ethnicity","apoeGenotype",
+            coi <- c("patientID", "sampleID", "study", "study","sex","ethnicity","apoeGenotype",
                      "braak","cerad","cogdx","pmi", "ageAtDeath")
             tbl.patient[, coi]
             },
 
+        getStandardClinicalColumnNames = function(){
+            private$standard.clinical.columns
+            },
+
         standardizeMayoPatientTable = function(tbl){
            tbl$ageDeath <- as.numeric(sub("+", "", tbl$ageDeath, fixed=TRUE))
+
            coi <- c("individualID", "individualIdSource", "sex", "ethnicity", "apoeGenotype",
                     "Braak", "CERAD", "pmi", "ageDeath")
            tbl.0 <- tbl[, coi]
            tbl.0$cogdx <- NA
-           standard.names <- c("patientID", "study", "sex","ethnicity","apoeGenotype","braak","cerad",
-                                "pmi", "ageAtDeath", "cogdx")
-           colnames(tbl.0) <- standard.names
+           colnames(tbl.0) <- private$standard.clinical.columns
            tbl.0
            },
 
         standardizeRosmapPatientTable = function(tbl){
            tbl$age_death <- as.numeric(sub("+", "", tbl$age_death, fixed=TRUE))
            coi <- c("individualID", "Study", "msex", "race", "apoe_genotype", "braaksc", "ceradsc",
-                    "cogdx", "pmi", "age_death")
+                    "pmi", "age_death", "cogdx")
+           private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
+                                                  "apoeGenotype","braak","cerad", "pmi",
+                                                  "ageAtDeath", "cogdx")
+
+
            tbl.0 <- tbl[, coi]
-           standard.names <- c("patientID", "study", "sex","ethnicity","apoeGenotype","braak","cerad",
-                                "cogdx", "pmi", "ageAtDeath")
-           colnames(tbl.0) <- standard.names
+           colnames(tbl.0) <- private$standard.clinical.columns
            tbl.0
            },
 
@@ -287,9 +308,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                     "Braak","CERAD","pmi","ageDeath")
            tbl.0 <- tbl[, coi]
            tbl.0$cogdx <- NA
-           standard.names <- c("patientID", "study", "sex","ethnicity","apoeGenotype","braak","cerad",
-                                "pmi", "ageAtDeath", "cogdx")
-           colnames(tbl.0) <- standard.names
+           colnames(tbl.0) <- private$standard.clinical.columns
            tbl.0
            },
 
