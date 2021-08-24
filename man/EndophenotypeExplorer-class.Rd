@@ -57,6 +57,7 @@ EndophenotypeExplorer
 \item \href{#method-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
 \item \href{#method-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
 \item \href{#method-getTissueExpression}{\code{EndophenotypeExplorer$getTissueExpression()}}
+\item \href{#method-splitExpressionMatrixByMutationStatusAtRSID}{\code{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -302,6 +303,19 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{getTissueExpression()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getTissueExpression(geneSymbol, tissue)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-splitExpressionMatrixByMutationStatusAtRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-splitExpressionMatrixByMutationStatusAtRSID}{}}}
+\subsection{Method \code{splitExpressionMatrixByMutationStatusAtRSID()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID(
+  mtx,
+  rsid,
+  study.name
+)}\if{html}{\out{</div>}}
 }
 
 }

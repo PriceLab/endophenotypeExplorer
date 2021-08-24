@@ -120,6 +120,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         rsidToLoc = function(rsids){
+            message(sprintf("starting time-consuming queries to SNPlocs"))
             rsids <- grep("^rs", rsids, value=TRUE)
             gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
             tbl.hg19 <- as.data.frame(gr.hg19)
@@ -383,9 +384,67 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            tbls <- lapply(x[[1]], as.data.frame)
            tbl <- do.call(rbind, tbls)
            tbl
-           }
+           },
 
-       ) # public
+             # mayoMatrixTissueSuffix is either _TCX or _CER
+             # use it to get only one sub matrix or the other, then remove it
+        splitExpressionMatrixByMutationStatusAtRSID = function(mtx, rsid, study.name){
+           tbl.map <- self$getIdMap()
+           mtx.geno <- self$getGenoMatrixByRSID(rsid)
+           dim(mtx.geno)
+           table(mtx.geno)     # 794  861 239   for rs28834970
+
+           samples.hom <- names(which(mtx.geno[1,] == "1/1"))
+           samples.het <- names(which(mtx.geno[1,] == "0/1"))
+           samples.wt  <- names(which(mtx.geno[1,] == "0/0"))
+
+           patients.wt  <- subset(tbl.map, sample %in% samples.wt & assay=="vcf")$patient
+           patients.hom <- subset(tbl.map, sample %in% samples.hom & assay=="vcf")$patient
+           patients.het <- subset(tbl.map, sample %in% samples.het & assay=="vcf")$patient
+           patients.mut <- sort(unique(c(patients.hom, patients.het)))
+
+           rna.samples.wt <- subset(tbl.map, patient %in% patients.wt &
+                                             study==study.name &
+                                             assay=="rnaseq")$sample
+           rna.samples.hom <- subset(tbl.map, patient %in% patients.hom &
+                                              study==study.name &
+                                              assay=="rnaseq")$sample
+           rna.samples.het <- subset(tbl.map, patient %in% patients.het &
+                                              study==study.name &
+                                              assay=="rnaseq")$sample
+           rna.samples.mut <- subset(tbl.map, patient %in% patients.mut &
+                                              study==study.name &
+                                              assay=="rnaseq")$sample
+               # todo: probably should remove these suffixes from the sample names
+               # since we now separate the matrices into different files,
+               # where the colnames DO have the suffixes removed
+           if(study.name == "mayo"){
+               rna.samples.wt <- sub("_TCX", "", rna.samples.wt)
+               rna.samples.wt <- sub("_CER", "", rna.samples.wt)
+               rna.samples.mut <- sub("_TCX", "", rna.samples.mut)
+               rna.samples.mut <- sub("_CER", "", rna.samples.mut)
+               rna.samples.het <- sub("_TCX", "", rna.samples.het)
+               rna.samples.het <- sub("_CER", "", rna.samples.het)
+               rna.samples.hom <- sub("_TCX", "", rna.samples.hom)
+               rna.samples.hom <- sub("_CER", "", rna.samples.hom)
+               }
+
+           rna.samples.wt  <- intersect(colnames(mtx), rna.samples.wt)
+           rna.samples.mut <- intersect(colnames(mtx), rna.samples.mut)
+           rna.samples.hom <- intersect(colnames(mtx), rna.samples.hom)
+           rna.samples.het <- intersect(colnames(mtx), rna.samples.het)
+           mtx.hom <- mtx[, rna.samples.hom]
+           mtx.het <- mtx[, rna.samples.het]
+           mtx.wt <-  mtx[, rna.samples.wt]
+           mtx.mut <- mtx[, rna.samples.mut]
+           patient.distribution <- list(wt=ncol(mtx.wt),
+                                        mut=ncol(mtx.mut),
+                                        het=ncol(mtx.het),
+                                        hom=ncol(mtx.hom))
+           return(list(wt=mtx.wt, mut=mtx.mut, het=mtx.het, hom=mtx.hom,
+                       genotypes=patient.distribution))
+           } # splitExpressionMatrixByMutationStatusAtRSID
+        ) # public
 
     ) # class EndophenotypeExplorer
 

@@ -22,6 +22,8 @@ runTests <- function()
     test_gtexTissueExpression()
     test_getEQTLsForGene()
 
+    test_splitExpressionMatrixByMutationStatusAtRSID()
+
 } # runTests
 #----------------------------------------------------------------------------------------------------
 test_ctor <- function()
@@ -463,6 +465,30 @@ test_getEQTLsForGene <- function()
     checkTrue(nrow(tbl.sig) < 400 & nrow(tbl.sig) > 300)
 
 } # test_getEQTLsForGene
+#----------------------------------------------------------------------------------------------------
+test_splitExpressionMatrixByMutationStatusAtRSID <- function()
+{
+   message(sprintf("--- test_splitExpressionMatrixByMutationStatusAtRSID"))
+
+   dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
+   file.tcx <- "mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData"
+   file.cer <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x255.RData"
+   mtx.cer <- get(load(file.path(dir, file.cer)))
+
+   targetGene <- "PTK2B"
+   rsid <- "rs28834970"
+
+   etx <- EndophenotypeExplorer$new(targetGene, "hg38")
+
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.cer, rsid, study.name="mayo")
+   checkEquals(sort(names(x)), c("genotypes", "het", "hom", "mut", "wt"))
+   checkEquals(x$genotypes, list(wt=95, mut=160, het=124, hom=36))
+   checkEquals(dim(x$wt), c(17009, 95))
+   checkEquals(dim(x$mut), c(17009, 160))
+   checkEquals(dim(x$het), c(17009, 124))
+   checkEquals(dim(x$hom), c(17009, 36))
+
+} # test_splitExpressionMatrixByMutationStatusAtRSID
 #----------------------------------------------------------------------------------------------------
 if(!interactive())
    runTests()
