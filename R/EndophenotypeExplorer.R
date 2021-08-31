@@ -13,6 +13,7 @@
 #' @importFrom rtracklayer liftOver import.chain
 #' @import httr
 #' @import jsonlite
+#' @import trena
 #'
 #' @title EndophenotypeExplorer
 #------------------------------------------------------------------------------------------------------------------------
@@ -120,7 +121,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         rsidToLoc = function(rsids){
-            message(sprintf("starting time-consuming queries to SNPlocs"))
+            message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
             rsids <- grep("^rs", rsids, value=TRUE)
             gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
             tbl.hg19 <- as.data.frame(gr.hg19)
@@ -313,12 +314,25 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            tbl.0
            },
 
-        getAggregatedAlleleFrequencies = function(rsid){
+        getAggregatedAlleleFrequencies = function(rsid, quiet=TRUE){
 
             uri <- sprintf("https://api.ncbi.nlm.nih.gov/variation/v0/refsnp/%s/frequency",
                   sub("rs", "", rsid))
-            response <- GET(uri)
-            suppressMessages(x <- fromJSON(httr::content(response, as="text"))$results)
+            x <- NULL
+            tries <- 0
+            max.tries <- 5
+            while(is.null(x) & tries <= max.tries){
+              tries <- tries + 1
+              if(!quiet)
+                 printf("requesting allele frequencies for %s, iteration %d", rsid, tries)
+              response <- GET(uri)
+              suppressMessages(x <- fromJSON(httr::content(response, as="text"))$results)
+              }
+            if(is.null(x)){
+                message(sprintf("failed to get allele frequencies for %s, %d tries",
+                                rsid, tries))
+                return(data.frame())
+                }
             ref <- x[[1]]$ref
             counts.list <- x[[1]]$counts
 
@@ -389,46 +403,55 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
              # mayoMatrixTissueSuffix is either _TCX or _CER
              # use it to get only one sub matrix or the other, then remove it
         splitExpressionMatrixByMutationStatusAtRSID = function(mtx, rsid, study.name){
+           stopifnot(study.name %in% c("mayo", "sinai", "rosmap"))
+           result <- switch(study.name,
+                             "mayo" = self$splitMayoRnaMatrixByGenotype(mtx,rsid),
+                             "sinai" = self$splitSinaiRnaMatrixByGenotype(mtx,rsid),
+                             "rosmap" = self$splitRosmapRnaMatrixByGenotype(mtx,rsid))
+           return(result)
+           }, # splitExpressionMatrixByMutationStatusAtRSID
+
+        #------------------------------------------------------------
+        splitMayoRnaMatrixByGenotype = function(mtx,rsid){
            tbl.map <- self$getIdMap()
            mtx.geno <- self$getGenoMatrixByRSID(rsid)
            dim(mtx.geno)
            table(mtx.geno)     # 794  861 239   for rs28834970
-
            samples.hom <- names(which(mtx.geno[1,] == "1/1"))
            samples.het <- names(which(mtx.geno[1,] == "0/1"))
            samples.wt  <- names(which(mtx.geno[1,] == "0/0"))
 
-           patients.wt  <- subset(tbl.map, sample %in% samples.wt & assay=="vcf")$patient
-           patients.hom <- subset(tbl.map, sample %in% samples.hom & assay=="vcf")$patient
-           patients.het <- subset(tbl.map, sample %in% samples.het & assay=="vcf")$patient
-           patients.mut <- sort(unique(c(patients.hom, patients.het)))
+           patients.wt  <- unique(subset(tbl.map, sample %in% samples.wt &
+                                                  study=="mayo" &
+                                                  assay=="vcf")$patient)
+           patients.hom <- unique(subset(tbl.map, sample %in% samples.hom &
+                                                  study=="mayo" &
+                                                  assay=="vcf")$patient)
+           patients.het <- unique(subset(tbl.map, sample %in% samples.het &
+                                                  study=="mayo" &
+                                                  assay=="vcf")$patient)
+           patients.mut <- unique(sort(unique(c(patients.hom, patients.het))))
 
            rna.samples.wt <- subset(tbl.map, patient %in% patients.wt &
-                                             study==study.name &
+                                             study=="mayo" &
                                              assay=="rnaseq")$sample
            rna.samples.hom <- subset(tbl.map, patient %in% patients.hom &
-                                              study==study.name &
+                                              study=="mayo" &
                                               assay=="rnaseq")$sample
            rna.samples.het <- subset(tbl.map, patient %in% patients.het &
-                                              study==study.name &
+                                              study=="mayo" &
                                               assay=="rnaseq")$sample
            rna.samples.mut <- subset(tbl.map, patient %in% patients.mut &
-                                              study==study.name &
+                                              study=="mayo" &
                                               assay=="rnaseq")$sample
-               # todo: probably should remove these suffixes from the sample names
-               # since we now separate the matrices into different files,
-               # where the colnames DO have the suffixes removed
-           if(study.name == "mayo"){
-               rna.samples.wt <- sub("_TCX", "", rna.samples.wt)
-               rna.samples.wt <- sub("_CER", "", rna.samples.wt)
-               rna.samples.mut <- sub("_TCX", "", rna.samples.mut)
-               rna.samples.mut <- sub("_CER", "", rna.samples.mut)
-               rna.samples.het <- sub("_TCX", "", rna.samples.het)
-               rna.samples.het <- sub("_CER", "", rna.samples.het)
-               rna.samples.hom <- sub("_TCX", "", rna.samples.hom)
-               rna.samples.hom <- sub("_CER", "", rna.samples.hom)
-               }
-
+           rna.samples.wt <- sub("_TCX", "", rna.samples.wt)
+           rna.samples.wt <- sub("_CER", "", rna.samples.wt)
+           rna.samples.mut <- sub("_TCX", "", rna.samples.mut)
+           rna.samples.mut <- sub("_CER", "", rna.samples.mut)
+           rna.samples.het <- sub("_TCX", "", rna.samples.het)
+           rna.samples.het <- sub("_CER", "", rna.samples.het)
+           rna.samples.hom <- sub("_TCX", "", rna.samples.hom)
+           rna.samples.hom <- sub("_CER", "", rna.samples.hom)
            rna.samples.wt  <- intersect(colnames(mtx), rna.samples.wt)
            rna.samples.mut <- intersect(colnames(mtx), rna.samples.mut)
            rna.samples.hom <- intersect(colnames(mtx), rna.samples.hom)
@@ -442,8 +465,121 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                         het=ncol(mtx.het),
                                         hom=ncol(mtx.hom))
            return(list(wt=mtx.wt, mut=mtx.mut, het=mtx.het, hom=mtx.hom,
-                       genotypes=patient.distribution))
-           } # splitExpressionMatrixByMutationStatusAtRSID
+                       genotypes.rna=patient.distribution,
+                       genotypes.vcf=list(wt=length(patients.wt),
+                                          mut=length(patients.mut),
+                                          het=length(patients.het),
+                                          hom=length(patients.hom))
+                       ))
+           }, # splitMayo
+
+        #------------------------------------------------------------
+        splitSinaiRnaMatrixByGenotype = function(mtx,rsid){
+           tbl.map <- self$getIdMap()
+           mtx.geno <- self$getGenoMatrixByRSID(rsid)
+           dim(mtx.geno)
+           table(mtx.geno)     # 794  861 239   for rs28834970
+           samples.hom <- names(which(mtx.geno[1,] == "1/1"))
+           samples.het <- names(which(mtx.geno[1,] == "0/1"))
+           samples.wt  <- names(which(mtx.geno[1,] == "0/0"))
+
+           patients.wt  <- unique(subset(tbl.map,
+                                         sample %in% samples.wt &
+                                         study=="sinai" &
+                                         assay=="vcf")$patient)
+           patients.hom  <- unique(subset(tbl.map,
+                                         sample %in% samples.hom &
+                                         study=="sinai" &
+                                         assay=="vcf")$patient)
+           patients.het <- unique(subset(tbl.map,
+                                         sample %in% samples.het &
+                                         study=="sinai" &
+                                         assay=="vcf")$patient)
+           patients.mut <- unique(sort(unique(c(patients.hom, patients.het))))
+
+           rna.samples.wt  <- intersect(colnames(mtx), patients.wt)
+           rna.samples.mut <- intersect(colnames(mtx), patients.mut)
+           rna.samples.hom <- intersect(colnames(mtx), patients.hom)
+           rna.samples.het <- intersect(colnames(mtx), patients.het)
+           mtx.hom <- mtx[, rna.samples.hom]
+           mtx.het <- mtx[, rna.samples.het]
+           mtx.wt <-  mtx[, rna.samples.wt]
+           mtx.mut <- mtx[, rna.samples.mut]
+           patient.distribution <- list(wt=ncol(mtx.wt),
+                                        mut=ncol(mtx.mut),
+                                        het=ncol(mtx.het),
+                                        hom=ncol(mtx.hom))
+
+           return(list(wt=mtx.wt, mut=mtx.mut, het=mtx.het, hom=mtx.hom,
+                       genotypes.rna=patient.distribution,
+                       genotypes.vcf=list(wt=length(patients.wt),
+                                          mut=length(patients.mut),
+                                          het=length(patients.het),
+                                          hom=length(patients.hom))
+                       ))
+           }, # splitSinaiRnaMatrixByGenotype
+
+        #------------------------------------------------------------
+        splitRosmapRnaMatrixByGenotype = function(mtx,rsid){
+            },
+
+        trenaScoreGenotypeStratifiedExpression = function(mtx.1, mtx.2, targetGene, tfs){
+           mtx.1[is.na(mtx.1)] <- 0
+           mtx.2[is.na(mtx.2)] <- 0
+           solver.names <- c("Spearman", "Pearson", "bicor", "RandomForest", "xgboost")
+           solver <- EnsembleSolver(mtx.1,
+                                    targetGene=targetGene,
+                                    candidateRegulators=tfs,
+                                    solverNames=solver.names,
+                                    geneCutoff=0.9)
+           tbl.trena.1 <- run(solver)
+           tbl.trena.1 <- tbl.trena.1[order(abs(tbl.trena.1$spearman), decreasing=TRUE),]
+
+           solver <- EnsembleSolver(mtx.2,
+                                    targetGene=targetGene,
+                                    candidateRegulators=tfs,
+                                    solverNames=solver.names,
+                                    geneCutoff=0.9)
+           tbl.trena.2 <- run(solver)
+           tbl.trena.2 <- tbl.trena.2[order(abs(tbl.trena.2$spearman), decreasing=TRUE),]
+
+              #-------------------------------
+              # find model bicor delta
+              #-------------------------------
+           tbl.bicor <- data.frame(tf=sort(unique(c(tbl.trena.1$gene, tbl.trena.2$gene))),
+                                   method="bicor", stringsAsFactors=FALSE)
+           tbl.bicor$wt <- 0
+           tbl.bicor$mut <- 0
+
+           indices <- match(tbl.trena.1$gene, tbl.bicor$tf)
+           tbl.bicor$wt[indices] <- tbl.trena.1[, "bicor"]
+           indices <- match(tbl.trena.2$gene, tbl.bicor$tf)
+           tbl.bicor$mut[indices] <- tbl.trena.2[, "bicor"]
+           tbl.bicor[, "delta"] <- tbl.bicor$mut - tbl.bicor$wt
+           new.order <- order(abs(tbl.bicor$delta), decreasing=TRUE)
+           tbl.bicor <- tbl.bicor[new.order,]
+           rownames(tbl.bicor) <- NULL
+
+              #-------------------------------
+              # find model random forest delta
+              #-------------------------------
+           tbl.rf <- data.frame(tf=sort(unique(c(tbl.trena.1$gene, tbl.trena.2$gene))),
+                                   method="rf", stringsAsFactors=FALSE)
+           tbl.rf$wt <- 0
+           tbl.rf$mut <- 0
+
+           indices <- match(tbl.trena.1$gene, tbl.rf$tf)
+           tbl.rf$wt[indices] <- tbl.trena.1[, "rfScore"]
+           indices <- match(tbl.trena.2$gene, tbl.rf$tf)
+           tbl.rf$mut[indices] <- tbl.trena.2[, "rfScore"]
+           tbl.rf[, "delta"] <- tbl.rf$mut - tbl.rf$wt
+           new.order <- order(abs(tbl.rf$delta), decreasing=TRUE)
+           tbl.rf <- tbl.rf[new.order,]
+           rownames(tbl.rf) <- NULL
+           list(trena.1=tbl.trena.1, trena.2=tbl.trena.2,
+                bicor.delta=tbl.bicor, rf.delta=tbl.rf)
+           } # trenaScoreGenotypeStratifiedExpression
+
         ) # public
 
     ) # class EndophenotypeExplorer

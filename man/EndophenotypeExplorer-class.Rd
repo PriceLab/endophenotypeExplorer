@@ -58,6 +58,10 @@ EndophenotypeExplorer
 \item \href{#method-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
 \item \href{#method-getTissueExpression}{\code{EndophenotypeExplorer$getTissueExpression()}}
 \item \href{#method-splitExpressionMatrixByMutationStatusAtRSID}{\code{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID()}}
+\item \href{#method-splitMayoRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitMayoRnaMatrixByGenotype()}}
+\item \href{#method-splitSinaiRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype()}}
+\item \href{#method-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
+\item \href{#method-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -293,7 +297,7 @@ A new `EndophenotypeExplorer` object.
 \if{latex}{\out{\hypertarget{method-getAggregatedAlleleFrequencies}{}}}
 \subsection{Method \code{getAggregatedAlleleFrequencies()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getAggregatedAlleleFrequencies(rsid)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getAggregatedAlleleFrequencies(rsid, quiet = TRUE)}\if{html}{\out{</div>}}
 }
 
 }
@@ -315,6 +319,47 @@ A new `EndophenotypeExplorer` object.
   mtx,
   rsid,
   study.name
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-splitMayoRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-splitMayoRnaMatrixByGenotype}{}}}
+\subsection{Method \code{splitMayoRnaMatrixByGenotype()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitMayoRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-splitSinaiRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-splitSinaiRnaMatrixByGenotype}{}}}
+\subsection{Method \code{splitSinaiRnaMatrixByGenotype()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-splitRosmapRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-splitRosmapRnaMatrixByGenotype}{}}}
+\subsection{Method \code{splitRosmapRnaMatrixByGenotype()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-trenaScoreGenotypeStratifiedExpression"></a>}}
+\if{latex}{\out{\hypertarget{method-trenaScoreGenotypeStratifiedExpression}{}}}
+\subsection{Method \code{trenaScoreGenotypeStratifiedExpression()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression(
+  mtx.1,
+  mtx.2,
+  targetGene,
+  tfs
 )}\if{html}{\out{</div>}}
 }
 
