@@ -520,9 +520,53 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            }, # splitSinaiRnaMatrixByGenotype
 
         #------------------------------------------------------------
-        splitRosmapRnaMatrixByGenotype = function(mtx,rsid){
-            },
+        splitRosmapRnaMatrixByGenotype = function(mtx, rsid){
+           tbl.map <- self$getIdMap()
+           mtx.geno <- self$getGenoMatrixByRSID(rsid)
+           dim(mtx.geno)
+           table(mtx.geno)     # 794  861 239   for rs28834970
+           samples.hom <- names(which(mtx.geno[1,] == "1/1"))
+           samples.het <- names(which(mtx.geno[1,] == "0/1"))
+           samples.wt  <- names(which(mtx.geno[1,] == "0/0"))
 
+           patients.wt  <- unique(subset(tbl.map,
+                                         sample %in% samples.wt &
+                                         study=="rosmap" &
+                                         assay=="vcf")$patient)
+           patients.hom  <- unique(subset(tbl.map,
+                                         sample %in% samples.hom &
+                                         study=="rosmap" &
+                                         assay=="vcf")$patient)
+           patients.het <- unique(subset(tbl.map,
+                                         sample %in% samples.het &
+                                         study=="rosmap" &
+                                         assay=="vcf")$patient)
+           patients.mut <- unique(sort(unique(c(patients.hom, patients.het))))
+
+           rna.samples.wt  <- intersect(colnames(mtx), patients.wt)
+           rna.samples.mut <- intersect(colnames(mtx), patients.mut)
+           rna.samples.hom <- intersect(colnames(mtx), patients.hom)
+           rna.samples.het <- intersect(colnames(mtx), patients.het)
+           mtx.hom <- mtx[, rna.samples.hom]
+           mtx.het <- mtx[, rna.samples.het]
+           mtx.wt <-  mtx[, rna.samples.wt]
+           mtx.mut <- mtx[, rna.samples.mut]
+           patient.distribution <- list(wt=ncol(mtx.wt),
+                                        mut=ncol(mtx.mut),
+                                        het=ncol(mtx.het),
+                                        hom=ncol(mtx.hom))
+
+           return(list(wt=mtx.wt, mut=mtx.mut, het=mtx.het, hom=mtx.hom,
+                       genotypes.rna=patient.distribution,
+                       genotypes.vcf=list(wt=length(patients.wt),
+                                          mut=length(patients.mut),
+                                          het=length(patients.het),
+                                          hom=length(patients.hom))
+                       ))
+
+            }, # splitRosmapRnaMatrixByGenotype
+
+        #------------------------------------------------------------
         trenaScoreGenotypeStratifiedExpression = function(mtx.1, mtx.2, targetGene, tfs){
            mtx.1[is.na(mtx.1)] <- 0
            mtx.2[is.na(mtx.2)] <- 0

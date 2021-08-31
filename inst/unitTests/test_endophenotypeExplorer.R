@@ -10,6 +10,7 @@ runTests <- function()
     test_standardizeMayoPatientTable()
 
     test_sinaiMapping()
+    test_rosmapMapping()
 
     test_getClinicalTable()
     test_readRemoteVCF()
@@ -26,6 +27,7 @@ runTests <- function()
 
     test_splitExpressionMatrixByMutationStatusAtRSID_mayo()
     test_splitExpressionMatrixByMutationStatusAtRSID_sinai()
+    test_splitExpressionMatrixByMutationStatusAtRSID_rosmap()
 
 } # runTests
 #----------------------------------------------------------------------------------------------------
@@ -154,6 +156,82 @@ test_sinaiMapping <- function()
     checkEquals(length(mtx.rnaseq.colnames), 23)
 
 } # test_sinaiMapping
+#----------------------------------------------------------------------------------------------------
+test_rosmapMapping <- function()
+{
+    message(sprintf("--- test_rosmapMapping"))
+
+    dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
+    file.rosmap <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
+    mtx.rosmap <- get(load(file.path(dir, file.rosmap)))
+    checkEquals(dim(mtx.rosmap), c(15582, 632))
+
+    etx <- EndophenotypeExplorer$new("PTK2B", "hg38")
+    tbl.map <- etx$getIdMap()
+    pts.rosmap <- unique(subset(tbl.map, study=="rosmap" & !is.na(patient))$patient)
+    checkEquals(length(pts.rosmap), 1223)
+    checkTrue(all(grepl("^R", pts.rosmap)))
+
+    rna.samples <- unique(subset(tbl.map, study=="rosmap" & assay=="rnaseq")$sample)
+    checkEquals(length(rna.samples), 632)
+       # rna.sample ids look like this
+       # "01_120405" "02_120405" "03_120405" "04_120405" "05_120405"
+       # where the first tokens appear to range from "01" to "958"
+       # plus "R24" and "redo4"
+    # the second tokens cluster like this:
+    # head(table(unlist(lapply(strsplit((rna.samples), "_"), "[", 2))))
+    #
+    # 120405 120410 120411 120416 120417 120418
+    #  5      6      8     17     34     16
+    # i'm not sure what these group number refer to
+
+    most.populous.group <- names(sort(table(unlist(lapply(
+        strsplit((rna.samples), "_"), "[", 2))), decreasing=TRUE))[1]
+    checkEquals(most.populous.group, "120430") # 37 members
+
+    vcf.samples <- unique(subset(tbl.map, study=="rosmap" & assay=="vcf")$sample)
+    checkEquals(length(vcf.samples), 1151)
+
+       #--------------------------------------------------
+       # an important query:
+       #   obtain the rnaseq sample ids corresponding to
+       #   vcf sample ids, mapped through the patient
+       #--------------------------------------------------
+
+    vcf.patients <- unique(subset(tbl.map, study=="rosmap" & assay=="vcf")$patient)
+    checkEquals(length(vcf.patients), 1144)
+
+    rna.patients <- unique(subset(tbl.map, study=="rosmap" & assay=="rnaseq")$patient)
+    checkEquals(length(rna.patients), 632)
+
+    both.patients <- intersect(vcf.patients, rna.patients)
+    checkEquals(length(both.patients), 553)
+
+       # a typical use of this table:
+       #   given vcf sample ids, determine the patients, return
+       #   the corresponding rnaseq, identify the (likely) subset of
+       #   patients with both kinds of data
+
+    set.seed(17)
+    poi <- sort(rna.patients[sample(seq_len(length(rna.patients)), size=30)])
+    checkEquals(length(poi), 30)
+
+       # here are our vcf sample ids to try out:
+    vcf.samples <- subset(tbl.map, patient %in% poi &
+                                   study=="rosmap" &
+                                   assay=="vcf")$sample
+    checkEquals(length(vcf.samples), 27)
+
+      # find the patients
+    patients <- unique(subset(tbl.map, sample %in% vcf.samples & study=="rosmap")$patient)
+    checkEquals(length(patients), 27)
+
+      # now pick out the columns of the rnaseq matrix, which have already
+      # been mapped to patient
+    mtx.rnaseq.colnames <- intersect(patients, colnames(mtx.rosmap))
+    checkEquals(length(mtx.rnaseq.colnames), 27)
+
+} # test_rosmapMapping
 #----------------------------------------------------------------------------------------------------
 test_getClinicalTable <- function()
 {
@@ -626,13 +704,23 @@ test_splitExpressionMatrixByMutationStatusAtRSID_rosmap <- function()
    dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
    file.rosmap <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
    mtx <- get(load(file.path(dir, file.rosmap)))
-   checkEquals(dim(mtx), c(16346, 753))
+   checkEquals(dim(mtx), c(15582, 632))
 
    targetGene <- "PTK2B"
    rsid <- "rs28834970"
 
    etx <- EndophenotypeExplorer$new(targetGene, "hg38")
    x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx, rsid, study.name="rosmap")
+   checkEquals(sort(names(x)),
+               c("genotypes.rna","genotypes.vcf", "het", "hom", "mut", "wt"))
+   checkEquals(x$genotypes.vcf,
+               list(wt=484, mut=661, het=518, hom=143))
+   checkEquals(x$genotypes.rna,
+               list(wt=241, mut=313, het=245, hom=68))
+   checkEquals(dim(x$wt),  c(15582, 241))
+   checkEquals(dim(x$mut), c(15582, 313))
+   checkEquals(dim(x$het), c(15582, 245))
+   checkEquals(dim(x$hom), c(15582, 68))
 
 } # test_splitExpressionMatrixByMutationStatusAtRSID_rosmap
 #----------------------------------------------------------------------------------------------------
