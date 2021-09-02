@@ -570,7 +570,8 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         trenaScoreGenotypeStratifiedExpression = function(mtx.1, mtx.2, targetGene, tfs){
            mtx.1[is.na(mtx.1)] <- 0
            mtx.2[is.na(mtx.2)] <- 0
-           solver.names <- c("Spearman", "Pearson", "bicor", "RandomForest", "xgboost")
+           solver.names <- c("spearman", "pearson", "bicor", "randomForest", "xgboost",
+                             "lasso", "ridge")
            solver <- EnsembleSolver(mtx.1,
                                     targetGene=targetGene,
                                     candidateRegulators=tfs,
@@ -587,43 +588,38 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            tbl.trena.2 <- run(solver)
            tbl.trena.2 <- tbl.trena.2[order(abs(tbl.trena.2$spearman), decreasing=TRUE),]
 
-              #-------------------------------
-              # find model bicor delta
-              #-------------------------------
-           tbl.bicor <- data.frame(tf=sort(unique(c(tbl.trena.1$gene, tbl.trena.2$gene))),
-                                   method="bicor", stringsAsFactors=FALSE)
-           tbl.bicor$wt <- 0
-           tbl.bicor$mut <- 0
+           calculateModelDeltas <- function(tbl.trena.1, tbl.trena.2, scoreName){
+               tbl.delta <- data.frame(tf=sort(unique(c(tbl.trena.1$gene, tbl.trena.2$gene))),
+                                       method=scoreName, stringsAsFactors=FALSE)
+               tbl.delta$wt <- 0
+               tbl.delta$mut <- 0
 
-           indices <- match(tbl.trena.1$gene, tbl.bicor$tf)
-           tbl.bicor$wt[indices] <- tbl.trena.1[, "bicor"]
-           indices <- match(tbl.trena.2$gene, tbl.bicor$tf)
-           tbl.bicor$mut[indices] <- tbl.trena.2[, "bicor"]
-           tbl.bicor[, "delta"] <- tbl.bicor$mut - tbl.bicor$wt
-           new.order <- order(abs(tbl.bicor$delta), decreasing=TRUE)
-           tbl.bicor <- tbl.bicor[new.order,]
-           rownames(tbl.bicor) <- NULL
+               indices <- match(tbl.trena.1$gene, tbl.delta$tf)
+               tbl.delta$wt[indices] <- tbl.trena.1[, scoreName]
+               indices <- match(tbl.trena.2$gene, tbl.delta$tf)
+               tbl.delta$mut[indices] <- tbl.trena.2[, scoreName]
+               tbl.delta[, "delta"] <- tbl.delta$mut - tbl.delta$wt
+               new.order <- order(abs(tbl.delta$delta), decreasing=TRUE)
+               tbl.delta <- tbl.delta[new.order,]
+               rownames(tbl.delta) <- NULL
+               tbl.delta
+               } # calculateModelDeltas
 
-              #-------------------------------
-              # find model random forest delta
-              #-------------------------------
-           tbl.rf <- data.frame(tf=sort(unique(c(tbl.trena.1$gene, tbl.trena.2$gene))),
-                                   method="rf", stringsAsFactors=FALSE)
-           tbl.rf$wt <- 0
-           tbl.rf$mut <- 0
-
-           indices <- match(tbl.trena.1$gene, tbl.rf$tf)
-           tbl.rf$wt[indices] <- tbl.trena.1[, "rfScore"]
-           indices <- match(tbl.trena.2$gene, tbl.rf$tf)
-           tbl.rf$mut[indices] <- tbl.trena.2[, "rfScore"]
-           tbl.rf[, "delta"] <- tbl.rf$mut - tbl.rf$wt
-           new.order <- order(abs(tbl.rf$delta), decreasing=TRUE)
-           tbl.rf <- tbl.rf[new.order,]
-           rownames(tbl.rf) <- NULL
+           tbl.bicor <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "bicor")
+           tbl.rf    <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "rfScore")
+           tbl.spear <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "spearmanCoeff")
+           tbl.lasso <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "betaLasso")
+           tbl.ridge <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "betaRidge")
+           tbl.pearson <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "pearsonCoeff")
+           tbl.xgboost <- calculateModelDeltas(tbl.trena.1, tbl.trena.2, "xgboost")
            list(trena.1=tbl.trena.1, trena.2=tbl.trena.2,
-                bicor.delta=tbl.bicor, rf.delta=tbl.rf)
+                bicor=tbl.bicor, rfScore=tbl.rf,
+                spearmanCoeff=tbl.spear, pearsonCoeff=tbl.pearson,
+                betaLasso=tbl.lasso, betaRidge=tbl.ridge, xgboost=tbl.xgboost)
            } # trenaScoreGenotypeStratifiedExpression
 
+
+        #------------------------------------------------------------
         ) # public
 
     ) # class EndophenotypeExplorer

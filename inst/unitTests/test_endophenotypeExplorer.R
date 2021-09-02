@@ -735,36 +735,110 @@ test_trenaScoreGenotypeStratifiedExpression <- function()
    tfs <- get(load(system.file(package="EndophenotypeExplorer", "extdata", "expression",
                                "tfs-44-for-PTK2B-mayo.RData")))
 
+   checkEquals(length(tfs), 44)
    targetGene <- "PTK2B"
-   rsid <- "rs28834970"
-
    etx <- EndophenotypeExplorer$new(targetGene, "hg38")
    tbl.eQTL <- etx$getEQTLsForGene()
-   tbl.eQTL.sig <- subset(tbl.eQTL, pvalue < 0.001 & study=="ampad-mayo")
+   tbl.eQTL.sig <- subset(tbl.eQTL, pvalue < 0.0007 & study=="ampad-mayo")
    new.order <- order(tbl.eQTL.sig$pvalue, decreasing=FALSE)
    tbl.eQTL.sig <- tbl.eQTL.sig[new.order,]
-   rsids <- tbl.eQTL.sig$rsid
-   result <- list()
-   for(rsid in rsids){
-      x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.cer, rsid, study.name="mayo")
-      xx <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$mut, targetGene, tfs)
-      print(head(xx$rf.delta, n=10))
-      print(head(xx$bicor.delta, n=10))
-      result[[rsid]] <- list(x, xx)
-      }
+   rsids <- tbl.eQTL.sig$rsid   #    "rs1594829"  "rs6557914"  "rs12544446"
+   checkEquals(rsids, c("rs1594829", "rs6557914", "rs12544446"))
 
-   checkEquals(sort(names(x)), c("genotypes.rna", "genotypes.vcf",
-                                 "het", "hom", "mut", "wt"))
-   checkEquals(x$genotypes.rna, list(wt=95, mut=160, het=124, hom=36))
+     # do just the first:
+     # chrom                 chr8
+     # hg19              26206077
+     # hg38              26348561
+     # rsid             rs1594829
+     # pvalue         0.000129674
+     # ensg       ENSG00000120899
+     # genesymbol           PTK2B
+     # study           ampad-mayo
+     # tissue                 cer
+     # assay              unknown
 
-   tbl.tms <- get(load("~/github/TrenaProjectAD/explore/ptk2b/tbl.tms.RData"))
+   rsid <- rsids[1]
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.cer, rsid, study.name="mayo")
+   expected <- c("wt", "mut", "het", "hom", "genotypes.rna", "genotypes.vcf")
+   checkTrue(all(expected %in% names(x)))
+   checkEquals(x$genotypes.vcf, list(wt=204, mut=145, het=127, hom=18))
+   checkEquals(x$genotypes.rna, list(wt=155, mut=100, het=87, hom=13))
+   checkEquals(ncol(x$wt), 155)
+   checkEquals(ncol(x$mut), 100)
+   checkEquals(ncol(x$het), 87)
+   checkEquals(ncol(x$hom), 13)
 
-   x <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$mut, targetGene, tfs)
-   head(x$rf.delta, n=10)
-   head(x$bicor.delta, n=10)
+      # with the rnaseq matrix now split by genotype, build and compare
+      # trena models with two different pairs
 
+   xx.mut <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$mut, targetGene, tfs)
+   xx.hom <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$hom, targetGene, tfs)
+   save(xx.mut, xx.hom, file="xx-mut-hom-tmp.RData")
+   expected <- c("trena.1", "trena.2", "bicor.delta", "rf.delta", "spear.delta",
+                 "lasso.delta")
+   checkTrue(all(expected %in% names(xx.mut)))
+   checkTrue(all(expected %in% names(xx.hom)))
+
+   checkEquals(lapply(xx.mut, dim),
+               list(trena.1=c(39, 8),
+                    trena.2=c(34, 8),
+                    bicor.delta=c(42, 5),
+                    rf.delta=c(42, 5),
+                    spear.delta=c(42, 5),
+                    lasso.delta=c(42, 5)))
+
+   checkEquals(lapply(xx.hom, dim),
+               list(trena.1=c(39, 8),
+                    trena.2=c(35, 8),
+                    bicor.delta=c(43, 5),
+                    rf.delta=c(43, 5),
+                    spear.delta=c(43, 5),
+                    lasso.delta=c(43, 5)))
+
+      # combine these various delta tables for wt vs hom, choosing
+      # just the top 2, sort by tf, see if any duplicats popup
+      # this is but an adhoc way to summarize these data, adequate
+      # only for this quick test.
+      # see etx$summarizeResults for a more general and more satisfying
+      # approach
+   tbl.top.hom <- do.call(rbind, lapply(xx.hom[grep("delta", names(xx.hom))],
+                                    function(tbl.delta) head(tbl.delta, 2)))
+   rownames(tbl.top.hom) <- NULL
+   tbl.top.hom <- tbl.top.hom[order(tbl.top.hom$tf),]
+   checkEquals(length(grep("TBR1", tbl.top.hom$tf)), 2)
+
+   tbl.top.mut <- do.call(rbind, lapply(xx.mut[grep("delta", names(xx.mut))],
+                                    function(tbl.delta) head(tbl.delta, 2)))
+   rownames(tbl.top.mut) <- NULL
+   tbl.top.mut <- tbl.top.mut[order(tbl.top.mut$tf),]
+   checkEquals(length(grep("TEAD1", tbl.top.mut$tf)), 3)
 
 } # test_trenaScoreGenotypeStratifiedExpression
+#----------------------------------------------------------------------------------------------------
+test_summarizeStratifiedModels <- function()
+{
+   message(sprintf("--- test_summarizeStratifiedModels"))
+
+   dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
+   file.cer <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x255.RData"
+   mtx.cer <- get(load(file.path(dir, file.cer)))
+   tfs <- get(load(system.file(package="EndophenotypeExplorer", "extdata", "expression",
+                               "tfs-44-for-PTK2B-mayo.RData")))
+   checkEquals(length(tfs), 44)
+   targetGene <- "PTK2B"
+   etx <- EndophenotypeExplorer$new(targetGene, "hg38")
+   rsid <- "rs1594829"
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.cer, rsid, study.name="mayo")
+   xx.mut <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$mut, targetGene, tfs)
+   xx.hom <- etx$trenaScoreGenotypeStratifiedExpression(x$wt, x$hom, targetGene, tfs)
+
+   tbl.summary <- etx$summarizeStratifiedModels(xx.mut, "spearman")
+
+
+
+
+
+} # test_summarizeStratifiedModels
 #----------------------------------------------------------------------------------------------------
 if(!interactive())
    runTests()
