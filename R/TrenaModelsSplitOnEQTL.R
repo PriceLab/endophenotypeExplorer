@@ -59,7 +59,6 @@ TrenaModelsSplitOnEQTL = R6Class("TrenaModelsSplitOnEQTL",
         # lasso, spearmanCoeff, rfScore, etc.
         summarizeStratifiedModels = function(models, scoreName){
 
-            browser()
             stopifnot(scoreName %in% colnames(models$trena.1))
             tfs <- models[[scoreName]]$tf
             tbl.1 <- models$trena.1

@@ -6,6 +6,8 @@ source("~/github/endophenotypeExplorer/R/TrenaModelsSplitOnEQTL.R")
 runTests <- function()
 {
     test_ctor()
+    test_buildTable()
+    test_buildModels()
 
 } # runTests
 #----------------------------------------------------------------------------------------------------
@@ -41,7 +43,7 @@ test_ctor <- function()
 {
    message(sprintf("--- test_ctor"))
 
-   splitter <- mayo.txc.splitter()
+   splitter <- mayo.tcx.splitter()
 
    checkEquals(is(splitter), "TrenaModelsSplitOnEQTL")
 
@@ -134,3 +136,5 @@ viz <- function()
 
 } # viz
 #----------------------------------------------------------------------------------------------------
+if(!interactive())
+   runTests()
