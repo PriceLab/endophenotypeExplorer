@@ -104,6 +104,15 @@ test_buildModels <- function()
    sort.order.tfs <- names(sort(table(tbl.all$tf), decreasing=TRUE))
    tbl.all <- tbl.all[subjectHits(findMatches(sort.order.tfs, tbl.all$tf)),]
 
+   shinyApp <- FALSE
+   if(shinyApp){
+     save(result, tbl.summary.rfScore, tbl.summary.spearman,
+          tbl.summary.pearson, tbl.summary.bicor,
+          tbl.summary.xgboost, tbl.summary.lasso, tbl.summary.ridge,
+          mtx.tcx,
+          file="~/github/TrenaProjectAD/explore/eqtl-trena-viz/PTK2B-rs11780653.RData")
+     }
+
 } # test_buildModels
 #----------------------------------------------------------------------------------------------------
 viz <- function()

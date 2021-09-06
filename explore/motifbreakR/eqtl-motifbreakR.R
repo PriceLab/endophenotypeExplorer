@@ -27,4 +27,14 @@ results <- motifbreakR(snpList = snps.gr,
                        BPPARAM = BiocParallel::bpparam(),
                        verbose=TRUE)
 
+tbl <- as.data.frame(results, row.names=NULL)
+tbl$pctDelta <- tbl$pctAlt - tbl$pctRef
+tbl$scoreDelta <- tbl$scoreAlt - tbl$scoreRef
+cor(tbl$pctDelta, tbl$scoreDelta)   # 0.94
+fivenum(abs(tbl$scoreDelta))        # 0.4001632 0.6700027 1.0379065 1.5177660 1.9998288
+tbl.strongest <- subset(tbl, scoreDelta > 1.995)
+dim(tbl.strongest)
+
+
+
 
