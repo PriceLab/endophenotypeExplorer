@@ -104,11 +104,13 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         getEQTLsForGene = function(){
-            suppressWarnings(db.access.test <- try(system("/sbin/ping -c 1 khaleesi", intern=TRUE, ignore.stderr=TRUE)))
-            if(length(db.access.test) == 0){
-               message(sprintf(("khaleesi unreachable, no eQTLS available")))
-               return(data.frame())
-               }
+            if(grepl("hagfish", Sys.info()[["nodename"]])){
+               suppressWarnings(db.access.test <- try(system("/sbin/ping -c 1 khaleesi", intern=TRUE, ignore.stderr=TRUE)))
+               if(length(db.access.test) == 0){
+                  message(sprintf(("khaleesi unreachable, no eQTLS available")))
+                  return(data.frame())
+                  } # length 0
+               } # on macos hagfish
             db <- dbConnect(PostgreSQL(), user="trena", password="trena", dbname="genereg2021", host="khaleesi")
             query.string <- sprintf("select * from eqtls where genesymbol='%s'", private$target.gene)
             private$tbl.eqtls <- dbGetQuery(db, query.string)
