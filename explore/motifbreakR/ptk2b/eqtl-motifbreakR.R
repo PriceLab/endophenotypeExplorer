@@ -14,20 +14,20 @@ rsids.all <- tbl.eQTL$rsid
 length(rsids.all)
 head(tbl.eQTL)
 dim(tbl.eQTL)
-dim(subset(tbl.eQTL, pvalue < 0.005)) 
+dim(subset(tbl.eQTL, pvalue < 0.005))
 tbl.eQTL[1:5,]
 subset(tbl.eQTL, pvalue < 0.005)
 
-direction <- "bottom"
+#direction <- "bottom"
 #direction <- "random"
 #direction <- "middle"
-#direction <- "top"
+direction <- "top"
 
 #rich.pvals.end <- nrow(subset(tbl.eQTL, pvalue <= 0.05))
 #rsids.oi <- rsids.all[1000:2000]
 #pval.threshold <- 0.005
 #rsids.oi <- subset(tbl.eQTL, pvalue <= pval.threshold)$rsid
-rsids.oi <- tail(tbl.eQTL$rsid, n=200)
+rsids.oi <- head(tbl.eQTL$rsid, n=100)
 match(rsids.oi, tbl.eQTL$rsid)
 
 count <- length(rsids.oi)
@@ -43,7 +43,7 @@ printf("found %d rsids", count)
 #snps.gr <- snps.from.rsid(rsid=rsids.sig,
 printf("--- getting snps")
 print(head(rsids.oi))
-snps.gr <- snps.from.rsid(rsid=rsids.oi, 
+snps.gr <- snps.from.rsid(rsid=rsids.oi,
                           dbSNP=SNPlocs.Hsapiens.dbSNP151.GRCh38,
                           search.genome=BSgenome.Hsapiens.UCSC.hg38)
 
@@ -52,8 +52,8 @@ length(snps.gr)
 printf("----- get motifs")
 
 #motifs.selected <- get(load("motifs.50.80.pkt2b.RData"))
-#motifs.selected <- get(load("motifs.38tfs.60motifs.pkt2b.RData"))
-motifs.selected <- get(load("motifs.2tfs.3motifs.pkt2b.RData"))
+motifs.selected <- get(load("motifs.38tfs.60motifs.pkt2b.RData"))
+#motifs.selected <- get(load("motifs.2tfs.3motifs.pkt2b.RData"))
 
 length(motifs.selected)
 
@@ -86,9 +86,9 @@ filename <- sprintf("ptk2b.eqtls.%s.%d.%s.motifbreaks.RData", direction, count,
                     format(Sys.time(), "%d%b.%H%M"))
 save(results, tbl.breaks, tbl.summary, file=filename)
 
-# 
+#
 #  rsids.to.use <- rsids.all[sort(sample(seq_len(length(rsids)), size=3))]
-#  
+#
 #  run.breaker <- function(snp.gr){
 #      printf("run.breaker on %s", paste(rsids, collapse= " "))
 #      results <- motifbreakR(snpList = snp.gr,
@@ -99,7 +99,7 @@ save(results, tbl.breaks, tbl.summary, file=filename)
 #                             bkg = c(A=0.25, C=0.25, G=0.25, T=0.25),
 #                             verbose=TRUE)
 #      }
-#  
+#
 #  direction <- "random"
 #  count <- 5
 #  if(direction == "top")
@@ -108,10 +108,10 @@ save(results, tbl.breaks, tbl.summary, file=filename)
 #    rsids <- tail(rsids.all, n=count)
 #  if(direction == "random")
 #    rsids <- rsids.all[sort(sample(seq_len(length(rsids.all)), size=count))]
-#  
+#
 #  snps.gr <- snps.from.rsid(rsid=rsids,
 #                            dbSNP=SNPlocs.Hsapiens.dbSNP151.GRCh38,
 #                            search.genome=BSgenome.Hsapiens.UCSC.hg38)
 #  x <- bplapply(list(snps.gr[[1]], snps.gr[[2]]), run.breaker, BPParame=MulitcoreParam()))
 #  #x <- bplapply(rsids, run.breaker, BPParame=MulitcoreParam()))
-#  
+#
