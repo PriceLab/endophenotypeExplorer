@@ -270,6 +270,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
               "sinai"  = self$standardizeSinaiPatientTable(subset(private$tbl.clinical.sinai,
                                                            individualID==patientID))
               )
+            if(nrow(tbl.patient) == 0) return(data.frame())
             tbl.patient$study <- study
             tbl.patient$sampleID <- sampleID
             coi <- c("patientID", "sampleID", "study", "study","sex","ethnicity","apoeGenotype",
