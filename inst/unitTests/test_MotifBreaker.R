@@ -21,9 +21,9 @@ slow.ptk2b.breaker <- function()
    targetGene <- "PTK2B"
    motifs.selected <- query(MotifDb, c("hsapiens", "jaspar2018"))
    f <- "~/github/endophenotypeExplorer/inst/unitTests/motifBreakerData/eqtl.ptk2b.100.RData"
-   top.eqtl.rsids <- get(load(f))
+   get(load(f))  # two variables: 100 rsids in top.eqtl.rsids, GRanges length 128 in gr.variants
    MotifBreaker$new(targetGene,
-                    variants=top.eqtl.rsids,
+                    variants=gr.variants, # top.eqtl.rsids,
                     motifs=motifs.selected,
                     quiet=FALSE)
 
@@ -91,6 +91,8 @@ test_runFull.ptk2b <- function()
     message(sprintf("--- test_runFull.ptk2b"))
     breaker <- slow.ptk2b.breaker()
     results <- breaker$findBreaks()
+    save(results, file="ptk2b.top100eqtls.allMotifs.RData")
+    
 
 } # test_runFull.ptk2b
 #----------------------------------------------------------------------------------------------------
@@ -128,4 +130,6 @@ prep_NDUFS2 <- function()
 
 } # prep_NDUFS
 #----------------------------------------------------------------------------------------------------
+if(!interactive())
+    test_runFull.ptk2b()
 
