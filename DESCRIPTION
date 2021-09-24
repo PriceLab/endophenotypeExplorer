@@ -14,4 +14,4 @@ Description: tools to explore associations between eQTLs, variants, gene express
 Depends: R (>= 4.1.0), R6, GenomicRanges
 License: Artistic-2.0
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

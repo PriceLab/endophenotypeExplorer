@@ -33,6 +33,7 @@ EndophenotypeExplorer
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{EndophenotypeExplorer$new()}}
+\item \href{#method-setTargetGene}{\code{EndophenotypeExplorer$setTargetGene()}}
 \item \href{#method-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
 \item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
@@ -75,6 +76,7 @@ Create a new EndophenotypeExplorer object
   target.gene,
   default.genome,
   verbose = FALSE,
+  initialize.snpLocs = FALSE,
   defer.setupClinicalData.toSupportTesting = FALSE
 )}\if{html}{\out{</div>}}
 }
@@ -93,6 +95,15 @@ Create a new EndophenotypeExplorer object
 \subsection{Returns}{
 A new `EndophenotypeExplorer` object.
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-setTargetGene"></a>}}
+\if{latex}{\out{\hypertarget{method-setTargetGene}{}}}
+\subsection{Method \code{setTargetGene()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setTargetGene(targetGene, genome)}\if{html}{\out{</div>}}
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-setupVcfURL"></a>}}

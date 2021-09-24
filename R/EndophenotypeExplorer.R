@@ -62,18 +62,36 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' @return A new `EndophenotypeExplorer` object.
 
         initialize = function(target.gene, default.genome, verbose=FALSE,
+                              initialize.snpLocs=FALSE,
                               defer.setupClinicalData.toSupportTesting=FALSE){
-            private$target.gene <- target.gene
-            private$default.genome <- default.genome
-            private$chromosome <- self$identifyTargetGeneChromosome(target.gene)
-            private$vcf.url <- self$setupVcfURL(private$chromosome)
+            self$setTargetGene(target.gene, default.genome)
             private$verbose <- verbose
             private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
                                                    "apoeGenotype","braak","cerad", "pmi",
                                                    "ageAtDeath", "cogdx")
             self$setupGWASData()
+            if(initialize.snpLocs){
+                message(sprintf("initializing hg19 and hg38 snpLocs, may take a minute"))
+                t1 <- system.time(x <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, "rs769450"))
+                t2 <- system.time(x <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, "rs769450"))
+                message(sprintf("dbSNP144 hg19: %5.2f", t2[["elapsed"]]))
+                message(sprintf("dbSNP151 hg38: %5.2f", t1[["elapsed"]]))
+                }
+
             if(!defer.setupClinicalData.toSupportTesting)
                 self$setupClinicalData()
+            },
+
+        setTargetGene = function(targetGene, genome){
+            private$target.gene <- targetGene
+            private$default.genome <- genome
+            if(is.na(targetGene)){
+              private$chromosome <- NA
+              private$vcf.url <- NA
+            } else {
+               private$chromosome <- self$identifyTargetGeneChromosome(targetGene)
+               private$vcf.url <- self$setupVcfURL(private$chromosome)
+               }
             },
 
         setupVcfURL = function(chromosome){
@@ -98,7 +116,13 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             },
 
         getGenoMatrixByRSID = function(rsids){
+            stopifnot(all(grepl("^rs", rsids)))
             tbl.locs <- self$rsidToLoc(rsids)
+            if(nrow(tbl.locs) == 0){
+                message(sprintf("failed to find chrom loc for rsids: %s",
+                                paste(rsids, collapse=",")))
+                return(NA)
+                }
             mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
             invisible(mtx)
             },
@@ -123,16 +147,18 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         rsidToLoc = function(rsids){
-            message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
+            # message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
             rsids <- grep("^rs", rsids, value=TRUE)
-            gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
-            tbl.hg19 <- as.data.frame(gr.hg19)
+            x.hg19 <- lapply(rsids, function(rsid)
+                snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsid, ifnotfound="drop"))
+            tbl.hg19 <- do.call(rbind, lapply(x.hg19, as.data.frame))
+            x.hg38 <- lapply(rsids, function(rsid)
+                snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsid, ifnotfound="drop"))
+            tbl.hg38 <- do.call(rbind, lapply(x.hg38, as.data.frame))
             colnames(tbl.hg19)[1] <- "chrom"
             colnames(tbl.hg19)[2] <- "hg19"
             colnames(tbl.hg19)[4] <- "rsid"
             tbl.hg19$chrom <- as.character(tbl.hg19$chrom)
-            gr.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsids, ifnotfound="drop")
-            tbl.hg38 <- as.data.frame(gr.hg38)
             colnames(tbl.hg38)[2] <- "hg38"
             colnames(tbl.hg38)[4] <- "rsid"
             tbl.out <- merge(tbl.hg19[, c("chrom", "hg19", "rsid")], tbl.hg38[, c("hg38", "rsid")], by="rsid")
