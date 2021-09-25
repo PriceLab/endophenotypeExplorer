@@ -1,7 +1,8 @@
 get.rna.matrix <- function(code)
 {
    mtx.choices <- c("max-tcx", "sage-eqtl-cer", "sage-eqtl-tcx",
-                   "old-mayo-tcx", "old-mayo-cer", "rosmap")
+                    "old-mayo-tcx", "old-mayo-cer",
+                    "old-rosmap", "sage-eqtl-rosmap")
 
    stopifnot(Sys.info()[["user"]] %in% c("paul", "pshannon"))
    stopifnot(code %in% mtx.choices)
@@ -36,9 +37,15 @@ get.rna.matrix <- function(code)
      mtx.rna <- get(load(file.path(data.dir, filename)))
      }
 
-   if(code=="rosmap"){
+   if(code=="rosmap-old"){
      data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
      filename <- "rosmap.14235x632.RData"
+     mtx.rna <- get(load(file.path(data.dir, filename)))
+     }
+
+   if(code=="sage-eqtl-rosmap"){
+     data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+     filename <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
      mtx.rna <- get(load(file.path(data.dir, filename)))
      }
 
