@@ -39,6 +39,7 @@ EndophenotypeExplorer
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
 \item \href{#method-getGenoMatrixByRSID}{\code{EndophenotypeExplorer$getGenoMatrixByRSID()}}
 \item \href{#method-getEQTLsForGene}{\code{EndophenotypeExplorer$getEQTLsForGene()}}
+\item \href{#method-getEQTLsInRegion}{\code{EndophenotypeExplorer$getEQTLsInRegion()}}
 \item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
 \item \href{#method-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
 \item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
@@ -63,6 +64,8 @@ EndophenotypeExplorer
 \item \href{#method-splitSinaiRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype()}}
 \item \href{#method-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
 \item \href{#method-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
+\item \href{#method-subsetAndRelabelGenoMatrixByPatientIDs}{\code{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs()}}
+\item \href{#method-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -147,6 +150,15 @@ A new `EndophenotypeExplorer` object.
 \subsection{Method \code{getEQTLsForGene()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getEQTLsForGene()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getEQTLsInRegion"></a>}}
+\if{latex}{\out{\hypertarget{method-getEQTLsInRegion}{}}}
+\subsection{Method \code{getEQTLsInRegion()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getEQTLsInRegion(chrom, start, end)}\if{html}{\out{</div>}}
 }
 
 }
@@ -372,6 +384,27 @@ A new `EndophenotypeExplorer` object.
   targetGene,
   tfs
 )}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-subsetAndRelabelGenoMatrixByPatientIDs"></a>}}
+\if{latex}{\out{\hypertarget{method-subsetAndRelabelGenoMatrixByPatientIDs}{}}}
+\subsection{Method \code{subsetAndRelabelGenoMatrixByPatientIDs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs(
+  mtx.geno,
+  studyName
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get.rna.matrix"></a>}}
+\if{latex}{\out{\hypertarget{method-get.rna.matrix}{}}}
+\subsection{Method \code{get.rna.matrix()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix(code)}\if{html}{\out{</div>}}
 }
 
 }

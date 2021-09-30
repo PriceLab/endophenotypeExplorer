@@ -105,7 +105,6 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            },
 
         getGenoMatrix = function(chrom, start, end){
-            message(sprintf("entering getGenoMatrix with vectors"))
             chromosomesInProperFormat <- !grepl("chr", chrom[1])
             stopifnot(chromosomesInProperFormat)
             roi <- sort(GRanges(seqnames=chrom, IRanges(start=start, end=end)))
@@ -117,13 +116,17 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
 
         getGenoMatrixByRSID = function(rsids){
             stopifnot(all(grepl("^rs", rsids)))
+            printf("--- getGenoMatrixByRSID looking up locs: %s", Sys.time())
+            print
             tbl.locs <- self$rsidToLoc(rsids)
+            printf("--- getGenoMatrixByRSID looking up locs, done: %s", Sys.time())
             if(nrow(tbl.locs) == 0){
                 message(sprintf("failed to find chrom loc for rsids: %s",
                                 paste(rsids, collapse=",")))
                 return(NA)
                 }
             mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
+            printf("--- getGenoMatrixByRSID, back from getGenoMatrix (locs): %s", Sys.time())
             invisible(mtx)
             },
 
@@ -137,6 +140,25 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                } # on macos hagfish
             db <- dbConnect(PostgreSQL(), user="trena", password="trena", dbname="genereg2021", host="khaleesi")
             query.string <- sprintf("select * from eqtls where genesymbol='%s'", private$target.gene)
+            tbl <- dbGetQuery(db, query.string)
+            new.order <- order(tbl$pvalue, decreasing=FALSE)
+            tbl <- tbl[new.order,]
+            dbDisconnect(db)
+            private$tbl.eqtls <- tbl
+            private$tbl.eqtls
+            },
+
+        getEQTLsInRegion = function(chrom, start, end){
+            if(grepl("hagfish", Sys.info()[["nodename"]])){
+               suppressWarnings(db.access.test <- try(system("/sbin/ping -c 1 khaleesi", intern=TRUE, ignore.stderr=TRUE)))
+               if(length(db.access.test) == 0){
+                  message(sprintf(("khaleesi unreachable, no eQTLS available")))
+                  return(data.frame())
+                  } # length 0
+               } # on macos hagfish
+            db <- dbConnect(PostgreSQL(), user="trena", password="trena", dbname="genereg2021", host="khaleesi")
+            query.string <-  sprintf("select * from eqtls where chrom='%s' and hg38 > %d and hg38 < %d",
+                               chrom, start, end)
             private$tbl.eqtls <- dbGetQuery(db, query.string)
             dbDisconnect(db)
             private$tbl.eqtls
@@ -645,7 +667,84 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                 bicor=tbl.bicor, rfScore=tbl.rf,
                 spearmanCoeff=tbl.spear, pearsonCoeff=tbl.pearson,
                 betaLasso=tbl.lasso, betaRidge=tbl.ridge, xgboost=tbl.xgboost)
-           } # trenaScoreGenotypeStratifiedExpression
+           }, # trenaScoreGenotypeStratifiedExpression
+
+
+           # duplicates parts of splitExpressionMatrixByMutationStatusAtRSID
+        subsetAndRelabelGenoMatrixByPatientIDs = function(mtx.geno, studyName){
+           tbl.map <- self$getIdMap()
+           stopifnot(studyName %in% tbl.map$study)
+           tbl.sub <- subset(tbl.map,
+                             study==studyName &
+                             sample %in% colnames(mtx.geno) &
+                             assay=="vcf")
+           mtx.geno.sub <- mtx.geno[, tbl.sub$sample, drop=FALSE]
+           indices <- match(colnames(mtx.geno.sub), tbl.sub$sample)
+           colnames(mtx.geno.sub) <- tbl.sub$patient[indices]
+           mtx.geno.sub
+           },
+
+        #----------------------------------------------------------------------------------------------
+        get.rna.matrix = function(code){
+            mtx.choices <- c("max-tcx", "sage-eqtl-cer", "sage-eqtl-tcx",
+                             "old-mayo-tcx", "old-mayo-cer",
+                             "old-rosmap", "sage-eqtl-rosmap",
+                             "sage-counts-rosmap")
+
+            stopifnot(Sys.info()[["user"]] %in% c("paul", "pshannon"))
+            stopifnot(code %in% mtx.choices)
+
+            if(code=="max-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
+                filename <- "mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="sage-eqtl-cer"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="sage-eqtl-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="old-mayo-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "mayo.tcx.16969x262.covariateCorrection.log+scale.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="old-mayo-cer"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "cerebellum.15167x263.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="old-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "rosmap.14235x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            if(code=="sage-eqtl-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+            if(code=="sage-counts-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+                }
+
+            invisible(mtx.rna)
+
+        } # get.rna.matrix
+
 
 
         #------------------------------------------------------------
