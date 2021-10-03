@@ -6,6 +6,7 @@
 #' @importFrom BSgenome snpsById snpsByOverlaps
 #' @import SNPlocs.Hsapiens.dbSNP144.GRCh37
 #' @import SNPlocs.Hsapiens.dbSNP151.GRCh38
+#' @import biomaRt
 #' @import TxDb.Hsapiens.UCSC.hg38.knownGene
 #' @import R6
 #' @import VariantAnnotation
@@ -48,6 +49,8 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                    tbl.gwas.38.associated=NULL,
                    tbl.eqtls=NULL,
                    standard.clinical.columns=NULL,
+                   snpMart.hg38=NULL,
+                   snpMart.hg19=NULL,
                    verbose=NULL
                    ),
 
@@ -77,7 +80,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                 message(sprintf("dbSNP144 hg19: %5.2f", t2[["elapsed"]]))
                 message(sprintf("dbSNP151 hg38: %5.2f", t1[["elapsed"]]))
                 }
-
+            #private$snpMart.hg38 <- useMart("ENSEMBL_MART_SNP",dataset="hsapiens_snp")
+            #private$snpMart.hg19 <- useMart(biomart="ENSEMBL_MART_SNP", host="grch37.ensembl.org",
+            #                                path="/biomart/martservice", dataset="hsapiens_snp")
             if(!defer.setupClinicalData.toSupportTesting)
                 self$setupClinicalData()
             },
@@ -168,6 +173,24 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            private$tbl.idMap
            },
 
+        biomart.rsidToLoc = function(rsids){
+           tbl.hg38 <- getBM(attributes=c("refsnp_id","allele","chr_name", "chrom_start"),
+                             filters=c("snp_filter"),
+                             values=list(rsids),
+                             mart=private$snpMart.hg38)
+           colnames(tbl.hg38) <- c("rsid", "allele", "chrom", "hg38")
+           tbl.hg19 <- getBM(attributes=c("refsnp_id","allele","chr_name", "chrom_start"),
+                             filters=c("snp_filter"),
+                             values=list(rsids),
+                             mart=private$snpMart.hg19)
+           colnames(tbl.hg19) <- c("rsid", "allele", "chrom", "hg19")
+           tbl.out <- merge(tbl.hg19[, c("chrom", "hg19", "rsid")],
+                            tbl.hg38[, c("hg38", "rsid")], by="rsid")
+           if(!grepl("chr", tbl.out$chrom[1]))
+              tbl.out$chrom <- sprintf("chr%s", tbl.out$chrom)
+           tbl.out[, c("chrom", "hg19", "hg38", "rsid")]
+           }, # biomart.rsidToLoc
+
         rsidToLoc = function(rsids){
             # message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
             rsids <- grep("^rs", rsids, value=TRUE)
@@ -185,7 +208,37 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             colnames(tbl.hg38)[4] <- "rsid"
             tbl.out <- merge(tbl.hg19[, c("chrom", "hg19", "rsid")], tbl.hg38[, c("hg38", "rsid")], by="rsid")
             tbl.out[, c("chrom", "hg19", "hg38", "rsid")]
-            },
+            }, # rsidToLoc
+
+        biomart.locsToRSID = function(locs, genome){
+              # expect locs in this form:  "2:127084193_G/A"
+              # todo: enforce this, fail or accomodate if otherwise
+            chroms <- unlist(lapply(strsplit(locs, ":"), "[", 1))
+            loc.strings <- unlist(lapply(strsplit(locs, ":"), "[", 2))
+            locs.base <- as.integer(sub("_.*$", "", loc.strings))
+               # convert location string to the standard from required by biomart
+               # which is chr:start:end
+            locs.biomart <- sprintf("%s:%d:%d", chroms, locs.base, locs.base)
+            if(genome == "hg19")
+               tbl.out <-  getBM(attributes=c("refsnp_id","allele","chr_name", "chrom_start"),
+                                 filters="chromosomal_region", # chr_name","start","end"),
+                                 #values=locs.biomart,
+                                 #values=c("2:127084193:127084193", "2:127084235:127084235"),
+                                        #values=values,
+                                 values=locs.biomart,
+                                 mart=private$snpMart.hg19)
+            if(genome == "hg38")
+               tbl.out <-  getBM(attributes=c("refsnp_id","allele","chr_name", "chrom_start"),
+                                 filters="chromosomal_region", # chr_name","start","end"),
+                                 values=locs.biomart,
+                                 #values=c("2:127084193:127084193", "2:127084235:127084235"),
+                                 mart=private$snpMart.hg38)
+            colnames(tbl.out) <- c("rsid", "allele", "chrom", genome)
+            x <- tbl.out$rsid
+            browser()
+            names(x) <- locs
+            x
+            }, # biomart.locsToRSID
 
         locsToRSID = function(locs, genome){
               # expect locs in this form:  "2:127084193_G/A"
@@ -216,7 +269,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             result <- tbl.new$rsid
             names(result) <- locs
             result
-            },
+            }, # old.locsToRSID
 
         mapSampleIdToPatientAndCohort = function(sampleID){
            subset(private$tbl.idMap, sample==sampleID)

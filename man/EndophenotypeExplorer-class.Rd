@@ -41,7 +41,9 @@ EndophenotypeExplorer
 \item \href{#method-getEQTLsForGene}{\code{EndophenotypeExplorer$getEQTLsForGene()}}
 \item \href{#method-getEQTLsInRegion}{\code{EndophenotypeExplorer$getEQTLsInRegion()}}
 \item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
+\item \href{#method-biomart.rsidToLoc}{\code{EndophenotypeExplorer$biomart.rsidToLoc()}}
 \item \href{#method-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
+\item \href{#method-biomart.locsToRSID}{\code{EndophenotypeExplorer$biomart.locsToRSID()}}
 \item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
 \item \href{#method-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
 \item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
@@ -172,11 +174,29 @@ A new `EndophenotypeExplorer` object.
 
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-biomart.rsidToLoc"></a>}}
+\if{latex}{\out{\hypertarget{method-biomart.rsidToLoc}{}}}
+\subsection{Method \code{biomart.rsidToLoc()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$biomart.rsidToLoc(rsids)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rsidToLoc"></a>}}
 \if{latex}{\out{\hypertarget{method-rsidToLoc}{}}}
 \subsection{Method \code{rsidToLoc()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$rsidToLoc(rsids)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-biomart.locsToRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-biomart.locsToRSID}{}}}
+\subsection{Method \code{biomart.locsToRSID()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$biomart.locsToRSID(locs, genome)}\if{html}{\out{</div>}}
 }
 
 }
