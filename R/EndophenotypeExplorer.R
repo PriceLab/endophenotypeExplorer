@@ -122,7 +122,6 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         getGenoMatrixByRSID = function(rsids){
             stopifnot(all(grepl("^rs", rsids)))
             printf("--- getGenoMatrixByRSID looking up locs: %s", Sys.time())
-            print
             tbl.locs <- self$rsidToLoc(rsids)
             printf("--- getGenoMatrixByRSID looking up locs, done: %s", Sys.time())
             if(nrow(tbl.locs) == 0){
