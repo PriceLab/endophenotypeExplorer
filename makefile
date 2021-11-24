@@ -1,7 +1,11 @@
-all:  docs install
+default:
+	@echo targets: all (roxy, install)  build install test
 
-docs:
+all:  roxy install
+
+roxy:
 	R -e "devtools::document()"
+
 vig:
 	R -e "devtools::build_vignettes()"
 

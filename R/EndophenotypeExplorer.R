@@ -51,6 +51,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                    standard.clinical.columns=NULL,
                    snpMart.hg38=NULL,
                    snpMart.hg19=NULL,
+                   expressionMatrixCodes=NULL,
                    verbose=NULL
                    ),
 
@@ -80,13 +81,27 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                 message(sprintf("dbSNP144 hg19: %5.2f", t2[["elapsed"]]))
                 message(sprintf("dbSNP151 hg38: %5.2f", t1[["elapsed"]]))
                 }
-            #private$snpMart.hg38 <- useMart("ENSEMBL_MART_SNP",dataset="hsapiens_snp")
-            #private$snpMart.hg19 <- useMart(biomart="ENSEMBL_MART_SNP", host="grch37.ensembl.org",
-            #                                path="/biomart/martservice", dataset="hsapiens_snp")
             if(!defer.setupClinicalData.toSupportTesting)
                 self$setupClinicalData()
+            private$expressionMatrixCodes <-
+                list("max-tcx"="mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData",
+                 "sage-eqtl-cer"="mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData",
+                 "sage-eqtl-tcx"="mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData",
+                 "old-mayo-tcx"="mayo.tcx.16969x262.covariateCorrection.log+scale.RData",
+                 "old-mayo-cer"="cerebellum.15167x263.RData",
+                 "old-rosmap"="rosmap.14235x632.RData",
+                 "sage-eqtl-rosmap"="mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData",
+                 "sage-counts-rosmap"="mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData",
+                 "max-rosmap"="ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData",
+                 "tcx-unknown"="temporalCortex.15167x264.RData")
+
             },
 
+         #' @description
+         #' the targetGene and genome are widely referenced - this member function allows you
+         #' to change your initial choices
+         #' @param target.gene  Gene of interest.
+         #' @param genome UCSC code, either `hg19` or `hg38`.
         setTargetGene = function(targetGene, genome){
             private$target.gene <- targetGene
             private$default.genome <- genome
@@ -99,16 +114,104 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                }
             },
 
+        get.rna.matrix.codes=function(){
+           return(private$expressionMatrixCodes)
+           },
+
+        get.rna.matrix=function(code) {
+            stopifnot(Sys.info()[["user"]] %in% c("paul", "pshannon"))  # only works for me, for now
+            mtx.choices <- names(private$expressionMatrixCodes)
+            stopifnot(code %in% mtx.choices)
+            if(code=="max-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
+                filename <- "ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="max-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
+                filename <- "mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="sage-eqtl-cer"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="sage-eqtl-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="old-mayo-tcx"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "mayo.tcx.16969x262.covariateCorrection.log+scale.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="old-mayo-cer"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "cerebellum.15167x263.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="old-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "rosmap.14235x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="sage-eqtl-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+            if(code=="sage-counts-rosmap"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+                filename <- "mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            if(code=="tcx-unknown"){
+                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
+                filename <- "temporalCortex.15167x264.RData"
+                mtx.rna <- get(load(file.path(data.dir, filename)))
+            }
+
+            invisible(mtx.rna)
+            }, # get.rna.matrix
+#----------------------------------------------------------------------------------------------------
+
+         #' @description
+         #' our genotypes are stored per-chromosome in vcf files.  this
+         #' function uses the current chromosome of interest, to provide
+         #' otherwise simple access to genotypes of the current gene and its
+         #' putative regulatory regions
+         #' @param chromosome
+         #' @returns the url
         setupVcfURL = function(chromosome){
            vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
            vcf.directory <- "NIA-1898"
            sprintf("%s/%s/%s.vcf.gz", vcf.base.url, vcf.directory, chromosome)
            },
 
+        #' @description
+        #' easy access to the current value
+        #' returns url in character form
         getVcfUrl = function(){
            private$vcf.url
            },
 
+
+        #' @description
+        #' genotypes for all samples in the specified locus
+        #' @param chrom character
+        #' @param start numeric
+        #' @param end numeric
+        #' returns matrix, location by sample
         getGenoMatrix = function(chrom, start, end){
             chromosomesInProperFormat <- !grepl("chr", chrom[1])
             stopifnot(chromosomesInProperFormat)
@@ -118,6 +221,11 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             mtx <- geno(x)$GT
             invisible(mtx)
             },
+
+        #' @description
+        #' genotypes for all samples at the specified rsids
+        #' @param rsids character
+        #' returns matrix, location by sample
 
         getGenoMatrixByRSID = function(rsids){
             stopifnot(all(grepl("^rs", rsids)))
@@ -734,70 +842,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            indices <- match(colnames(mtx.geno.sub), tbl.sub$sample)
            colnames(mtx.geno.sub) <- tbl.sub$patient[indices]
            mtx.geno.sub
-           },
-
-        #----------------------------------------------------------------------------------------------
-        get.rna.matrix = function(code){
-            mtx.choices <- c("max-tcx", "sage-eqtl-cer", "sage-eqtl-tcx",
-                             "old-mayo-tcx", "old-mayo-cer",
-                             "old-rosmap", "sage-eqtl-rosmap",
-                             "sage-counts-rosmap")
-
-            stopifnot(Sys.info()[["user"]] %in% c("paul", "pshannon"))
-            stopifnot(code %in% mtx.choices)
-
-            if(code=="max-tcx"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
-                filename <- "mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="sage-eqtl-cer"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
-                filename <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="sage-eqtl-tcx"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
-                filename <- "mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="old-mayo-tcx"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
-                filename <- "mayo.tcx.16969x262.covariateCorrection.log+scale.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="old-mayo-cer"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
-                filename <- "cerebellum.15167x263.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="old-rosmap"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression"
-                filename <- "rosmap.14235x632.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            if(code=="sage-eqtl-rosmap"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
-                filename <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-            if(code=="sage-counts-rosmap"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
-                filename <- "mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-                }
-
-            invisible(mtx.rna)
-
-        } # get.rna.matrix
-
-
+           }
 
         #------------------------------------------------------------
         ) # public

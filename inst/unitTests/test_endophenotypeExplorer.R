@@ -1,10 +1,14 @@
 library(RUnit)
 library(EndophenotypeExplorer)
 library(plyr)
+# source("~/github/endophenotypeExplorer/R/getExpressionMatrices.R")
+#----------------------------------------------------------------------------------------------------
+init.snpLocs <- function() x <- EndophenotypeExplorer$new(NA, NA, initialize.snpLocs=TRUE)
 #----------------------------------------------------------------------------------------------------
 runTests <- function()
 {
     test_ctor()
+    test_getExpressionMatrix()
     test_standardizeRosmapPatientTable ()
     test_standardizeSinaiPatientTable()
     test_standardizeMayoPatientTable()
@@ -29,6 +33,8 @@ runTests <- function()
     test_splitExpressionMatrixByMutationStatusAtRSID_sinai()
     test_splitExpressionMatrixByMutationStatusAtRSID_rosmap()
 
+    test_subsetAndRelabelGenoMatrixByPatientIDs()
+
 } # runTests
 #----------------------------------------------------------------------------------------------------
 test_ctor <- function()
@@ -40,7 +46,37 @@ test_ctor <- function()
    expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr2.vcf.gz"
    checkEquals(etx$getVcfUrl(), expected)
 
+   etx <- EndophenotypeExplorer$new(NA, NA)
+   etx$setTargetGene("BIN1", "hg19")
+   checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
+   checkEquals(etx$getVcfUrl(), expected)
+
+   etx$setTargetGene("BACH1", "hg38")
+   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr21.vcf.gz"
+   checkEquals(etx$getVcfUrl(), expected)
+
+
 } # test_ctor
+#----------------------------------------------------------------------------------------------------
+test_getExpressionMatrix <- function()
+{
+    message(sprintf("--- test_getExpressionMatrix"))
+
+    etx <- EndophenotypeExplorer$new("BIN1", "hg38")
+    codes <- names(etx$get.rna.matrix.codes())
+    checkTrue(length(codes) >= 10)
+      # check a few
+    checkTrue(all(c("max-tcx", "sage-eqtl-cer", "old-rosmap", "max-rosmap") %in%  codes))
+
+      # now loop through all, get the matrices, check for reasonable dimensions
+    for(code in codes){
+        mtx <- etx$get.rna.matrix(code)
+        printf("--- %s: %d x %d", code, nrow(mtx), ncol(mtx))
+        checkTrue(nrow(mtx) > 14000)
+        checkTrue(ncol(mtx) > 250)
+        }
+
+} # test_getExpressionMatrix
 #----------------------------------------------------------------------------------------------------
 test_standardizeMayoPatientTable <- function()
 {
@@ -285,21 +321,64 @@ test_getGenoMatrix <- function()
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19")
       # chr2:127,084,188-127,084,203: 16 base pairs around rs10200967 in bin1 5' utr
-   mtx.geno <- etx$getGenoMatrix("2", 127084188, 127094203)
+   loc.start <- 127084188
+   loc.end   <- 127094203
+   x <- system.time(mtx.geno <- etx$getGenoMatrix("2", loc.start, loc.end))
    checkEquals(dim(mtx.geno), c(220, 1894))
+   printf("--- retrieved %d variants, %d samples, in %d seconds across %d kb bases on chr2",
+          nrow(mtx.geno), ncol(mtx.geno),
+          as.integer(x[["elapsed"]]),
+          as.integer((loc.end - loc.start)/1000))
    checkTrue(all(c("2:127084193_G/A", "2:127084194_A/C") %in% rownames(mtx.geno)))
 
 
+     #--------------------------------------------------------------------------------
      # divide the region into two halves, should get the same matrix back
+     #--------------------------------------------------------------------------------
+
    mtx.geno.2 <- etx$getGenoMatrix(chrom=c("2", "2"),
                                    start=c(127084188, 127084196),
                                    end  =c(127084195, 127094203))
    checkEquals(dim(mtx.geno.2), dim(mtx.geno))
 
+     #--------------------------------------------------------------------------------
+     # query across a much larger area, that which spans all the rosmap/ampad eQTLs
+     # for NDUFS2
+     #--------------------------------------------------------------------------------
+   etx$setTargetGene("NDUFS2", "hg19")
+   tbl.eqtls.ndufs2 <- etx$getEQTLsForGene()
+   checkEquals(dim(tbl.eqtls.ndufs2), c(11310, 10))
+   tbl.eqtls.sub <- subset(tbl.eqtls.ndufs2, study=="ampad-rosmap" & pvalue < 1e-5)
+   dim(tbl.eqtls.sub)
+
+
+   loc.start <- min(tbl.eqtls.sub$hg19)
+   loc.end  <-  max(tbl.eqtls.sub$hg19)
+   loc.chrom  <- "1"
+
+   x <- system.time(mtx.geno <- etx$getGenoMatrix(loc.chrom, loc.start, loc.end))
+   checkEquals(dim(mtx.geno), c(2155, 1894))
+   printf("--- retrieved %d variants, %d samples, in %d seconds across %d kb bases on chr2",
+          nrow(mtx.geno), ncol(mtx.geno),
+          as.integer(x[["elapsed"]]),
+          as.integer((loc.end - loc.start)/1000))
+
+
+
+
+     #--------------------------------------------------------------------------------
      # now, on a different chromosome, query by rsid, then write rsids back into the mtx rownames
+     #--------------------------------------------------------------------------------
+
    etx <- EndophenotypeExplorer$new("NDUFS2", "hg19")
    rsids <- c("rs11576415", "rs11584174", "rs12753774", "rs12754503")
-   mtx.geno <- etx$getGenoMatrixByRSID(rsids)
+   x <- system.time(mtx.geno <- etx$getGenoMatrixByRSID(rsids))
+   printf("--- retrieved %d variants, %d samples, in %d seconds",
+          nrow(mtx.geno), ncol(mtx.geno),
+          as.integer(x[["elapsed"]]))
+
+
+
    new.names <- etx$locsToRSID(rownames(mtx.geno), "hg19")
    checkEquals(names(new.names), rownames(mtx.geno))
         # the locations were sorted before the matrix was retreived.
@@ -312,36 +391,89 @@ test_getGenoMatrix <- function()
 
 } # test_getGenoMatrix
 #----------------------------------------------------------------------------------------------------
+test_getGenoMatrixByRSID_atScale <- function()
+{
+    message(sprintf("--- test_getGenoMatrixByRSID_atScale"))
+    etx$setTargetGene("NDUFS2", "hg19")
+    tbl.eqtls <- etx$getEQTLsForGene()
+
+    time.001 <- system.time(mtx.geno.001 <- etx$getGenoMatrixByRSID(tbl.eqtls$rsid[1]))
+    time.010 <- system.time(mtx.geno.001 <- etx$getGenoMatrixByRSID(tbl.eqtls$rsid[1:10]))
+    time.100 <- system.time(mtx.geno.001 <- etx$getGenoMatrixByRSID(tbl.eqtls$rsid[1:100]))
+
+    rsids.100 <- tbl.eqtls$rsid[1:100]
+    library(SNPlocs.Hsapiens.dbSNP144.GRCh37)
+    library(SNPlocs.Hsapiens.dbSNP151.GRCh38)
+    time.100.snpsById.hg19 <- system.time(x <- lapply(rsids.100, function(rsid)
+                snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsid, ifnotfound="drop")))
+    time.100.snpsById.hg38 <- system.time(x <- lapply(rsids.100, function(rsid)
+                snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsid, ifnotfound="drop")))
+    time.100.snpsById.hg38.oneCall <- system.time(
+                snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsids.100, ifnotfound="drop"))
+
+    system.time(etx$rsidToLoc(rsids.100))
+
+} # test_getGenoMatrixByRSID_atScale
+#----------------------------------------------------------------------------------------------------
+test_getGenoMatrix_multipleGenes <- function()
+{
+   message(sprintf("--- test_getGenoMatrix_multipleGenes"))
+
+   etx <- EndophenotypeExplorer$new(NA, NA, initialize.snpLocs=TRUE)
+   tbl.gwas <- etx$getGWASTables()$gwas.38
+
+   genes <- sort(tbl.gwas$geneSymbol[c(1,38)])
+   checkEquals(genes, c("AGRN", "APP"))
+      # make sure these are different chromosomes to provide a good test
+   checkTrue(tbl.gwas$chrom[1] != tbl.gwas$chrom[38])
+
+   etx$setTargetGene("AGRN", "hg19")
+   checkEquals(etx$getVcfUrl(),
+               "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr1.vcf.gz")
+   mtx.geno.1 <- etx$getGenoMatrixByRSID(tbl.gwas$leadVariant[1])
+   checkEquals(dim(mtx.geno.1), c(1, 1894))
+
+   etx$setTargetGene("APP", "hg19")
+   checkEquals(etx$getVcfUrl(),
+               "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr21.vcf.gz")
+   mtx.geno.38 <- etx$getGenoMatrixByRSID(tbl.gwas$leadVariant[38])
+   checkEquals(dim(mtx.geno.38), c(1, 1894))
+
+      # make sure we did not get the same matrix back twice
+   checkTrue(as.list(table(mtx.geno.1))[["0/1"]] != as.list(table(mtx.geno.38))[["0/1"]])
+
+} # test_getGenoMatrix_multipleGenes
+#----------------------------------------------------------------------------------------------------
 test_locsToRSID <- function()
 {
    message(sprintf("--- test_locsToRSID"))
-   list.locs <- get(load(system.file(package="EndophenotypeExplorer", "extdata",
-                                     "chromLocs.hg19.for.rsidMapping.RData")))
+   etx <- EndophenotypeExplorer$new("BIN1", "hg19", initialize.snpLocs=TRUE)
 
-      # first, just a few
-   etx <- EndophenotypeExplorer$new("BIN1", "hg19")
-   small.set <- list.locs[c(1,3,5,9)]   # 9 has no gh19 rsid
-   rsids <- etx$locsToRSID(small.set, "hg19")
-   checkEquals(names(rsids), small.set)
-   checkEquals(as.character(rsids),
-               c("rs574335478", "rs572625692", "rs185158978", "2:127084512"))
+     # get a set of rsids with hg19 and hg38 locs
+   tbl.eqtl <- etx$getEQTLsForGene()
+   tbl.bin1 <-  head(subset(tbl.eqtl, study=="ampad-rosmap"))
+   locs.hg19 <- sprintf("%s:%d_X/Y", tbl.bin1$chrom, tbl.bin1$hg19)
+   locs.hg19 <- sub("chr", "", locs.hg19)
+   locs.hg38 <- sprintf("%s:%d_X/Y", tbl.bin1$chrom, tbl.bin1$hg38)
+   locs.hg38 <- sub("chr", "", locs.hg38)
+   rsids.orig<- tbl.bin1$rsid
 
-     # now the full 220
-   rsids <- etx$locsToRSID(list.locs, "hg19")
-   checkEquals(names(rsids), list.locs)
+      #----------------------------------------
+      # first, hg19 locs
+      #----------------------------------------
 
-   checkEquals(length(list.locs), length(rsids))
-   checkEquals(length(grep(":", rsids)), 69)
+   rsids <- etx$locsToRSID(locs.hg19, "hg19")
+   checkEquals(names(rsids), locs.hg19)
+   checkTrue(all(rsids.orig %in% rsids))
 
-     # one long insertion ought to work despite its extreme nature
-   checkEquals(list.locs[168],
-               "2:127091778_A/AGACCTGGGACCAAAAGCAGGACATCATTTTTAATCTAGGTGCATACAAAGTCAGTCATTGTTAGGT")
-   checkEquals(rsids[[168]], "2:127091778")
+      #----------------------------------------
+      # now, hg38 locs
+      #----------------------------------------
 
-     # though the locs are actually hg19, we should be able to make a useless hg38 conversion
-   rsids <- etx$locsToRSID(list.locs, "hg38")
-   checkEquals(length(list.locs), length(rsids))
-   checkEquals(length(grep(":", rsids)), 181)
+   rsids <- etx$locsToRSID(locs.hg38, "hg38")
+   checkEquals(length(locs.hg38), length(rsids))
+   checkTrue(all(rsids.orig %in% rsids))
+
 
 } # test_locsToRSID
 #----------------------------------------------------------------------------------------------------
@@ -359,7 +491,7 @@ test_rsidToLocs <- function()
    checkEquals(tbl.locs$rsid, "rs4575098")
 
    rsid.list <- c("rs114360492", "rs4351014", "rs74615166", "rs6504163", "rs9381040")
-   tbl.locs <- etx$rsidToLoc(rsid.list)
+   system.time(tbl.locs <- etx$rsidToLoc(rsid.list))
 
    new.order <- match(rsid.list, tbl.locs$rsid)
    tbl.locs <- tbl.locs[new.order,]
@@ -597,13 +729,16 @@ test_getEQTLsForGene <- function()
     message(sprintf("--- test_getEQTLsForGene"))
 
     targetGene <- "NDUFS2"
-    etx <- EndophenotypeExplorer$new(targetGene, "hg19")
+    etx <- EndophenotypeExplorer$new(targetGene, "hg19", initialize.snpLocs=FALSE)
     tbl.eQTL <- etx$getEQTLsForGene()
     checkTrue(nrow(tbl.eQTL) > 10000)
     checkTrue(ncol(tbl.eQTL) >= 10)
 
     min.pval <- min(tbl.eQTL$pvalue)
     checkTrue("rs1136224" %in% subset(tbl.eQTL, pvalue == min.pval)$rsid)
+
+       # has the table been sorted?
+    checkEquals(tbl.eQTL$rsid[1], "rs1136224")
 
     tbl.sig <- subset(tbl.eQTL, pvalue <= 0.01)
     dim(tbl.sig)
@@ -701,26 +836,57 @@ test_splitExpressionMatrixByMutationStatusAtRSID_rosmap <- function()
 {
    message(sprintf("--- test_splitExpressionMatrixByMutationStatusAtRSID_rosmap"))
 
-   dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
-   file.rosmap <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
-   mtx <- get(load(file.path(dir, file.rosmap)))
-   checkEquals(dim(mtx), c(15582, 632))
+     #-----------------------------------------------
+     # use the eqtl-optimized matrix from sage
+     #-----------------------------------------------
 
-   targetGene <- "PTK2B"
-   rsid <- "rs28834970"
+   variant.best <- "rs1136224"   # splits mtx.rna with t.test p.value < 1e-17
+   variant.worst <- "rs352680"   # splits mtx.rna with t.test p.value > 0.99
+   mtx.rna <- etx$get.rna.matrix("sage-eqtl-rosmap")
 
+   targetGene <- "NDUFS2"
    etx <- EndophenotypeExplorer$new(targetGene, "hg38")
-   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx, rsid, study.name="rosmap")
-   checkEquals(sort(names(x)),
-               c("genotypes.rna","genotypes.vcf", "het", "hom", "mut", "wt"))
-   checkEquals(x$genotypes.vcf,
-               list(wt=484, mut=661, het=518, hom=143))
-   checkEquals(x$genotypes.rna,
-               list(wt=241, mut=313, het=245, hom=68))
-   checkEquals(dim(x$wt),  c(15582, 241))
-   checkEquals(dim(x$mut), c(15582, 313))
-   checkEquals(dim(x$het), c(15582, 245))
-   checkEquals(dim(x$hom), c(15582, 68))
+
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.rna, variant.best, study.name="rosmap")
+   checkEquals(x$genotypes.vcf, list(wt=820, mut=324, het=296, hom=28))
+   checkEquals(x$genotypes.rna, list(wt=388, mut=165, het=146, hom=19))
+
+   ndufs2.wt <- as.numeric(x$wt["NDUFS2",])
+   ndufs2.mut <- as.numeric(x$mut["NDUFS2",])
+   checkTrue(t.test(ndufs2.wt, ndufs2.mut)$p.value < 1e-16)
+
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.rna, variant.worst, study.name="rosmap")
+   ndufs2.wt <- as.numeric(x$wt["NDUFS2",])
+   ndufs2.mut <- as.numeric(x$mut["NDUFS2",])
+   checkTrue(t.test(ndufs2.wt, ndufs2.mut)$p.value > 0.92)
+
+   x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.rna, "rs4575098", study.name="rosmap")
+   ndufs2.wt <- as.numeric(x$wt["NDUFS2",])
+   ndufs2.mut <- as.numeric(x$mut["NDUFS2",])
+   checkTrue(t.test(ndufs2.wt, ndufs2.mut)$p.value < 6e-07)
+
+   hsf2.wt <- as.numeric(x$wt["HSF2",])
+   hsf2.mut <- as.numeric(x$mut["HSF2",])
+
+   tfs.all <- get(load("~/github/MotifDb/inst/extdata/tfs/tfs-1683-lambert.RData"))$Gene
+   tf.candidates <- intersect(tfs.all, rownames(mtx.rna))
+   length(tf.candidates)
+
+   library(trena)
+   mtx.rna.fixed <- mtx.rna
+   mtx.rna.fixed[is.na(mtx.rna.fixed)] <- 0
+   solver <- EnsembleSolver(mtx.rna.fixed,
+                           targetGene="NDUFS2",
+                           candidateRegulators=tf.candidates,
+                           solverNames=c("Spearman", "Pearson", "RandomForest", "xgboost"),
+                           #solverNames=c("lasso", "Ridge", "Spearman", "Pearson", "RandomForest", "xgboost"),
+			   geneCutoff=1.0)
+   tbl.out <- run(solver)
+   new.order <- order(abs(tbl.out$spearman), decreasing=TRUE)
+   tbl.out <- tbl.out[new.order,]
+
+   cor(hsf2.wt, ndufs2.wt, method="spearman", use="pairwise.complete")
+   cor(hsf2.mut, ndufs2.mut, method="spearman", use="pairwise.complete")
 
 } # test_splitExpressionMatrixByMutationStatusAtRSID_rosmap
 #----------------------------------------------------------------------------------------------------
@@ -835,10 +1001,129 @@ test_summarizeStratifiedModels <- function()
    tbl.summary <- etx$summarizeStratifiedModels(xx.mut, "spearman")
 
 
-
-
-
 } # test_summarizeStratifiedModels
 #----------------------------------------------------------------------------------------------------
-if(!interactive())
+test_subsetAndRelabelGenoMatrixByPatientIDs <- function()
+{
+    message(sprintf("--- test_subsetAndRelabelGenoMatrixByPatientIDs"))
+
+    etx <- EndophenotypeExplorer$new("NDUFS2", "hg38", initialize.snpLocs=TRUE)
+
+    mtx.rna <- etx$get.rna.matrix("sage-eqtl-rosmap")
+    variant.best  <- "rs1136224"   # from ampad eqtls
+    variant.worst <- "rs352680"
+
+    mtx.geno.1 <- etx$getGenoMatrixByRSID(variant.best)
+    mtx.geno.pt.rosmap <- etx$subsetAndRelabelGenoMatrixByPatientIDs(mtx.geno.1, "rosmap")
+
+    mtx.geno.pt.rosmap <- etx$subsetAndRelabelGenoMatrixByPatientIDs(mtx.geno.1, studyName="rosmap")
+
+    checkEquals(dim(mtx.geno.1), c(1, 1894))
+    checkEquals(dim(mtx.geno.pt.rosmap), c(1, 1151))
+
+    tbl.map <- etx$getIdMap()
+
+    expected.geno <-  c("0/0", "0/0", "0/1", "1/1", "0/0")
+    vcf.sample.ids <- c("SM-CTELZ", "SM-CTEM1", "SM-CTEM2", "SM-CTEM3", "SM-CTEM4")
+    patient.ids <- c("R5413523", "R9641047", "R9254359", "R4146432", "R6414128")
+    checkEquals(as.character(mtx.geno.1[1, vcf.sample.ids]), expected.geno)
+    checkEquals(as.character(mtx.geno.pt.rosmap[1, patient.ids]), expected.geno)
+
+} # test_subsetAndRelabelGenoMatrixByPatientIDs
+#----------------------------------------------------------------------------------------------------
+# reproduce, more or less, these first and last eQTL scores from AMPAD
+#  chrom      hg19      hg38       rsid       pvalue            ensg genesymbol        study tissue   assay
+#   chr1 161184097 161214307  rs1136224 1.285003e-18 ENSG00000158864     NDUFS2 ampad-rosmap  dlpfc unknown
+#   chr1 160678721 160708931   rs352680 0.9999419 ENSG00000158864     NDUFS2 ampad-rosmap  dlpfc unknown
+demo_variantSeparated.rna.t.test <- function()
+{
+    message(sprintf("--- test_subsetAndRelabelGenoMatrixByPatientIDs"))
+
+    targetGene <- "NDUFS2"
+    etx <- EndophenotypeExplorer$new(targetGene, "hg38", initialize.snpLocs=TRUE)
+
+    mtx.rna <- etx$get.rna.matrix("sage-eqtl-rosmap")
+    variant.best  <- "rs1136224"   # from ampad eqtls
+    variant.worst <- "rs352680"
+
+    mtx.geno.1 <- etx$getGenoMatrixByRSID(variant.best)
+    mtx.geno.pt.rosmap <- etx$subsetAndRelabelGenoMatrixByPatientIDs(mtx.geno.1, "rosmap")
+
+    wt.patients <- which(mtx.geno.pt.rosmap[1,] %in% "0/0")
+    wt.patient.names <- colnames(mtx.geno.pt.rosmap)[wt.patients]
+    checkEquals(length(wt.patient.names), 827)
+    wt.patient.names <- intersect(colnames(mtx.rna), wt.patient.names)
+    checkEquals(length(wt.patient.names), 388)
+
+    mut.patients <- which(mtx.geno.pt.rosmap[1,] %in% c("0/1", "1/1"))
+    mut.patient.names <- colnames(mtx.geno.pt.rosmap)[mut.patients]
+    checkEquals(length(mut.patient.names), 324)
+    mut.patient.names <- intersect(colnames(mtx.rna), mut.patient.names)
+    checkEquals(length(mut.patient.names), 165)
+
+    wt.vec <- mtx.rna[targetGene, wt.patient.names]
+    mut.vec <- mtx.rna[targetGene, mut.patient.names]
+    checkEqualsNumeric(t.test(wt.vec, mut.vec)$p.value, 5.31e-17, tol=1e15)
+
+       #------------------------------------------------
+       # does mutation status correspond to diagnosis?
+       # from mayo/sage ampad eqtl 2020 nature paper
+       #  Prior to RNA-seq normalization, we harmonized the LOAD
+       #  definition across AMP-AD studies. AD controls were defined as
+       #  patients with a low burden of plaques and tangles, as well as
+       #  lack of evidence of cognitive impairment. For the ROSMAP
+       #  study, we defined AD cases to be individuals with a Braak
+       #  greater than or equal to 4, CERAD score less than or equal
+       #  to 2, and a cognitive diagnosis of probable AD with no other
+       #  causes (cogdx = 4), and controls to be individuals with Braak
+       #  less than or equal to 3, CERAD score greater than or equal to
+       #  3, and cognitive diagnosis of ‘no cognitive impairment’
+       #  (cogdx = 1). For the Mayo Clinic study, we defined disease
+       #  status based on neuropathology, where individuals with Braak
+       #  score greater than or equal to 4 were defined to be AD cases,
+       #  and individuals with Braak less than or equal to 3 were
+       #  defined to be controls. Individuals not meeting “AD case” or
+       #  “control” criteria were retained for analysis, and were
+       #  categorized as “other” for the purposes of RNA-seq
+       #  adjustment.
+
+    tbl.pt <- etx$get.rosmap.patient.table(NA)
+    checkEquals(dim(tbl.pt), c(3583, 18))
+        # table(tbl.pt$braaksc)
+        #  0   1   2   3   4   5   6
+        #  17 104 152 383 510 408  23
+        # table(tbl.pt$ceradsc)
+        #   1   2   3   4
+        # 532 560 141 364
+        # table(tbl.pt$cogdx)
+        #   1   2   3   4   5   6
+        # 586 404  33 674  94  30
+
+     tbl.pt.ad <- subset(tbl.pt, braaksc >=4 & ceradsc <= 2 & cogdx==4)
+     checkEquals(dim(tbl.pt.ad), c(445, 18))
+     pts.ad <- unique(tbl.pt.ad$individualID)
+     pts.ad <- intersect(pts.ad, colnames(mtx.geno.pt.rosmap))
+     length(pts.ad)  # 312
+
+     tbl.pt.ctl <- subset(tbl.pt, braaksc <=3 & ceradsc >= 3 & cogdx==1)
+     checkEquals(dim(tbl.pt.ctl), c(203, 18))
+     pts.ctl <- unique(tbl.pt.ctl$individualID)
+     pts.ctl <- intersect(pts.ctl, colnames(mtx.geno.pt.rosmap))
+     length(pts.ctl)  # 150
+
+        # no phenotype difference
+     round(as.numeric(table(mtx.geno.pt.rosmap[, pts.ctl]))/150, digits=2) # [1] 0.69 0.30 0.01
+     round(as.numeric(table(mtx.geno.pt.rosmap[, pts.ad]))/312, digits=2)  # [1] 0.71 0.27 0.02
+
+} # demo_variantSeparated.rna.t.test
+#----------------------------------------------------------------------------------------------------
+exploreGenotypeExpressionPhenotype <- function()
+{
+   #rsid <-
+
+} # explore genotype/expression/AD-phenotype
+#----------------------------------------------------------------------------------------------------
+if(!interactive()){
+   init.snpLocs()
    runTests()
+   }
