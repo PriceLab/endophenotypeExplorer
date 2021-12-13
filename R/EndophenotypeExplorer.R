@@ -22,6 +22,7 @@
 #' @rdname EndophenotypeExplorer-class
 #' @aliases EndophenotypeExplorer
 #----------------------------------------------------------------------------------------------------
+#'@description
 #' R6 Class for exploring associations between eQTLs, variants, gene expression and gene regulation
 #'
 #' An endophenotypeExplore has access to eQTLs, variant calls, and more
@@ -93,8 +94,22 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                  "sage-eqtl-rosmap"="mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData",
                  "sage-counts-rosmap"="mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData",
                  "max-rosmap"="ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData",
-                 "tcx-unknown"="temporalCortex.15167x264.RData")
-
+                 "tcx-unknown"="temporalCortex.15167x264.RData",
+                 "gtex.v8.Brain_Amygdala"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Amygdala.RData",
+                 "gtex.v8.Brain_Anterior_cingulate_cortex_BA24"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Anterior_cingulate_cortex_BA24.RData",
+                 "gtex.v8.Brain_Caudate_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Caudate_basal_ganglia.RData",
+                 "gtex.v8.Brain_Cerebellar_Hemisphere"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellar_Hemisphere.RData",
+                 "gtex.v8.Brain_Cerebellum"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellum.RData",
+                 "gtex.v8.Brain_Cortex"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cortex.RData",
+                 "gtex.v8.Brain_Frontal_Cortex_BA9"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Frontal_Cortex_BA9.RData",
+                 "gtex.v8.Brain_Hippocampus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hippocampus.RData",
+                 "gtex.v8.Brain_Hypothalamus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hypothalamus.RData",
+                 "gtex.v8.Brain_Nucleus_accumbens_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Nucleus_accumbens_basal_ganglia.RData",
+                 "gtex.v8.Brain_Putamen_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Putamen_basal_ganglia.RData",
+                 "gtex.v8.Brain_Spinal_cord_cervical_c-1"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Spinal_cord_cervical_c-1.RData",
+                 "gtex.v8.Brain_Substantia_nigra"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Substantia_nigra.RData",
+                 "gtex.v8.Whole_Blood"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Whole_Blood.RData"
+                 )
             },
 
          #' @description
@@ -122,23 +137,29 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             stopifnot(Sys.info()[["user"]] %in% c("paul", "pshannon"))  # only works for me, for now
             mtx.choices <- names(private$expressionMatrixCodes)
             stopifnot(code %in% mtx.choices)
+
+            if(grepl("^gtex.v8", code)){
+               path <- private$expressionMatrixCodes[[code]]
+               mtx.rna <- get(load(path))
+               }
+
             if(code=="max-rosmap"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
-                filename <- "ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-            }
+               data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
+               filename <- "ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData"
+               mtx.rna <- get(load(file.path(data.dir, filename)))
+               }
 
             if(code=="max-tcx"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
-                filename <- "mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-            }
+               data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/maxNormalizations"
+               filename <- "mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData"
+               mtx.rna <- get(load(file.path(data.dir, filename)))
+               }
 
             if(code=="sage-eqtl-cer"){
-                data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
-                filename <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData"
-                mtx.rna <- get(load(file.path(data.dir, filename)))
-            }
+               data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"
+               filename <- "mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData"
+               mtx.rna <- get(load(file.path(data.dir, filename)))
+               }
 
             if(code=="sage-eqtl-tcx"){
                 data.dir <- "~/github/TrenaProjectAD/inst/extdata/expression/sage.eqtl.optimized"

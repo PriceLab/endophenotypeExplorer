@@ -3,37 +3,22 @@
 \name{EndophenotypeExplorer-class}
 \alias{EndophenotypeExplorer-class}
 \alias{EndophenotypeExplorer}
-\alias{R6}
-\alias{Class}
-\alias{for}
-\alias{exploring}
-\alias{associations}
-\alias{between}
-\alias{eQTLs,}
-\alias{variants,}
-\alias{gene}
-\alias{expression}
-\alias{and}
-\alias{regulation}
-\alias{An}
-\alias{endophenotypeExplore}
-\alias{has}
-\alias{access}
-\alias{to}
-\alias{variant}
-\alias{calls,}
-\alias{more}
 \title{EndophenotypeExplorer}
+\value{
+the url
+}
 \description{
-EndophenotypeExplorer
+R6 Class for exploring associations between eQTLs, variants, gene expression and gene regulation
 
-EndophenotypeExplorer
+An endophenotypeExplore has access to eQTLs, variant calls, and more
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{EndophenotypeExplorer$new()}}
 \item \href{#method-setTargetGene}{\code{EndophenotypeExplorer$setTargetGene()}}
+\item \href{#method-get.rna.matrix.codes}{\code{EndophenotypeExplorer$get.rna.matrix.codes()}}
+\item \href{#method-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
 \item \href{#method-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
 \item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
@@ -67,7 +52,6 @@ EndophenotypeExplorer
 \item \href{#method-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
 \item \href{#method-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
 \item \href{#method-subsetAndRelabelGenoMatrixByPatientIDs}{\code{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs()}}
-\item \href{#method-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
 \item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -105,8 +89,37 @@ A new `EndophenotypeExplorer` object.
 \if{html}{\out{<a id="method-setTargetGene"></a>}}
 \if{latex}{\out{\hypertarget{method-setTargetGene}{}}}
 \subsection{Method \code{setTargetGene()}}{
+the targetGene and genome are widely referenced - this member function allows you
+to change your initial choices
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setTargetGene(targetGene, genome)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{genome}}{UCSC code, either `hg19` or `hg38`.}
+
+\item{\code{target.gene}}{Gene of interest.}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get.rna.matrix.codes"></a>}}
+\if{latex}{\out{\hypertarget{method-get.rna.matrix.codes}{}}}
+\subsection{Method \code{get.rna.matrix.codes()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix.codes()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get.rna.matrix"></a>}}
+\if{latex}{\out{\hypertarget{method-get.rna.matrix}{}}}
+\subsection{Method \code{get.rna.matrix()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix(code)}\if{html}{\out{</div>}}
 }
 
 }
@@ -114,6 +127,10 @@ A new `EndophenotypeExplorer` object.
 \if{html}{\out{<a id="method-setupVcfURL"></a>}}
 \if{latex}{\out{\hypertarget{method-setupVcfURL}{}}}
 \subsection{Method \code{setupVcfURL()}}{
+our genotypes are stored per-chromosome in vcf files.  this
+function uses the current chromosome of interest, to provide
+otherwise simple access to genotypes of the current gene and its
+putative regulatory regions
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupVcfURL(chromosome)}\if{html}{\out{</div>}}
 }
@@ -123,6 +140,8 @@ A new `EndophenotypeExplorer` object.
 \if{html}{\out{<a id="method-getVcfUrl"></a>}}
 \if{latex}{\out{\hypertarget{method-getVcfUrl}{}}}
 \subsection{Method \code{getVcfUrl()}}{
+easy access to the current value
+returns url in character form
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getVcfUrl()}\if{html}{\out{</div>}}
 }
@@ -132,19 +151,41 @@ A new `EndophenotypeExplorer` object.
 \if{html}{\out{<a id="method-getGenoMatrix"></a>}}
 \if{latex}{\out{\hypertarget{method-getGenoMatrix}{}}}
 \subsection{Method \code{getGenoMatrix()}}{
+genotypes for all samples in the specified locus
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getGenoMatrix(chrom, start, end)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{chrom}}{character}
+
+\item{\code{start}}{numeric}
+
+\item{\code{end}}{numeric
+returns matrix, location by sample}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-getGenoMatrixByRSID"></a>}}
 \if{latex}{\out{\hypertarget{method-getGenoMatrixByRSID}{}}}
 \subsection{Method \code{getGenoMatrixByRSID()}}{
+genotypes for all samples at the specified rsids
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getGenoMatrixByRSID(rsids)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{rsids}}{character
+returns matrix, location by sample}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-getEQTLsForGene"></a>}}
@@ -416,15 +457,6 @@ A new `EndophenotypeExplorer` object.
   mtx.geno,
   studyName
 )}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.rna.matrix"></a>}}
-\if{latex}{\out{\hypertarget{method-get.rna.matrix}{}}}
-\subsection{Method \code{get.rna.matrix()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix(code)}\if{html}{\out{</div>}}
 }
 
 }

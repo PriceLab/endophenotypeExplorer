@@ -67,13 +67,14 @@ test_getExpressionMatrix <- function()
     checkTrue(length(codes) >= 10)
       # check a few
     checkTrue(all(c("max-tcx", "sage-eqtl-cer", "old-rosmap", "max-rosmap") %in%  codes))
+    checkTrue(length(grep("^gtex.v8", codes)) >= 14)
 
       # now loop through all, get the matrices, check for reasonable dimensions
     for(code in codes){
         mtx <- etx$get.rna.matrix(code)
         printf("--- %s: %d x %d", code, nrow(mtx), ncol(mtx))
         checkTrue(nrow(mtx) > 14000)
-        checkTrue(ncol(mtx) > 250)
+        checkTrue(ncol(mtx) > 100)
         }
 
 } # test_getExpressionMatrix
@@ -842,10 +843,10 @@ test_splitExpressionMatrixByMutationStatusAtRSID_rosmap <- function()
 
    variant.best <- "rs1136224"   # splits mtx.rna with t.test p.value < 1e-17
    variant.worst <- "rs352680"   # splits mtx.rna with t.test p.value > 0.99
-   mtx.rna <- etx$get.rna.matrix("sage-eqtl-rosmap")
 
    targetGene <- "NDUFS2"
    etx <- EndophenotypeExplorer$new(targetGene, "hg38")
+   mtx.rna <- etx$get.rna.matrix("sage-eqtl-rosmap")
 
    x <- etx$splitExpressionMatrixByMutationStatusAtRSID(mtx.rna, variant.best, study.name="rosmap")
    checkEquals(x$genotypes.vcf, list(wt=820, mut=324, het=296, hom=28))
@@ -872,21 +873,21 @@ test_splitExpressionMatrixByMutationStatusAtRSID_rosmap <- function()
    tf.candidates <- intersect(tfs.all, rownames(mtx.rna))
    length(tf.candidates)
 
-   library(trena)
-   mtx.rna.fixed <- mtx.rna
-   mtx.rna.fixed[is.na(mtx.rna.fixed)] <- 0
-   solver <- EnsembleSolver(mtx.rna.fixed,
-                           targetGene="NDUFS2",
-                           candidateRegulators=tf.candidates,
-                           solverNames=c("Spearman", "Pearson", "RandomForest", "xgboost"),
-                           #solverNames=c("lasso", "Ridge", "Spearman", "Pearson", "RandomForest", "xgboost"),
-			   geneCutoff=1.0)
-   tbl.out <- run(solver)
-   new.order <- order(abs(tbl.out$spearman), decreasing=TRUE)
-   tbl.out <- tbl.out[new.order,]
-
-   cor(hsf2.wt, ndufs2.wt, method="spearman", use="pairwise.complete")
-   cor(hsf2.mut, ndufs2.mut, method="spearman", use="pairwise.complete")
+   #   library(trena)
+   #   mtx.rna.fixed <- mtx.rna
+   #   mtx.rna.fixed[is.na(mtx.rna.fixed)] <- 0
+   #   solver <- EnsembleSolver(mtx.rna.fixed,
+   #                           targetGene="NDUFS2",
+   #                           candidateRegulators=tf.candidates,
+   #                           solverNames=c("Spearman", "Pearson", "RandomForest", "xgboost"),
+   #                           #solverNames=c("lasso", "Ridge", "Spearman", "Pearson", "RandomForest", "xgboost"),
+   #			   geneCutoff=1.0)
+   #   tbl.out <- run(solver)
+   #   new.order <- order(abs(tbl.out$spearman), decreasing=TRUE)
+   #   tbl.out <- tbl.out[new.order,]
+   #
+   #   cor(hsf2.wt, ndufs2.wt, method="spearman", use="pairwise.complete")
+   #   cor(hsf2.mut, ndufs2.mut, method="spearman", use="pairwise.complete")
 
 } # test_splitExpressionMatrixByMutationStatusAtRSID_rosmap
 #----------------------------------------------------------------------------------------------------

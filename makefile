@@ -1,5 +1,5 @@
 default:
-	@echo targets: all (roxy, install)  build install test
+	@echo targets: all [roxy, install]  build install test
 
 all:  roxy install
 
@@ -17,5 +17,6 @@ install:
 
 
 test:
-	for x in inst/unitTests/test_*.R; do echo $$x; R -f $$x; done
+	(cd inst/unitTests; make)
+
 
