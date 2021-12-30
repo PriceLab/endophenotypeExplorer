@@ -95,20 +95,20 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                  "sage-counts-rosmap"="mtx.rosmap.rnaseq-counts-geneSymbols-patients-15582x632.RData",
                  "max-rosmap"="ROSMAP_rnaseq-ncsNormalized-covCorrectedForStudyPMIandAgeAtDeath-10oct21-21667x631.RData",
                  "tcx-unknown"="temporalCortex.15167x264.RData",
-                 "gtex.v8.Brain_Amygdala"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Amygdala.RData",
-                 "gtex.v8.Brain_Anterior_cingulate_cortex_BA24"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Anterior_cingulate_cortex_BA24.RData",
-                 "gtex.v8.Brain_Caudate_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Caudate_basal_ganglia.RData",
-                 "gtex.v8.Brain_Cerebellar_Hemisphere"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellar_Hemisphere.RData",
-                 "gtex.v8.Brain_Cerebellum"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellum.RData",
-                 "gtex.v8.Brain_Cortex"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cortex.RData",
-                 "gtex.v8.Brain_Frontal_Cortex_BA9"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Frontal_Cortex_BA9.RData",
-                 "gtex.v8.Brain_Hippocampus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hippocampus.RData",
-                 "gtex.v8.Brain_Hypothalamus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hypothalamus.RData",
-                 "gtex.v8.Brain_Nucleus_accumbens_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Nucleus_accumbens_basal_ganglia.RData",
-                 "gtex.v8.Brain_Putamen_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Putamen_basal_ganglia.RData",
-                 "gtex.v8.Brain_Spinal_cord_cervical_c-1"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Spinal_cord_cervical_c-1.RData",
-                 "gtex.v8.Brain_Substantia_nigra"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Substantia_nigra.RData",
-                 "gtex.v8.Whole_Blood"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Whole_Blood.RData"
+                 "GTEx_V8.Brain_Amygdala"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Amygdala.RData",
+                 "GTEx_V8.Brain_Anterior_cingulate_cortex_BA24"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Anterior_cingulate_cortex_BA24.RData",
+                 "GTEx_V8.Brain_Caudate_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Caudate_basal_ganglia.RData",
+                 "GTEx_V8.Brain_Cerebellar_Hemisphere"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellar_Hemisphere.RData",
+                 "GTEx_V8.Brain_Cerebellum"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cerebellum.RData",
+                 "GTEx_V8.Brain_Cortex"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Cortex.RData",
+                 "GTEx_V8.Brain_Frontal_Cortex_BA9"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Frontal_Cortex_BA9.RData",
+                 "GTEx_V8.Brain_Hippocampus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hippocampus.RData",
+                 "GTEx_V8.Brain_Hypothalamus"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Hypothalamus.RData",
+                 "GTEx_V8.Brain_Nucleus_accumbens_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Nucleus_accumbens_basal_ganglia.RData",
+                 "GTEx_V8.Brain_Putamen_basal_ganglia"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Putamen_basal_ganglia.RData",
+                 "GTEx_V8.Brain_Spinal_cord_cervical_c-1"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Spinal_cord_cervical_c-1.RData",
+                 "GTEx_V8.Brain_Substantia_nigra"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Brain_Substantia_nigra.RData",
+                 "GTEx_V8.Whole_Blood"="~/github/TrenaProjectAD/inst/extdata/expression/gtex.v8/Whole_Blood.RData"
                  )
             },
 
@@ -138,7 +138,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             mtx.choices <- names(private$expressionMatrixCodes)
             stopifnot(code %in% mtx.choices)
 
-            if(grepl("^gtex.v8", code)){
+            if(grepl("^GTEx_V8", code)){
                path <- private$expressionMatrixCodes[[code]]
                mtx.rna <- get(load(path))
                }
