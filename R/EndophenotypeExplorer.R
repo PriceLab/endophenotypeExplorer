@@ -35,6 +35,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
     #--------------------------------------------------------------------------------
     private = list(target.gene=NULL,
                    chromosome=NULL,
+                   vcf.project=NULL,
                    vcf.url=NULL,
                    geneReg.db=NULL,
                    default.genome=NULL,
@@ -63,13 +64,20 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' Create a new EndophenotypeExplorer object
       #' @param target.gene  Gene of interest.
       #' @param default.genome UCSC code, either `hg19` or `hg38`.
-      #' @param vcf.url https endpoint from serving indexed vcf files
+      #' @param vcf.project character, either "ADNI" or "AMPAD", the latter by default
+      #' @param verbose logical
+      #' @param initialize.snpLocs logical, force this ~60 second process at startup
+      #' @parma defer.setupClinicalData.toSupportTesting logical, default FALSE
       #' @return A new `EndophenotypeExplorer` object.
 
-        initialize = function(target.gene, default.genome, verbose=FALSE,
+        initialize = function(target.gene, default.genome,
+                              vcf.project="AMPAD",
+                              verbose=FALSE,
                               initialize.snpLocs=FALSE,
                               defer.setupClinicalData.toSupportTesting=FALSE){
             self$setTargetGene(target.gene, default.genome)
+            stopifnot(vcf.project %in% c("AMPAD", "ADNI"))
+            private$vcf.project <- vcf.project
             private$verbose <- verbose
             private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
                                                    "apoeGenotype","braak","cerad", "pmi",
@@ -214,9 +222,24 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
          #' @param chromosome
          #' @returns the url
         setupVcfURL = function(chromosome){
-           vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
-           vcf.directory <- "NIA-1898"
-           sprintf("%s/%s/%s.vcf.gz", vcf.base.url, vcf.directory, chromosome)
+           url <- "failure"
+           if(private$vcf.project == "AMPAD"){
+              vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
+              vcf.directory <- "NIA-1898"
+              url <- sprintf("%s/%s/%s.vcf.gz", vcf.base.url, vcf.directory, chromosome)
+              }
+           if(private$vcf.project == "ADNI"){
+              vcf.base.url <- "https://igv-data.systemsbiology.net/static/nfs/adni"
+              if(chromosome == "M"){
+                 vcf.filename <- "adni_mito_genomes_20170201.vcf.gz"
+                 }
+              if(chromosome != "M"){
+                 template <- "gcad.qc.wgs.%s.4789.GATK.2018.09.17.v2.biallelic.genotypes.ALL.vcf.gz"
+                 vcf.filename <- sprintf(template, chromosome)
+                 }
+              url <- sprintf("%s/%s", vcf.base.url, vcf.filename)
+              } # ADNI
+           return(url)
            },
 
         #' @description

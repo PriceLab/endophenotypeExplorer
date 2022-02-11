@@ -64,6 +64,7 @@ Create a new EndophenotypeExplorer object
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(
   target.gene,
   default.genome,
+  vcf.project = "AMPAD",
   verbose = FALSE,
   initialize.snpLocs = FALSE,
   defer.setupClinicalData.toSupportTesting = FALSE
@@ -77,7 +78,11 @@ Create a new EndophenotypeExplorer object
 
 \item{\code{default.genome}}{UCSC code, either `hg19` or `hg38`.}
 
-\item{\code{vcf.url}}{https endpoint from serving indexed vcf files}
+\item{\code{vcf.project}}{character, either "ADNI" or "AMPAD", the latter by default}
+
+\item{\code{verbose}}{logical}
+
+\item{\code{initialize.snpLocs}}{logical, force this ~60 second process at startup}
 }
 \if{html}{\out{</div>}}
 }
