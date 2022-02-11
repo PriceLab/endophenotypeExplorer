@@ -75,9 +75,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                               verbose=FALSE,
                               initialize.snpLocs=FALSE,
                               defer.setupClinicalData.toSupportTesting=FALSE){
-            self$setTargetGene(target.gene, default.genome)
             stopifnot(vcf.project %in% c("AMPAD", "ADNI"))
             private$vcf.project <- vcf.project
+            self$setTargetGene(target.gene, default.genome)
             private$verbose <- verbose
             private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
                                                    "apoeGenotype","braak","cerad", "pmi",
