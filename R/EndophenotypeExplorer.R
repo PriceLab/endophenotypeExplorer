@@ -363,7 +363,6 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                  mart=private$snpMart.hg38)
             colnames(tbl.out) <- c("rsid", "allele", "chrom", genome)
             x <- tbl.out$rsid
-            browser()
             names(x) <- locs
             x
             }, # biomart.locsToRSID

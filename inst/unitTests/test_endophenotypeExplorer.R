@@ -67,7 +67,7 @@ test_getExpressionMatrix <- function()
     checkTrue(length(codes) >= 10)
       # check a few
     checkTrue(all(c("max-tcx", "sage-eqtl-cer", "old-rosmap", "max-rosmap") %in%  codes))
-    checkTrue(length(grep("^gtex.v8", codes)) >= 14)
+    checkTrue(length(grep("^GTEx_V8", codes)) >= 14)
 
       # now loop through all, get the matrices, check for reasonable dimensions
     for(code in codes){
