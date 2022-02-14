@@ -257,8 +257,21 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         #' @param end numeric
         #' returns matrix, location by sample
         getGenoMatrix = function(chrom, start, end){
-            chromosomesInProperFormat <- !grepl("chr", chrom[1])
-            stopifnot(chromosomesInProperFormat)
+            fixChromFormat <- function(chrom){
+              stopifnot(private$vcf.project %in% c("ADNI", "AMPAD"))
+              stopifnot(all(chrom == chrom[1]))
+              chrom.fixed  <- chrom[1]
+              if(private$vcf.project == "ADNI"){
+                  if(!grepl("^chr", chrom[1]))
+                     chrom.fixed <- paste0("chr", chrom[1])
+                 } # ADNI
+              if(private$vcf.project == "AMPAD"){
+                  if(grepl("^chr", chrom[1]))
+                     chrom.fixed <- sub("chr", "", chrom[1])
+                 } # AMPAD
+               return(rep(chrom.fixed, length(chrom)))
+               } # fixChromFormat
+            chrom <- fixChromFormat(chrom)
             roi <- sort(GRanges(seqnames=chrom, IRanges(start=start, end=end)))
             x <- readVcf(private$vcf.url, private$default.genome, roi)
             stopifnot("GT" %in% names(geno(x)))
