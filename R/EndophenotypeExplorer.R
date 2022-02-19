@@ -64,19 +64,24 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' Create a new EndophenotypeExplorer object
       #' @param target.gene  Gene of interest.
       #' @param default.genome UCSC code, either `hg19` or `hg38`.
-      #' @param vcf.project character, either "ADNI" or "AMPAD", the latter by default
+      #' @param vcf.project character, either "ADNI" or "AMPAD"
       #' @param verbose logical
       #' @param initialize.snpLocs logical, force this ~60 second process at startup
       #' @parma defer.setupClinicalData.toSupportTesting logical, default FALSE
       #' @return A new `EndophenotypeExplorer` object.
 
         initialize = function(target.gene, default.genome,
-                              vcf.project="AMPAD",
+                              vcf.project,
                               verbose=FALSE,
                               initialize.snpLocs=FALSE,
                               defer.setupClinicalData.toSupportTesting=FALSE){
             stopifnot(vcf.project %in% c("AMPAD", "ADNI"))
+            if(!default.genome %in% c("hg19", "hg38")){
+               message(sprintf("error: genome '%s' not supported", default.genome))
+               stop()
+               }
             private$vcf.project <- vcf.project
+            private$default.genome = default.genome
             self$setTargetGene(target.gene, default.genome)
             private$verbose <- verbose
             private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
@@ -294,12 +299,14 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                 paste(rsids, collapse=",")))
                 return(NA)
                 }
-            mtx <- self$getGenoMatrix(tbl.locs$chrom, tbl.locs$hg19, tbl.locs$hg19)
+            start <- tbl.locs[, private$default.genome]
+            end <- start
+            mtx <- self$getGenoMatrix(tbl.locs$chrom, start, end)
             printf("--- getGenoMatrixByRSID, back from getGenoMatrix (locs): %s", Sys.time())
             invisible(mtx)
             },
 
-        getEQTLsForGene = function(){
+        get.ampad.EQTLsForGene = function(){
             if(grepl("hagfish", Sys.info()[["nodename"]])){
                suppressWarnings(db.access.test <- try(system("/sbin/ping -c 1 khaleesi", intern=TRUE, ignore.stderr=TRUE)))
                if(length(db.access.test) == 0){

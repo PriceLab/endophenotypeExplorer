@@ -1,8 +1,8 @@
 Package: EndophenotypeExplorer
 Type: Package
 Title: EndophenotypeExplorer
-Version: 1.0.28
-Date: 2022-02-14
+Version: 1.0.30
+Date: 2022-02-18
 Author: Paul Shannon
 Maintainer: Paul Shannon<pshannon@systemsbiology.org>
 Imports:
