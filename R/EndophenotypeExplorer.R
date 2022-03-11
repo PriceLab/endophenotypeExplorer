@@ -413,8 +413,18 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         locsToRSID = function(locs, genome){
               # expect locs in this form:  "2:127084193_G/A"
               # todo: enforce this, fail or accomodate if otherwise
-            chroms <- unlist(lapply(strsplit(locs, ":"), "[", 1))
-            loc.strings <- unlist(lapply(strsplit(locs, ":"), "[", 2))
+
+            regex <-  "(?<chrom>.*):(?<pos>\\d+)_(?<ref>.*)\\/(?<alt>.*)"
+            matches <- as.integer(regexpr(regex, locs, perl=TRUE))
+            good.locs <- which(matches == 1)
+            bad.locs  <- which(matches == -1)
+            result <- as.list(vector(mode="character", length=length(locs)))
+            names(result) <- locs
+            result[bad.locs] <- locs[bad.locs]
+            good.loc.strings <- locs[good.locs]
+            chroms <- unlist(lapply(strsplit(good.loc.strings, ":"), "[", 1))
+            # browser()
+            loc.strings <- unlist(lapply(strsplit(good.loc.strings, ":"), "[", 2))
             locs.base <- as.integer(sub("_.*$", "", loc.strings))
             snplocs <- switch(genome,
                    "hg19" = SNPlocs.Hsapiens.dbSNP144.GRCh37,
@@ -433,13 +443,13 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                   signature=sig,
                                   stringsAsFactors=FALSE)
             tbl.new <- merge(tbl.all, tbl.rsids[, c("rsid", "signature")], by="signature", all.x=TRUE)
-            failures <- which(is.na(tbl.new$rsid))
-            length(failures)
-            tbl.new$rsid[failures] <- tbl.new$signature[failures]
-            result <- tbl.new$rsid
-            names(result) <- locs
+            #failures <- which(is.na(tbl.new$rsid))
+            #length(failures)
+            #tbl.new$rsid[failures] <- tbl.new$signature[failures]
+            result[good.locs] <- tbl.new$rsid
+            #names(result) <- locs
             result
-            }, # old.locsToRSID
+            }, # locsToRSID
 
         mapSampleIdToPatientAndCohort = function(sampleID){
            subset(private$tbl.idMap, sample==sampleID)
