@@ -381,6 +381,23 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             tbl.out[, c("chrom", "hg19", "hg38", "rsid")]
             }, # rsidToLoc
 
+        new.rsidToLoc = function(rsids){
+            # message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
+            rsids <- grep("^rs", rsids, value=TRUE)
+            gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
+            tbl.hg19 <- as.data.frame(gr.hg19)
+            gr.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsids, ifnotfound="drop")
+            tbl.hg38 <- as.data.frame(gr.hg38)
+            colnames(tbl.hg19)[1] <- "chrom"
+            colnames(tbl.hg19)[2] <- "hg19"
+            colnames(tbl.hg19)[4] <- "rsid"
+            tbl.hg19$chrom <- as.character(tbl.hg19$chrom)
+            colnames(tbl.hg38)[2] <- "hg38"
+            colnames(tbl.hg38)[4] <- "rsid"
+            tbl.out <- merge(tbl.hg19[, c("chrom", "hg19", "rsid")], tbl.hg38[, c("hg38", "rsid")], by="rsid")
+            tbl.out[, c("chrom", "hg19", "hg38", "rsid")]
+            }, # new.rsidToLoc
+
         biomart.locsToRSID = function(locs, genome){
               # expect locs in this form:  "2:127084193_G/A"
               # todo: enforce this, fail or accomodate if otherwise
@@ -422,10 +439,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             names(result) <- locs
             result[bad.locs] <- locs[bad.locs]
             good.loc.strings <- locs[good.locs]
+            good.loc.strings <- sub("^chr", "", good.loc.strings)
             chroms <- unlist(lapply(strsplit(good.loc.strings, ":"), "[", 1))
-            # browser()
             loc.strings <- unlist(lapply(strsplit(good.loc.strings, ":"), "[", 2))
-            locs.base <- as.integer(sub("_.*$", "", loc.strings))
+            locs.base <- as.numeric(sub("_.*$", "", loc.strings))
             snplocs <- switch(genome,
                    "hg19" = SNPlocs.Hsapiens.dbSNP144.GRCh37,
                    "hg38" = SNPlocs.Hsapiens.dbSNP151.GRCh38
@@ -443,11 +460,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                                   signature=sig,
                                   stringsAsFactors=FALSE)
             tbl.new <- merge(tbl.all, tbl.rsids[, c("rsid", "signature")], by="signature", all.x=TRUE)
-            #failures <- which(is.na(tbl.new$rsid))
-            #length(failures)
-            #tbl.new$rsid[failures] <- tbl.new$signature[failures]
             result[good.locs] <- tbl.new$rsid
-            #names(result) <- locs
+            failed.lookups <- as.integer(which(is.na(result)))
+            if(length(failed.lookups) > 0)
+               result[failed.lookups] <- names(result)[failed.lookups]
             result
             }, # locsToRSID
 
