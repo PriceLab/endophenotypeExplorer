@@ -207,6 +207,8 @@ test_rosmapMapping <- function()
 
     dir <- "~/github/TrenaProjectAD/prep/rna-seq-counts-from-synapse/eqtl"
     file.rosmap <- "mtx.rosmap.rnaseq-residual-eqtl-geneSymbols-patients-15582x632.RData"
+    full.path <- file.path(dir, file.rosmap)
+    checkTrue(file.exists(full.path))
     mtx.rosmap <- get(load(file.path(dir, file.rosmap)))
     checkEquals(dim(mtx.rosmap), c(15582, 632))
 
@@ -547,7 +549,9 @@ test_getGenoMatrix_multipleGenes <- function()
 {
    message(sprintf("--- test_getGenoMatrix_multipleGenes"))
 
-   etx <- EndophenotypeExplorer$new(NA, NA, initialize.snpLocs=TRUE)
+   etx <- EndophenotypeExplorer$new(NA, "hg38", vcf.project="ADNI",
+                                    initialize.snpLocs=TRUE)
+
    tbl.gwas <- etx$getGWASTables()$gwas.38
 
    genes <- sort(tbl.gwas$geneSymbol[c(1,38)])
