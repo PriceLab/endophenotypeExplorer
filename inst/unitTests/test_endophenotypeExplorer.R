@@ -50,7 +50,7 @@ test_ctor <- function()
 
    etx <- EndophenotypeExplorer$new("BIN1", "hg19", vcf.project="AMPAD")
    checkTrue(all(c("EndophenotypeExplorer", "R6") %in% class(etx)))
-   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr2.vcf.gz"
+   expected <- "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr2.vcf.gz"
    checkEquals(etx$getVcfUrl(), expected)
 
    etx <- EndophenotypeExplorer$new(NA, "hg19", vcf.project="AMPAD")
@@ -59,7 +59,7 @@ test_ctor <- function()
    checkEquals(etx$getVcfUrl(), expected)
 
    etx$setTargetGene("BACH1", "hg38")
-   expected <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr21.vcf.gz"
+   expected <- "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr21.vcf.gz"
    checkEquals(etx$getVcfUrl(), expected)
 
 
@@ -317,7 +317,7 @@ test_setupVcfURL <- function()
 
    etx <- EndophenotypeExplorer$new(NA, "hg19", vcf.project="AMPAD")
    checkEquals(etx$setupVcfURL("chr1"),
-               "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr1.vcf.gz")
+               "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr1.vcf.gz")
 
       #------------------------------------------------------------------
       # get a slice of ADNI chr13, test its actual veracity by grabbing
@@ -328,7 +328,7 @@ test_setupVcfURL <- function()
 
    chromosome <- "chr13"
    url <- etx$setupVcfURL(chromosome)
-   checkEquals(url, paste0("https://igv-data.systemsbiology.net/static/nfs/adni/",
+   checkEquals(url, paste0("https://igv-data.systemsbiology.net/nfs/adni/",
                            "gcad.qc.wgs.chr13.4789.GATK.2018.09.17.v2.biallelic.genotypes.ALL.vcf.gz"))
    loc <- 102307271
    shoulder <- 100
@@ -345,7 +345,7 @@ test_setupVcfURL <- function()
    #     Error in scanBcfHeader(bf) : [internal] _hts_rewind() failed
    #   chromosome <- "M"
    #   url <- etx$setupVcfURL(chromosome)
-   #   checkEquals(url, paste0("https://igv-data.systemsbiology.net/static/nfs/adni/",
+   #   checkEquals(url, paste0("https://igv-data.systemsbiology.net/nfs/adni/",
    #                           "adni_mito_genomes_20170201.vcf.gz"))
    #   loc <- 3000
    #   shoulder <- 1000
@@ -365,8 +365,8 @@ test_readRemoteVCF <- function(verbose=FALSE)
    if(verbose) message(sprintf("packageVersion('VariantAnnotation': %s')", packageVersion("VariantAnnotation")))
 
    roi <- GRanges(seqnames="2", IRanges(start=127084188, end=127084203))
-   url <- "https://igv-data.systemsbiology.net/static/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
-   url <- "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr2.vcf.gz"
+   url <- "https://igv-data.systemsbiology.net/ampad/NIA_JG_1898_samples_GRM_WGS_b37_JointAnalysis01_2017-12-08_recalibrated_variants/chr2.vcf.gz"
+   url <- "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr2.vcf.gz"
    x <- readVcf(url, "hg19", roi)
 
    if(verbose) message(sprintf("size: %d", length(x)))
@@ -557,13 +557,13 @@ test_getGenoMatrix_multipleGenes <- function()
 
    etx$setTargetGene("AGRN", "hg19")
    checkEquals(etx$getVcfUrl(),
-               "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr1.vcf.gz")
+               "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr1.vcf.gz")
    mtx.geno.1 <- etx$getGenoMatrixByRSID(tbl.gwas$leadVariant[1])
    checkEquals(dim(mtx.geno.1), c(1, 1894))
 
    etx$setTargetGene("APP", "hg19")
    checkEquals(etx$getVcfUrl(),
-               "https://igv-data.systemsbiology.net/static/ampad/NIA-1898/chr21.vcf.gz")
+               "https://igv-data.systemsbiology.net/ampad/NIA-1898/chr21.vcf.gz")
    mtx.geno.38 <- etx$getGenoMatrixByRSID(tbl.gwas$leadVariant[38])
    checkEquals(dim(mtx.geno.38), c(1, 1894))
 

@@ -23,11 +23,12 @@ An endophenotypeExplore has access to eQTLs, variant calls, and more
 \item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
 \item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
 \item \href{#method-getGenoMatrixByRSID}{\code{EndophenotypeExplorer$getGenoMatrixByRSID()}}
-\item \href{#method-getEQTLsForGene}{\code{EndophenotypeExplorer$getEQTLsForGene()}}
+\item \href{#method-get.ampad.EQTLsForGene}{\code{EndophenotypeExplorer$get.ampad.EQTLsForGene()}}
 \item \href{#method-getEQTLsInRegion}{\code{EndophenotypeExplorer$getEQTLsInRegion()}}
 \item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
 \item \href{#method-biomart.rsidToLoc}{\code{EndophenotypeExplorer$biomart.rsidToLoc()}}
 \item \href{#method-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
+\item \href{#method-new.rsidToLoc}{\code{EndophenotypeExplorer$new.rsidToLoc()}}
 \item \href{#method-biomart.locsToRSID}{\code{EndophenotypeExplorer$biomart.locsToRSID()}}
 \item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
 \item \href{#method-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
@@ -64,7 +65,7 @@ Create a new EndophenotypeExplorer object
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new(
   target.gene,
   default.genome,
-  vcf.project = "AMPAD",
+  vcf.project,
   verbose = FALSE,
   initialize.snpLocs = FALSE,
   defer.setupClinicalData.toSupportTesting = FALSE
@@ -78,7 +79,7 @@ Create a new EndophenotypeExplorer object
 
 \item{\code{default.genome}}{UCSC code, either `hg19` or `hg38`.}
 
-\item{\code{vcf.project}}{character, either "ADNI" or "AMPAD", the latter by default}
+\item{\code{vcf.project}}{character, either "ADNI" or "AMPAD"}
 
 \item{\code{verbose}}{logical}
 
@@ -193,11 +194,11 @@ returns matrix, location by sample}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getEQTLsForGene"></a>}}
-\if{latex}{\out{\hypertarget{method-getEQTLsForGene}{}}}
-\subsection{Method \code{getEQTLsForGene()}}{
+\if{html}{\out{<a id="method-get.ampad.EQTLsForGene"></a>}}
+\if{latex}{\out{\hypertarget{method-get.ampad.EQTLsForGene}{}}}
+\subsection{Method \code{get.ampad.EQTLsForGene()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getEQTLsForGene()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.ampad.EQTLsForGene()}\if{html}{\out{</div>}}
 }
 
 }
@@ -234,6 +235,15 @@ returns matrix, location by sample}
 \subsection{Method \code{rsidToLoc()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$rsidToLoc(rsids)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new.rsidToLoc"></a>}}
+\if{latex}{\out{\hypertarget{method-new.rsidToLoc}{}}}
+\subsection{Method \code{new.rsidToLoc()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new.rsidToLoc(rsids)}\if{html}{\out{</div>}}
 }
 
 }

@@ -229,12 +229,12 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         setupVcfURL = function(chromosome){
            url <- "failure"
            if(private$vcf.project == "AMPAD"){
-              vcf.base.url <- "https://igv-data.systemsbiology.net/static/ampad"
+              vcf.base.url <- "https://igv-data.systemsbiology.net/ampad"
               vcf.directory <- "NIA-1898"
               url <- sprintf("%s/%s/%s.vcf.gz", vcf.base.url, vcf.directory, chromosome)
               }
            if(private$vcf.project == "ADNI"){
-              vcf.base.url <- "https://igv-data.systemsbiology.net/static/nfs/adni"
+              vcf.base.url <- "https://igv-data.systemsbiology.net/nfs/adni"
               if(chromosome == "M"){
                  vcf.filename <- "adni_mito_genomes_20170201.vcf.gz"
                  }
