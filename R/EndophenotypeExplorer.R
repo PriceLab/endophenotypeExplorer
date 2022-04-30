@@ -302,9 +302,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
 
         getGenoMatrixByRSID = function(rsids){
             stopifnot(all(grepl("^rs", rsids)))
-            printf("--- getGenoMatrixByRSID looking up locs: %s", Sys.time())
+            message(sprintf("--- getGenoMatrixByRSID looking up locs: %s", Sys.time()))
             tbl.locs <- self$rsidToLoc(rsids)
-            printf("--- getGenoMatrixByRSID looking up locs, done: %s", Sys.time())
+            message(sprintf("--- getGenoMatrixByRSID looking up locs, done: %s", Sys.time()))
             if(nrow(tbl.locs) == 0){
                 message(sprintf("failed to find chrom loc for rsids: %s",
                                 paste(rsids, collapse=",")))
@@ -313,7 +313,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             start <- tbl.locs[, private$default.genome]
             end <- start
             mtx <- self$getGenoMatrix(tbl.locs$chrom, start, end)
-            printf("--- getGenoMatrixByRSID, back from getGenoMatrix (locs): %s", Sys.time())
+            message(sprintf("--- getGenoMatrixByRSID, back from getGenoMatrix (locs): %s", Sys.time()))
             invisible(mtx)
             },
 
@@ -635,7 +635,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             while(is.null(x) & tries <= max.tries){
               tries <- tries + 1
               if(!quiet)
-                 printf("requesting allele frequencies for %s, iteration %d", rsid, tries)
+                 message(sprintf("requesting allele frequencies for %s, iteration %d", rsid, tries))
               response <- GET(uri)
               suppressMessages(x <- fromJSON(httr::content(response, as="text"))$results)
               }
