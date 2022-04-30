@@ -501,6 +501,37 @@ test_getGenoMatrixByRSID <- function()
    checkEquals(as.integer(table(mtx.geno.hg38.adni[1,])), c(161, 2850, 1532, 245))
    checkEquals(as.integer(table(mtx.geno.hg38.adni[2,])), c(145, 4051,  575,  17))
 
+     #------------------------------------------------------------
+     # in the original design, the class required a gene and genome
+     # in the constructor call.
+     # subsequently i realized the need to get geno matrix for
+     # rsids knowing only its chromosome, no gene specified
+     # because there is a vcf file for each chromosome, we must
+     # set the chromosome before calling for the geno matrix
+     #------------------------------------------------------------
+
+   data.dir <- "~/github/TrenaProjectAD/inst/extdata/gwasLoci"
+   file <- "schwartzentruber-2021-with-hg38-locs.RData"
+   full.path <- file.path(data.dir, file)
+   checkTrue(file.exists(full.path))
+   tbl.snps <- get(load(full.path))
+
+   rsid.1 <- tbl.snps$rsid[1]
+   chrom.1 <- sprintf("chr%s", tbl.snps$chrom[1])
+   etx <- EndophenotypeExplorer$new("APOE", "hg19", vcf.project="AMPAD")
+   etx$setTargetChromosome(chrom.1, "hg19")
+   mtx.geno.1 <- etx$getGenoMatrixByRSID(rsid.1)
+   dim(mtx.geno.1)
+   checkEquals(as.integer(table(mtx.geno.1)), c(465, 919, 510))
+
+   rsid.2 <- tbl.snps$rsid[2]
+   chrom.2 <- sprintf("chr%s", tbl.snps$chrom[2])
+   checkTrue(chrom.2 != chrom.1)
+   etx$setTargetChromosome(chrom.2, "hg19")
+   mtx.geno.2 <- etx$getGenoMatrixByRSID(rsid.2)
+   dim(mtx.geno.2)
+   checkEquals(as.integer(table(mtx.geno.2)), c(1841, 53))
+
 } # test_getGenoMatrixByRSID
 #----------------------------------------------------------------------------------------------------
 # this fails because the project-specific url is set by gene (add direct by chromome?)

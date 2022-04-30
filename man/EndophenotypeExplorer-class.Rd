@@ -17,6 +17,7 @@ An endophenotypeExplore has access to eQTLs, variant calls, and more
 \itemize{
 \item \href{#method-new}{\code{EndophenotypeExplorer$new()}}
 \item \href{#method-setTargetGene}{\code{EndophenotypeExplorer$setTargetGene()}}
+\item \href{#method-setTargetChromosome}{\code{EndophenotypeExplorer$setTargetChromosome()}}
 \item \href{#method-get.rna.matrix.codes}{\code{EndophenotypeExplorer$get.rna.matrix.codes()}}
 \item \href{#method-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
 \item \href{#method-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
@@ -107,6 +108,24 @@ to change your initial choices
 \item{\code{genome}}{UCSC code, either `hg19` or `hg38`.}
 
 \item{\code{target.gene}}{Gene of interest.}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-setTargetChromosome"></a>}}
+\if{latex}{\out{\hypertarget{method-setTargetChromosome}{}}}
+\subsection{Method \code{setTargetChromosome()}}{
+the target chromosome and genome are widely referenced - this member function allows you
+to change your initial choices
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setTargetChromosome(target.chromosome, genome)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{genome}}{UCSC code, either `hg19` or `hg38`.}
 }
 \if{html}{\out{</div>}}
 }

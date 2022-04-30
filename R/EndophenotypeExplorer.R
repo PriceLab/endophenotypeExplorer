@@ -142,6 +142,17 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                }
             },
 
+         #' @description
+         #' the target chromosome and genome are widely referenced - this member function allows you
+         #' to change your initial choices
+         #' @param target.chromsome
+         #' @param genome UCSC code, either `hg19` or `hg38`.
+        setTargetChromosome = function(target.chromosome, genome){
+            private$default.genome <- genome
+            private$chromosome <- target.chromosome
+            private$vcf.url <- self$setupVcfURL(private$chromosome)
+            },
+
         get.rna.matrix.codes=function(){
            return(private$expressionMatrixCodes)
            },
