@@ -35,6 +35,7 @@ runTests <- function()
     test_gwasLociFrequencies()
     test_gtexTissueExpression()
     test_get.ampad.EQTLsForGene()
+    test_get.ampad.EQTLsForRegion()
 
     test_splitExpressionMatrixByMutationStatusAtRSID_mayo()
     test_splitExpressionMatrixByMutationStatusAtRSID_sinai()
@@ -328,16 +329,16 @@ test_setupVcfURL <- function()
 
    etx <- EndophenotypeExplorer$new(NA, "hg38", vcf.project="ADNI")
 
-   chromosome <- "chr13"
-   url <- etx$setupVcfURL(chromosome)
-   checkEquals(url, paste0("https://igv-data.systemsbiology.net/nfs/adni/",
-                           "gcad.qc.wgs.chr13.4789.GATK.2018.09.17.v2.biallelic.genotypes.ALL.vcf.gz"))
-   loc <- 102307271
-   shoulder <- 100
-   roi <- GRanges(seqnames=chromosome, IRanges(start=loc-shoulder, end=loc+shoulder))
+   #chromosome <- "chr13"
+   #url <- etx$setupVcfURL(chromosome)
+   #checkEquals(url, paste0("https://igv-data.systemsbiology.net/nfs/adni/",
+   #                        "gcad.qc.wgs.chr13.4789.GATK.2018.09.17.v2.biallelic.genotypes.ALL.vcf.gz"))
+   #loc <- 102307271
+   #shoulder <- 100
+   #roi <- GRanges(seqnames=chromosome, IRanges(start=loc-shoulder, end=loc+shoulder))
 
-   vcf <- readVcf(url, "hg38", roi)
-   checkEquals(dim(geno(vcf)$GT), c(10, 4788))
+   #vcf <- readVcf(url, "hg38", roi)
+   #checkEquals(dim(geno(vcf)$GT), c(10, 4788))
 
       #------------------------------------------------------------------
       # the ADNI mitochcondrial vcf follows a different naminc convention
@@ -938,6 +939,26 @@ test_get.ampad.EQTLsForGene <- function()
     checkTrue(nrow(tbl.sig) < 400 & nrow(tbl.sig) > 300)
 
 } # test_get.ampad.EQTLsForGene
+#----------------------------------------------------------------------------------------------------
+test_get.ampad.EQTLsForRegion <- function()
+{
+    message(sprintf("--- test_get.ampad.EQTLsForRegion"))
+    targetGene <- "NDUFS2"
+    etx <- EndophenotypeExplorer$new(targetGene, "hg19", vcf.project="AMPAD", initialize.snpLocs=FALSE)
+
+   chrom <- "chr1"
+   tag.snp.hg19 <- 161155392
+   shoulder <- 300
+   start <- tag.snp.hg19 - shoulder
+   end <- tag.snp.hg19 + shoulder
+
+   tbl.eqtls <- etx$getEQTLsInRegion(chrom, start, end)
+   dim(tbl.eqtls)
+   checkTrue(nrow(tbl.eqtls) > 100)
+   checkTrue(all(sort(head(subset(tbl.eqtls, pvalue < 0.05)$genesymbol)) %in%
+                 c("CASQ1", "DEDD", "FCER1G", "KLHDC9", "MPZ", "PPOX")))
+
+} # test_get.ampad.EQTLsForRegion
 #----------------------------------------------------------------------------------------------------
 test_splitExpressionMatrixByMutationStatusAtRSID_mayo <- function()
 {

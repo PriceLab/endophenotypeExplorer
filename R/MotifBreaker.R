@@ -1,6 +1,6 @@
 library(R6)
 library(motifbreakR)
-library(SNPlocs.Hsapiens.dbSNP151.GRCh38)
+library(SNPlocs.Hsapiens.dbSNP155.GRCh38)
 library(BSgenome.Hsapiens.UCSC.hg38)
 library(BiocParallel)
 #--------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ MotifBreaker = R6Class("MotifBreaker",
            if(class(private$variants) == "character"){  # need to create GRanges
              duration <- system.time(
                 private$variants <- snps.from.rsid(rsid=private$variants,
-                                                   dbSNP=SNPlocs.Hsapiens.dbSNP151.GRCh38,
+                                                   dbSNP=SNPlocs.Hsapiens.dbSNP155.GRCh38,
                                                    search.genome=BSgenome.Hsapiens.UCSC.hg38))
              elapsedTime <- duration[["elapsed"]]
              }

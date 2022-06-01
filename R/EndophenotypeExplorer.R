@@ -5,7 +5,7 @@
 #' @import org.Hs.eg.db
 #' @importFrom BSgenome snpsById snpsByOverlaps
 #' @import SNPlocs.Hsapiens.dbSNP144.GRCh37
-#' @import SNPlocs.Hsapiens.dbSNP151.GRCh38
+#' @import SNPlocs.Hsapiens.dbSNP155.GRCh38
 #' @import biomaRt
 #' @import TxDb.Hsapiens.UCSC.hg38.knownGene
 #' @import R6
@@ -90,15 +90,16 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             self$setupGWASData()
             if(initialize.snpLocs){
                 message(sprintf("initializing hg19 and hg38 snpLocs, may take a minute"))
-                t1 <- system.time(x <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, "rs769450"))
+                t1 <- system.time(x <- snpsById(SNPlocs.Hsapiens.dbSNP155.GRCh38, "rs769450"))
                 t2 <- system.time(x <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, "rs769450"))
                 message(sprintf("dbSNP144 hg19: %5.2f", t2[["elapsed"]]))
-                message(sprintf("dbSNP151 hg38: %5.2f", t1[["elapsed"]]))
+                message(sprintf("dbSNP155 hg38: %5.2f", t1[["elapsed"]]))
                 }
             if(!defer.setupClinicalData.toSupportTesting)
                 self$setupClinicalData()
             private$expressionMatrixCodes <-
-                list("max-tcx"="mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData",
+                list(
+                 "max-tcx"="mayo.tcx.robinson.normalized.PMI-age-cellType-covariate-collected.15201x262.RData",
                  "sage-eqtl-cer"="mtx.mayo.cer.eqtl-optimized-geneSymbols-sampleIDs-17009x261.RData",
                  "sage-eqtl-tcx"="mtx.mayo.tcx.eqtl-optimized-geneSymbols-sampleIDs-with-vcf17009x257.RData",
                  "old-mayo-tcx"="mayo.tcx.16969x262.covariateCorrection.log+scale.RData",
@@ -376,12 +377,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
         rsidToLoc = function(rsids){
             # message(sprintf("--- EndophenotypeExplorer$rsidToLoc, starting time-consuming queries to SNPlocs"))
             rsids <- grep("^rs", rsids, value=TRUE)
-            x.hg19 <- lapply(rsids, function(rsid)
-                snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsid, ifnotfound="drop"))
-            tbl.hg19 <- do.call(rbind, lapply(x.hg19, as.data.frame))
-            x.hg38 <- lapply(rsids, function(rsid)
-                snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsid, ifnotfound="drop"))
-            tbl.hg38 <- do.call(rbind, lapply(x.hg38, as.data.frame))
+            x.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
+            tbl.hg19 <- as.data.frame(x.hg19) # do.call(rbind, lapply(x.hg19, as.data.frame))
+            x.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP155.GRCh38, rsids, ifnotfound="drop")
+            tbl.hg38 <- as.data.frame(x.hg38) # do.call(rbind, lapply(x.hg38, as.data.frame))
             colnames(tbl.hg19)[1] <- "chrom"
             colnames(tbl.hg19)[2] <- "hg19"
             colnames(tbl.hg19)[4] <- "rsid"
@@ -397,7 +396,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             rsids <- grep("^rs", rsids, value=TRUE)
             gr.hg19 <- snpsById(SNPlocs.Hsapiens.dbSNP144.GRCh37, rsids, ifnotfound="drop")
             tbl.hg19 <- as.data.frame(gr.hg19)
-            gr.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP151.GRCh38, rsids, ifnotfound="drop")
+            gr.hg38 <- snpsById(SNPlocs.Hsapiens.dbSNP155.GRCh38, rsids, ifnotfound="drop")
             tbl.hg38 <- as.data.frame(gr.hg38)
             colnames(tbl.hg19)[1] <- "chrom"
             colnames(tbl.hg19)[2] <- "hg19"
@@ -456,7 +455,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             locs.base <- as.numeric(sub("_.*$", "", loc.strings))
             snplocs <- switch(genome,
                    "hg19" = SNPlocs.Hsapiens.dbSNP144.GRCh37,
-                   "hg38" = SNPlocs.Hsapiens.dbSNP151.GRCh38
+                   "hg38" = SNPlocs.Hsapiens.dbSNP155.GRCh38
                    )
             gr <- GRanges(seqnames=chroms, IRanges(start=locs.base, end=locs.base))
             gr.snps <- snpsByOverlaps(snplocs, gr)
@@ -938,6 +937,8 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                              study==studyName &
                              sample %in% colnames(mtx.geno) &
                              assay=="vcf")
+           if(nrow(tbl.sub) == 0)
+               return(NA)
            mtx.geno.sub <- mtx.geno[, tbl.sub$sample, drop=FALSE]
            indices <- match(colnames(mtx.geno.sub), tbl.sub$sample)
            colnames(mtx.geno.sub) <- tbl.sub$patient[indices]
