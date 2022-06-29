@@ -67,6 +67,7 @@ Create a new EndophenotypeExplorer object
   target.gene,
   default.genome,
   vcf.project,
+  chromosome = NA,
   verbose = FALSE,
   initialize.snpLocs = FALSE,
   defer.setupClinicalData.toSupportTesting = FALSE
@@ -81,6 +82,8 @@ Create a new EndophenotypeExplorer object
 \item{\code{default.genome}}{UCSC code, either `hg19` or `hg38`.}
 
 \item{\code{vcf.project}}{character, either "ADNI" or "AMPAD"}
+
+\item{\code{chromosome}}{default NA, may be unusual cases where we supply it (C2orf90/ECRG4) for instance}
 
 \item{\code{verbose}}{logical}
 
@@ -99,13 +102,15 @@ A new `EndophenotypeExplorer` object.
 the targetGene and genome are widely referenced - this member function allows you
 to change your initial choices
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setTargetGene(targetGene, genome)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setTargetGene(targetGene, genome, chromosome = NA)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{genome}}{UCSC code, either `hg19` or `hg38`.}
+
+\item{\code{chromosome}}{default NA, causing a lookup}
 
 \item{\code{target.gene}}{Gene of interest.}
 }

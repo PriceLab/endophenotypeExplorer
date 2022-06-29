@@ -65,6 +65,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
       #' @param target.gene  Gene of interest.
       #' @param default.genome UCSC code, either `hg19` or `hg38`.
       #' @param vcf.project character, either "ADNI" or "AMPAD"
+      #' @param chromosome default NA, may be unusual cases where we supply it (C2orf90/ECRG4) for instance
       #' @param verbose logical
       #' @param initialize.snpLocs logical, force this ~60 second process at startup
       #' @parma defer.setupClinicalData.toSupportTesting logical, default FALSE
@@ -72,6 +73,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
 
         initialize = function(target.gene, default.genome,
                               vcf.project,
+                              chromosome=NA,
                               verbose=FALSE,
                               initialize.snpLocs=FALSE,
                               defer.setupClinicalData.toSupportTesting=FALSE){
@@ -82,7 +84,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
                }
             private$vcf.project <- vcf.project
             private$default.genome = default.genome
-            self$setTargetGene(target.gene, default.genome)
+            self$setTargetGene(target.gene, default.genome, chromosome)
             private$verbose <- verbose
             private$standard.clinical.columns <- c("patientID", "study", "sex","ethnicity",
                                                    "apoeGenotype","braak","cerad", "pmi",
@@ -131,14 +133,19 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
          #' to change your initial choices
          #' @param target.gene  Gene of interest.
          #' @param genome UCSC code, either `hg19` or `hg38`.
-        setTargetGene = function(targetGene, genome){
+         #' @param chromosome default NA, causing a lookup 
+        setTargetGene = function(targetGene, genome, chromosome=NA){
             private$target.gene <- targetGene
             private$default.genome <- genome
             if(is.na(targetGene)){
               private$chromosome <- NA
               private$vcf.url <- NA
             } else {
-               private$chromosome <- self$identifyTargetGeneChromosome(targetGene)
+               if(!is.na(chromosome)){
+                   private$chromosome <- chromosome
+                   } else {
+                      private$chromosome <- self$identifyTargetGeneChromosome(targetGene)
+                      }
                private$vcf.url <- self$setupVcfURL(private$chromosome)
                }
             },
@@ -146,7 +153,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
          #' @description
          #' the target chromosome and genome are widely referenced - this member function allows you
          #' to change your initial choices
-         #' @param target.chromsome
+         #' @param target.chromosome
          #' @param genome UCSC code, either `hg19` or `hg38`.
         setTargetChromosome = function(target.chromosome, genome){
             private$default.genome <- genome

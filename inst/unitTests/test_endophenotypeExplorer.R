@@ -21,6 +21,10 @@ runTests <- function()
     test_getClinicalTable()
     test_setupVcfURL()
 
+    test_setUnknownGene()
+    
+    test_unrecognizedGene()
+
     test_readRemoteVCF()
     test_locsToRSID()
     test_rsidToLocs()
@@ -359,6 +363,21 @@ test_setupVcfURL <- function()
    #
 
 } # test_setupVcfURL
+#----------------------------------------------------------------------------------------------------
+# "C2orf40" is still recognized by rosmap and gtex, but ogr.Hs.eg.db.   maybe the recently
+# assigned "ECRG4" instead
+# see if we can work around that here
+test_setUnknownGene <- function()
+{
+   message(sprintf("--- setUnknownGene"))
+
+   etx <- EndophenotypeExplorer$new("C2orf90", "hg38", chromosome="chr2", vcf.project="ADNI")
+   vcf.url <- etx$getVcfUrl()
+   expected <- paste0("https://igv-data.systemsbiology.net/nfs/adni/",
+                      "gcad.qc.wgs.chr2.4789.GATK.2018.09.17.v2.biallelic.genotypes.ALL.vcf.gz")
+   checkEquals(vcf.url, expected)
+
+} # test_setUnkownGene
 #----------------------------------------------------------------------------------------------------
 test_readRemoteVCF <- function(verbose=FALSE)
 {
