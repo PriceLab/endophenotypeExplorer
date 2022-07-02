@@ -133,7 +133,7 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
          #' to change your initial choices
          #' @param target.gene  Gene of interest.
          #' @param genome UCSC code, either `hg19` or `hg38`.
-         #' @param chromosome default NA, causing a lookup 
+         #' @param chromosome default NA, causing a lookup
         setTargetGene = function(targetGene, genome, chromosome=NA){
             private$target.gene <- targetGene
             private$default.genome <- genome
@@ -548,7 +548,9 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
               # terrible hack. should be table driven. pshannon 29jun22
               # gtex and ampad still know C2orf40 with its old name
               # but org.Hs.eg.db only knows the new name
-             if(target.gene=="C2orf40") 
+             if(target.gene %in% (c("C2orf49-DT", "RP11-332H14.2")))
+                  return("chr2")
+             if(target.gene=="C2orf40")
                 target.gene <- "ECRG4"
              entrezID <- select(org.Hs.eg.db, keys=target.gene, keytype="SYMBOL", columns="ENTREZID")$ENTREZID
              stopifnot(nchar(entrezID) > 1)
