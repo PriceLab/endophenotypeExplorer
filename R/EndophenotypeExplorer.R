@@ -548,10 +548,10 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
               # terrible hack. should be table driven. pshannon 29jun22
               # gtex and ampad still know C2orf40 with its old name
               # but org.Hs.eg.db only knows the new name
-             if(target.gene %in% (c("C2orf49-DT", "RP11-332H14.2")))
-                  return("chr2")
-             if(target.gene=="C2orf40")
-                target.gene <- "ECRG4"
+             #if(target.gene %in% (c("C2orf49-DT", "RP11-332H14.2")))
+             #     return("chr2")
+             #if(target.gene=="C2orf40")
+             #   target.gene <- "ECRG4"
              entrezID <- select(org.Hs.eg.db, keys=target.gene, keytype="SYMBOL", columns="ENTREZID")$ENTREZID
              stopifnot(nchar(entrezID) > 1)
              select(TxDb.Hsapiens.UCSC.hg38.knownGene, keys=entrezID, keytype="GENEID",
