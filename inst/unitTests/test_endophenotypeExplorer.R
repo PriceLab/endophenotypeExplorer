@@ -23,7 +23,7 @@ runTests <- function()
 
     test_setUnknownGene()
     
-    test_unrecognizedGene()
+    #test_unrecognizedGene()
 
     test_readRemoteVCF()
     test_locsToRSID()

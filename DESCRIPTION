@@ -1,8 +1,8 @@
 Package: EndophenotypeExplorer
 Type: Package
 Title: EndophenotypeExplorer
-Version: 1.0.44
-Date: 2022-07-04
+Version: 1.0.45
+Date: 2022-07-18
 Author: Paul Shannon
 Maintainer: Paul Shannon<pshannon@systemsbiology.org>
 Imports:
@@ -14,4 +14,4 @@ Description: tools to explore associations between eQTLs, variants, gene express
 Depends: R (>= 4.1.0), R6, GenomicRanges
 License: Artistic-2.0
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0

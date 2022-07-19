@@ -15,51 +15,51 @@ An endophenotypeExplore has access to eQTLs, variant calls, and more
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{EndophenotypeExplorer$new()}}
-\item \href{#method-setTargetGene}{\code{EndophenotypeExplorer$setTargetGene()}}
-\item \href{#method-setTargetChromosome}{\code{EndophenotypeExplorer$setTargetChromosome()}}
-\item \href{#method-get.rna.matrix.codes}{\code{EndophenotypeExplorer$get.rna.matrix.codes()}}
-\item \href{#method-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
-\item \href{#method-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
-\item \href{#method-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
-\item \href{#method-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
-\item \href{#method-getGenoMatrixByRSID}{\code{EndophenotypeExplorer$getGenoMatrixByRSID()}}
-\item \href{#method-get.ampad.EQTLsForGene}{\code{EndophenotypeExplorer$get.ampad.EQTLsForGene()}}
-\item \href{#method-getEQTLsInRegion}{\code{EndophenotypeExplorer$getEQTLsInRegion()}}
-\item \href{#method-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
-\item \href{#method-biomart.rsidToLoc}{\code{EndophenotypeExplorer$biomart.rsidToLoc()}}
-\item \href{#method-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
-\item \href{#method-new.rsidToLoc}{\code{EndophenotypeExplorer$new.rsidToLoc()}}
-\item \href{#method-biomart.locsToRSID}{\code{EndophenotypeExplorer$biomart.locsToRSID()}}
-\item \href{#method-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
-\item \href{#method-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
-\item \href{#method-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
-\item \href{#method-getClinicalTable}{\code{EndophenotypeExplorer$getClinicalTable()}}
-\item \href{#method-setupGWASData}{\code{EndophenotypeExplorer$setupGWASData()}}
-\item \href{#method-getGWASTables}{\code{EndophenotypeExplorer$getGWASTables()}}
-\item \href{#method-identifyTargetGeneChromosome}{\code{EndophenotypeExplorer$identifyTargetGeneChromosome()}}
-\item \href{#method-get.rosmap.patient.table}{\code{EndophenotypeExplorer$get.rosmap.patient.table()}}
-\item \href{#method-get.sinai.patient.table}{\code{EndophenotypeExplorer$get.sinai.patient.table()}}
-\item \href{#method-get.mayo.patient.table}{\code{EndophenotypeExplorer$get.mayo.patient.table()}}
-\item \href{#method-sampleID.to.clinicalTable}{\code{EndophenotypeExplorer$sampleID.to.clinicalTable()}}
-\item \href{#method-getStandardClinicalColumnNames}{\code{EndophenotypeExplorer$getStandardClinicalColumnNames()}}
-\item \href{#method-standardizeMayoPatientTable}{\code{EndophenotypeExplorer$standardizeMayoPatientTable()}}
-\item \href{#method-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
-\item \href{#method-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
-\item \href{#method-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
-\item \href{#method-getTissueExpression}{\code{EndophenotypeExplorer$getTissueExpression()}}
-\item \href{#method-splitExpressionMatrixByMutationStatusAtRSID}{\code{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID()}}
-\item \href{#method-splitMayoRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitMayoRnaMatrixByGenotype()}}
-\item \href{#method-splitSinaiRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype()}}
-\item \href{#method-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
-\item \href{#method-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
-\item \href{#method-subsetAndRelabelGenoMatrixByPatientIDs}{\code{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs()}}
-\item \href{#method-clone}{\code{EndophenotypeExplorer$clone()}}
+\item \href{#method-EndophenotypeExplorer-new}{\code{EndophenotypeExplorer$new()}}
+\item \href{#method-EndophenotypeExplorer-setTargetGene}{\code{EndophenotypeExplorer$setTargetGene()}}
+\item \href{#method-EndophenotypeExplorer-setTargetChromosome}{\code{EndophenotypeExplorer$setTargetChromosome()}}
+\item \href{#method-EndophenotypeExplorer-get.rna.matrix.codes}{\code{EndophenotypeExplorer$get.rna.matrix.codes()}}
+\item \href{#method-EndophenotypeExplorer-get.rna.matrix}{\code{EndophenotypeExplorer$get.rna.matrix()}}
+\item \href{#method-EndophenotypeExplorer-setupVcfURL}{\code{EndophenotypeExplorer$setupVcfURL()}}
+\item \href{#method-EndophenotypeExplorer-getVcfUrl}{\code{EndophenotypeExplorer$getVcfUrl()}}
+\item \href{#method-EndophenotypeExplorer-getGenoMatrix}{\code{EndophenotypeExplorer$getGenoMatrix()}}
+\item \href{#method-EndophenotypeExplorer-getGenoMatrixByRSID}{\code{EndophenotypeExplorer$getGenoMatrixByRSID()}}
+\item \href{#method-EndophenotypeExplorer-get.ampad.EQTLsForGene}{\code{EndophenotypeExplorer$get.ampad.EQTLsForGene()}}
+\item \href{#method-EndophenotypeExplorer-getEQTLsInRegion}{\code{EndophenotypeExplorer$getEQTLsInRegion()}}
+\item \href{#method-EndophenotypeExplorer-getIdMap}{\code{EndophenotypeExplorer$getIdMap()}}
+\item \href{#method-EndophenotypeExplorer-biomart.rsidToLoc}{\code{EndophenotypeExplorer$biomart.rsidToLoc()}}
+\item \href{#method-EndophenotypeExplorer-rsidToLoc}{\code{EndophenotypeExplorer$rsidToLoc()}}
+\item \href{#method-EndophenotypeExplorer-new.rsidToLoc}{\code{EndophenotypeExplorer$new.rsidToLoc()}}
+\item \href{#method-EndophenotypeExplorer-biomart.locsToRSID}{\code{EndophenotypeExplorer$biomart.locsToRSID()}}
+\item \href{#method-EndophenotypeExplorer-locsToRSID}{\code{EndophenotypeExplorer$locsToRSID()}}
+\item \href{#method-EndophenotypeExplorer-mapSampleIdToPatientAndCohort}{\code{EndophenotypeExplorer$mapSampleIdToPatientAndCohort()}}
+\item \href{#method-EndophenotypeExplorer-setupClinicalData}{\code{EndophenotypeExplorer$setupClinicalData()}}
+\item \href{#method-EndophenotypeExplorer-getClinicalTable}{\code{EndophenotypeExplorer$getClinicalTable()}}
+\item \href{#method-EndophenotypeExplorer-setupGWASData}{\code{EndophenotypeExplorer$setupGWASData()}}
+\item \href{#method-EndophenotypeExplorer-getGWASTables}{\code{EndophenotypeExplorer$getGWASTables()}}
+\item \href{#method-EndophenotypeExplorer-identifyTargetGeneChromosome}{\code{EndophenotypeExplorer$identifyTargetGeneChromosome()}}
+\item \href{#method-EndophenotypeExplorer-get.rosmap.patient.table}{\code{EndophenotypeExplorer$get.rosmap.patient.table()}}
+\item \href{#method-EndophenotypeExplorer-get.sinai.patient.table}{\code{EndophenotypeExplorer$get.sinai.patient.table()}}
+\item \href{#method-EndophenotypeExplorer-get.mayo.patient.table}{\code{EndophenotypeExplorer$get.mayo.patient.table()}}
+\item \href{#method-EndophenotypeExplorer-sampleID.to.clinicalTable}{\code{EndophenotypeExplorer$sampleID.to.clinicalTable()}}
+\item \href{#method-EndophenotypeExplorer-getStandardClinicalColumnNames}{\code{EndophenotypeExplorer$getStandardClinicalColumnNames()}}
+\item \href{#method-EndophenotypeExplorer-standardizeMayoPatientTable}{\code{EndophenotypeExplorer$standardizeMayoPatientTable()}}
+\item \href{#method-EndophenotypeExplorer-standardizeRosmapPatientTable}{\code{EndophenotypeExplorer$standardizeRosmapPatientTable()}}
+\item \href{#method-EndophenotypeExplorer-standardizeSinaiPatientTable}{\code{EndophenotypeExplorer$standardizeSinaiPatientTable()}}
+\item \href{#method-EndophenotypeExplorer-getAggregatedAlleleFrequencies}{\code{EndophenotypeExplorer$getAggregatedAlleleFrequencies()}}
+\item \href{#method-EndophenotypeExplorer-getTissueExpression}{\code{EndophenotypeExplorer$getTissueExpression()}}
+\item \href{#method-EndophenotypeExplorer-splitExpressionMatrixByMutationStatusAtRSID}{\code{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID()}}
+\item \href{#method-EndophenotypeExplorer-splitMayoRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitMayoRnaMatrixByGenotype()}}
+\item \href{#method-EndophenotypeExplorer-splitSinaiRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype()}}
+\item \href{#method-EndophenotypeExplorer-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
+\item \href{#method-EndophenotypeExplorer-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
+\item \href{#method-EndophenotypeExplorer-subsetAndRelabelGenoMatrixByPatientIDs}{\code{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs()}}
+\item \href{#method-EndophenotypeExplorer-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-new"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new EndophenotypeExplorer object
 \subsection{Usage}{
@@ -96,8 +96,8 @@ A new `EndophenotypeExplorer` object.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-setTargetGene"></a>}}
-\if{latex}{\out{\hypertarget{method-setTargetGene}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-setTargetGene"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-setTargetGene}{}}}
 \subsection{Method \code{setTargetGene()}}{
 the targetGene and genome are widely referenced - this member function allows you
 to change your initial choices
@@ -118,8 +118,8 @@ to change your initial choices
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-setTargetChromosome"></a>}}
-\if{latex}{\out{\hypertarget{method-setTargetChromosome}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-setTargetChromosome"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-setTargetChromosome}{}}}
 \subsection{Method \code{setTargetChromosome()}}{
 the target chromosome and genome are widely referenced - this member function allows you
 to change your initial choices
@@ -136,8 +136,8 @@ to change your initial choices
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.rna.matrix.codes"></a>}}
-\if{latex}{\out{\hypertarget{method-get.rna.matrix.codes}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.rna.matrix.codes"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.rna.matrix.codes}{}}}
 \subsection{Method \code{get.rna.matrix.codes()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix.codes()}\if{html}{\out{</div>}}
@@ -145,8 +145,8 @@ to change your initial choices
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.rna.matrix"></a>}}
-\if{latex}{\out{\hypertarget{method-get.rna.matrix}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.rna.matrix"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.rna.matrix}{}}}
 \subsection{Method \code{get.rna.matrix()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rna.matrix(code)}\if{html}{\out{</div>}}
@@ -154,8 +154,8 @@ to change your initial choices
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-setupVcfURL"></a>}}
-\if{latex}{\out{\hypertarget{method-setupVcfURL}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-setupVcfURL"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-setupVcfURL}{}}}
 \subsection{Method \code{setupVcfURL()}}{
 our genotypes are stored per-chromosome in vcf files.  this
 function uses the current chromosome of interest, to provide
@@ -167,8 +167,8 @@ putative regulatory regions
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getVcfUrl"></a>}}
-\if{latex}{\out{\hypertarget{method-getVcfUrl}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getVcfUrl"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getVcfUrl}{}}}
 \subsection{Method \code{getVcfUrl()}}{
 easy access to the current value
 returns url in character form
@@ -178,8 +178,8 @@ returns url in character form
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getGenoMatrix"></a>}}
-\if{latex}{\out{\hypertarget{method-getGenoMatrix}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getGenoMatrix"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getGenoMatrix}{}}}
 \subsection{Method \code{getGenoMatrix()}}{
 genotypes for all samples in the specified locus
 \subsection{Usage}{
@@ -200,8 +200,8 @@ returns matrix, location by sample}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getGenoMatrixByRSID"></a>}}
-\if{latex}{\out{\hypertarget{method-getGenoMatrixByRSID}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getGenoMatrixByRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getGenoMatrixByRSID}{}}}
 \subsection{Method \code{getGenoMatrixByRSID()}}{
 genotypes for all samples at the specified rsids
 \subsection{Usage}{
@@ -218,8 +218,8 @@ returns matrix, location by sample}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.ampad.EQTLsForGene"></a>}}
-\if{latex}{\out{\hypertarget{method-get.ampad.EQTLsForGene}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.ampad.EQTLsForGene"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.ampad.EQTLsForGene}{}}}
 \subsection{Method \code{get.ampad.EQTLsForGene()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.ampad.EQTLsForGene()}\if{html}{\out{</div>}}
@@ -227,8 +227,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getEQTLsInRegion"></a>}}
-\if{latex}{\out{\hypertarget{method-getEQTLsInRegion}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getEQTLsInRegion"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getEQTLsInRegion}{}}}
 \subsection{Method \code{getEQTLsInRegion()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getEQTLsInRegion(chrom, start, end)}\if{html}{\out{</div>}}
@@ -236,8 +236,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getIdMap"></a>}}
-\if{latex}{\out{\hypertarget{method-getIdMap}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getIdMap"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getIdMap}{}}}
 \subsection{Method \code{getIdMap()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getIdMap()}\if{html}{\out{</div>}}
@@ -245,8 +245,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-biomart.rsidToLoc"></a>}}
-\if{latex}{\out{\hypertarget{method-biomart.rsidToLoc}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-biomart.rsidToLoc"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-biomart.rsidToLoc}{}}}
 \subsection{Method \code{biomart.rsidToLoc()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$biomart.rsidToLoc(rsids)}\if{html}{\out{</div>}}
@@ -254,8 +254,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rsidToLoc"></a>}}
-\if{latex}{\out{\hypertarget{method-rsidToLoc}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-rsidToLoc"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-rsidToLoc}{}}}
 \subsection{Method \code{rsidToLoc()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$rsidToLoc(rsids)}\if{html}{\out{</div>}}
@@ -263,8 +263,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new.rsidToLoc"></a>}}
-\if{latex}{\out{\hypertarget{method-new.rsidToLoc}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-new.rsidToLoc"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-new.rsidToLoc}{}}}
 \subsection{Method \code{new.rsidToLoc()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$new.rsidToLoc(rsids)}\if{html}{\out{</div>}}
@@ -272,8 +272,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-biomart.locsToRSID"></a>}}
-\if{latex}{\out{\hypertarget{method-biomart.locsToRSID}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-biomart.locsToRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-biomart.locsToRSID}{}}}
 \subsection{Method \code{biomart.locsToRSID()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$biomart.locsToRSID(locs, genome)}\if{html}{\out{</div>}}
@@ -281,8 +281,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-locsToRSID"></a>}}
-\if{latex}{\out{\hypertarget{method-locsToRSID}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-locsToRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-locsToRSID}{}}}
 \subsection{Method \code{locsToRSID()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$locsToRSID(locs, genome)}\if{html}{\out{</div>}}
@@ -290,8 +290,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mapSampleIdToPatientAndCohort"></a>}}
-\if{latex}{\out{\hypertarget{method-mapSampleIdToPatientAndCohort}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-mapSampleIdToPatientAndCohort"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-mapSampleIdToPatientAndCohort}{}}}
 \subsection{Method \code{mapSampleIdToPatientAndCohort()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$mapSampleIdToPatientAndCohort(sampleID)}\if{html}{\out{</div>}}
@@ -299,8 +299,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-setupClinicalData"></a>}}
-\if{latex}{\out{\hypertarget{method-setupClinicalData}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-setupClinicalData"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-setupClinicalData}{}}}
 \subsection{Method \code{setupClinicalData()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupClinicalData()}\if{html}{\out{</div>}}
@@ -308,8 +308,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getClinicalTable"></a>}}
-\if{latex}{\out{\hypertarget{method-getClinicalTable}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getClinicalTable"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getClinicalTable}{}}}
 \subsection{Method \code{getClinicalTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getClinicalTable()}\if{html}{\out{</div>}}
@@ -317,8 +317,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-setupGWASData"></a>}}
-\if{latex}{\out{\hypertarget{method-setupGWASData}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-setupGWASData"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-setupGWASData}{}}}
 \subsection{Method \code{setupGWASData()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$setupGWASData()}\if{html}{\out{</div>}}
@@ -326,8 +326,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getGWASTables"></a>}}
-\if{latex}{\out{\hypertarget{method-getGWASTables}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getGWASTables"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getGWASTables}{}}}
 \subsection{Method \code{getGWASTables()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getGWASTables()}\if{html}{\out{</div>}}
@@ -335,8 +335,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-identifyTargetGeneChromosome"></a>}}
-\if{latex}{\out{\hypertarget{method-identifyTargetGeneChromosome}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-identifyTargetGeneChromosome"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-identifyTargetGeneChromosome}{}}}
 \subsection{Method \code{identifyTargetGeneChromosome()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$identifyTargetGeneChromosome(target.gene)}\if{html}{\out{</div>}}
@@ -344,8 +344,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.rosmap.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-get.rosmap.patient.table}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.rosmap.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.rosmap.patient.table}{}}}
 \subsection{Method \code{get.rosmap.patient.table()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.rosmap.patient.table(patientID)}\if{html}{\out{</div>}}
@@ -353,8 +353,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.sinai.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-get.sinai.patient.table}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.sinai.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.sinai.patient.table}{}}}
 \subsection{Method \code{get.sinai.patient.table()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.sinai.patient.table(patientID)}\if{html}{\out{</div>}}
@@ -362,8 +362,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get.mayo.patient.table"></a>}}
-\if{latex}{\out{\hypertarget{method-get.mayo.patient.table}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-get.mayo.patient.table"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-get.mayo.patient.table}{}}}
 \subsection{Method \code{get.mayo.patient.table()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$get.mayo.patient.table(patientID)}\if{html}{\out{</div>}}
@@ -371,8 +371,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sampleID.to.clinicalTable"></a>}}
-\if{latex}{\out{\hypertarget{method-sampleID.to.clinicalTable}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-sampleID.to.clinicalTable"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-sampleID.to.clinicalTable}{}}}
 \subsection{Method \code{sampleID.to.clinicalTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$sampleID.to.clinicalTable(sampleID)}\if{html}{\out{</div>}}
@@ -380,8 +380,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getStandardClinicalColumnNames"></a>}}
-\if{latex}{\out{\hypertarget{method-getStandardClinicalColumnNames}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getStandardClinicalColumnNames"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getStandardClinicalColumnNames}{}}}
 \subsection{Method \code{getStandardClinicalColumnNames()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getStandardClinicalColumnNames()}\if{html}{\out{</div>}}
@@ -389,8 +389,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-standardizeMayoPatientTable"></a>}}
-\if{latex}{\out{\hypertarget{method-standardizeMayoPatientTable}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-standardizeMayoPatientTable"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-standardizeMayoPatientTable}{}}}
 \subsection{Method \code{standardizeMayoPatientTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$standardizeMayoPatientTable(tbl)}\if{html}{\out{</div>}}
@@ -398,8 +398,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-standardizeRosmapPatientTable"></a>}}
-\if{latex}{\out{\hypertarget{method-standardizeRosmapPatientTable}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-standardizeRosmapPatientTable"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-standardizeRosmapPatientTable}{}}}
 \subsection{Method \code{standardizeRosmapPatientTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$standardizeRosmapPatientTable(tbl)}\if{html}{\out{</div>}}
@@ -407,8 +407,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-standardizeSinaiPatientTable"></a>}}
-\if{latex}{\out{\hypertarget{method-standardizeSinaiPatientTable}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-standardizeSinaiPatientTable"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-standardizeSinaiPatientTable}{}}}
 \subsection{Method \code{standardizeSinaiPatientTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$standardizeSinaiPatientTable(tbl)}\if{html}{\out{</div>}}
@@ -416,8 +416,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getAggregatedAlleleFrequencies"></a>}}
-\if{latex}{\out{\hypertarget{method-getAggregatedAlleleFrequencies}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getAggregatedAlleleFrequencies"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getAggregatedAlleleFrequencies}{}}}
 \subsection{Method \code{getAggregatedAlleleFrequencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getAggregatedAlleleFrequencies(rsid, quiet = TRUE)}\if{html}{\out{</div>}}
@@ -425,8 +425,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-getTissueExpression"></a>}}
-\if{latex}{\out{\hypertarget{method-getTissueExpression}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-getTissueExpression"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-getTissueExpression}{}}}
 \subsection{Method \code{getTissueExpression()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$getTissueExpression(geneSymbol, tissue)}\if{html}{\out{</div>}}
@@ -434,8 +434,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-splitExpressionMatrixByMutationStatusAtRSID"></a>}}
-\if{latex}{\out{\hypertarget{method-splitExpressionMatrixByMutationStatusAtRSID}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-splitExpressionMatrixByMutationStatusAtRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-splitExpressionMatrixByMutationStatusAtRSID}{}}}
 \subsection{Method \code{splitExpressionMatrixByMutationStatusAtRSID()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitExpressionMatrixByMutationStatusAtRSID(
@@ -447,8 +447,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-splitMayoRnaMatrixByGenotype"></a>}}
-\if{latex}{\out{\hypertarget{method-splitMayoRnaMatrixByGenotype}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-splitMayoRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-splitMayoRnaMatrixByGenotype}{}}}
 \subsection{Method \code{splitMayoRnaMatrixByGenotype()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitMayoRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
@@ -456,8 +456,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-splitSinaiRnaMatrixByGenotype"></a>}}
-\if{latex}{\out{\hypertarget{method-splitSinaiRnaMatrixByGenotype}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-splitSinaiRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-splitSinaiRnaMatrixByGenotype}{}}}
 \subsection{Method \code{splitSinaiRnaMatrixByGenotype()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitSinaiRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
@@ -465,8 +465,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-splitRosmapRnaMatrixByGenotype"></a>}}
-\if{latex}{\out{\hypertarget{method-splitRosmapRnaMatrixByGenotype}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-splitRosmapRnaMatrixByGenotype"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-splitRosmapRnaMatrixByGenotype}{}}}
 \subsection{Method \code{splitRosmapRnaMatrixByGenotype()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype(mtx, rsid)}\if{html}{\out{</div>}}
@@ -474,8 +474,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-trenaScoreGenotypeStratifiedExpression"></a>}}
-\if{latex}{\out{\hypertarget{method-trenaScoreGenotypeStratifiedExpression}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-trenaScoreGenotypeStratifiedExpression"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-trenaScoreGenotypeStratifiedExpression}{}}}
 \subsection{Method \code{trenaScoreGenotypeStratifiedExpression()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression(
@@ -488,8 +488,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-subsetAndRelabelGenoMatrixByPatientIDs"></a>}}
-\if{latex}{\out{\hypertarget{method-subsetAndRelabelGenoMatrixByPatientIDs}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-subsetAndRelabelGenoMatrixByPatientIDs"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-subsetAndRelabelGenoMatrixByPatientIDs}{}}}
 \subsection{Method \code{subsetAndRelabelGenoMatrixByPatientIDs()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs(
@@ -500,8 +500,8 @@ returns matrix, location by sample}
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
