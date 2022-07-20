@@ -950,7 +950,94 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
            indices <- match(colnames(mtx.geno.sub), tbl.sub$sample)
            colnames(mtx.geno.sub) <- tbl.sub$patient[indices]
            mtx.geno.sub
-           }
+           }, # subsetAndRelabelGenoMatrixByPatientIDs
+
+           # fisher's exact and T test on enrichment of braak >= 5, <=1
+           # in rosmpa patients, when separated on having/not-having the
+           # specified variant
+        extremeBraakScoreSignificanceAtRSID = function(rsid){
+            result <- list(pval.t=NA,
+                           pval.fisher=NA,
+                           tbl.geno=data.frame(),
+                           tbl.pt=data.frame(),
+                           mtx.geno=matrix(),
+                           mtx.geno.study=matrix(),
+                           pt.ad=c(),
+                           pt.ctl=c())
+
+            mtx.geno.1 <- self$getGenoMatrixByRSID(rsid)
+            if(all(is.na(mtx.geno.1)))
+                return(result)
+
+            mtx.geno.pt.rosmap <- self$subsetAndRelabelGenoMatrixByPatientIDs(mtx.geno.1, "rosmap")
+            if(all(is.na(mtx.geno.pt.rosmap)))
+                return(result)
+
+            tbl.pt <- self$get.rosmap.patient.table(NA)
+            rosmap.patients <- intersect(tbl.pt$individualID, colnames(mtx.geno.pt.rosmap))
+            length(rosmap.patients)   # 1143
+
+            tbl.pt.rosmap <- subset(tbl.pt, individualID %in% rosmap.patients)
+            dim(tbl.pt.rosmap)  # 1143 18
+
+            dim(mtx.geno.pt.rosmap)
+            table(mtx.geno.pt.rosmap)  # mtx.geno.pt.rosmap
+                                        # 0/0 0/1 1/1
+                                        # 827 296  28
+            pt.ad <-  subset(tbl.pt.rosmap, braaksc >=5)$individualID   # 303
+            pt.ctl <- subset(tbl.pt.rosmap, braaksc <=1)$individualID  # 85
+
+
+            table(mtx.geno.pt.rosmap)  # mtx.geno.pt.rosmap
+                                        #  0/0 0/1 1/1
+                                        #  827 296  28
+
+            pt.ad <-  subset(tbl.pt.rosmap, braaksc >=5)$individualID   # 303
+            pt.ctl <- subset(tbl.pt.rosmap, braaksc <=1)$individualID  # 85
+
+            ad.wt <- 0
+            at.het <- 0
+            ad.hom <- 0
+
+            ad.wt  <- length(grep("0/0", (mtx.geno.pt.rosmap[, pt.ad])))
+            ad.het <- length(grep("0/1", (mtx.geno.pt.rosmap[, pt.ad])))
+            ad.hom <- length(grep("1/1", (mtx.geno.pt.rosmap[, pt.ad])))
+
+            ctl.wt  <- length(grep("0/0", (mtx.geno.pt.rosmap[, pt.ctl])))
+            ctl.het <- length(grep("0/1", (mtx.geno.pt.rosmap[, pt.ctl])))
+            ctl.hom <- length(grep("1/1", (mtx.geno.pt.rosmap[, pt.ctl])))
+
+            tbl.summary <- data.frame(wt=c(ad.wt, ctl.wt), het=c(ad.het, ctl.het), hom=c(ad.hom, ctl.hom),
+                                      row.names=c("ad", "ctl"))
+            print(tbl.summary)
+
+            ad.vector <- with(tbl.summary["ad",],
+                              c(rep(0, wt),
+                                rep(1, het),
+                                rep(2, hom)))
+            ctl.vector <- with(tbl.summary["ctl",],
+                               c(rep(0, wt),
+                                 rep(1, het),
+                                 rep(2, hom)))
+
+            pval.t <- tryCatch({
+                t.test(ad.vector, ctl.vector)$p.value
+                }, error=function(e){return(1)})
+
+            pval.fisher <- tryCatch({
+                fisher.test(tbl.summary)$p.value
+                }, error=function(e){return(1)})
+
+            return(list(pval.t=pval.t,
+                        pval.fisher=pval.fisher,
+                        tbl.geno=tbl.summary,
+                        tbl.pt=tbl.pt.rosmap,
+                        mtx.geno=mtx.geno.1,
+                        mtx.geno.study=mtx.geno.pt.rosmap,
+                        pt.ad=pt.ad,
+                        pt.ctl=pt.ctl))
+
+            } # extremeBraakScoreSignificanceAtRSID
 
         #------------------------------------------------------------
         ) # public

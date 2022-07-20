@@ -54,6 +54,7 @@ An endophenotypeExplore has access to eQTLs, variant calls, and more
 \item \href{#method-EndophenotypeExplorer-splitRosmapRnaMatrixByGenotype}{\code{EndophenotypeExplorer$splitRosmapRnaMatrixByGenotype()}}
 \item \href{#method-EndophenotypeExplorer-trenaScoreGenotypeStratifiedExpression}{\code{EndophenotypeExplorer$trenaScoreGenotypeStratifiedExpression()}}
 \item \href{#method-EndophenotypeExplorer-subsetAndRelabelGenoMatrixByPatientIDs}{\code{EndophenotypeExplorer$subsetAndRelabelGenoMatrixByPatientIDs()}}
+\item \href{#method-EndophenotypeExplorer-extremeBraakScoreSignificanceAtRSID}{\code{EndophenotypeExplorer$extremeBraakScoreSignificanceAtRSID()}}
 \item \href{#method-EndophenotypeExplorer-clone}{\code{EndophenotypeExplorer$clone()}}
 }
 }
@@ -496,6 +497,15 @@ returns matrix, location by sample}
   mtx.geno,
   studyName
 )}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-EndophenotypeExplorer-extremeBraakScoreSignificanceAtRSID"></a>}}
+\if{latex}{\out{\hypertarget{method-EndophenotypeExplorer-extremeBraakScoreSignificanceAtRSID}{}}}
+\subsection{Method \code{extremeBraakScoreSignificanceAtRSID()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{EndophenotypeExplorer$extremeBraakScoreSignificanceAtRSID(rsid)}\if{html}{\out{</div>}}
 }
 
 }

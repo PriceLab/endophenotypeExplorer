@@ -22,7 +22,7 @@ runTests <- function()
     test_setupVcfURL()
 
     test_setUnknownGene()
-    
+
     #test_unrecognizedGene()
 
     test_readRemoteVCF()
@@ -1351,6 +1351,22 @@ demo_variantSeparated.rna.t.test <- function()
      round(as.numeric(table(mtx.geno.pt.rosmap[, pts.ad]))/312, digits=2)  # [1] 0.71 0.27 0.02
 
 } # demo_variantSeparated.rna.t.test
+#----------------------------------------------------------------------------------------------------
+demo_variantSeparated.extremeBrackScore <- function()
+{
+   message(sprintf("--- demo_variantSeparated.extremeBrackScore"))
+
+   heath.snp <- "rs12539712"
+   g78r.snp  <- "rs1859788"
+   bell26.snp <- "rs7384878"
+   rsid <- bell26.snp
+
+   etx <- EndophenotypeExplorer$new("PILRA", "hg19", vcf.project="AMPAD", initialize.snpLocs=TRUE)
+   x <-   etx$extremeBraakScoreSignificanceAtRSID(bell26.snp)
+   checkTrue(x$pval.t < 0.0009)
+   checkTrue(x$pval.fisher < 0.0013)
+
+} # demo_variantSeparated.extremeBrackScore
 #----------------------------------------------------------------------------------------------------
 exploreGenotypeExpressionPhenotype <- function()
 {
