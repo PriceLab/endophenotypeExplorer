@@ -969,6 +969,8 @@ EndophenotypeExplorer = R6Class("EndophenotypeExplorer",
             if(all(is.na(mtx.geno.1)))
                 return(result)
 
+            new.names <- etx$locsToRSID(rownames(mtx.geno.1), "hg19")
+            rownames(mtx.geno.1) <- new.names
             mtx.geno.pt.rosmap <- self$subsetAndRelabelGenoMatrixByPatientIDs(mtx.geno.1, "rosmap")
             if(all(is.na(mtx.geno.pt.rosmap)))
                 return(result)
